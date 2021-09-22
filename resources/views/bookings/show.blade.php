@@ -1,111 +1,104 @@
-{{--@extends('layouts.app')
-@section('content')
-
-    @foreach($bookings as $booking)
-
-        <h3>{{$booking->firstname}} {{$booking->lastname}}</h3>
-        <p>Email {{$booking->email}}, DOB {{$booking->dob}}, Gender {{$booking->gender}} Mobile: {{$booking->mobile}}
-            CompName: {{$booking->companyName}} Street: {{$booking->addressStreet}}
-            Suburb: {{$booking->addressSuburb}} City: {{$booking->addressCity}} PostCode: {{$booking->addressPostcode}}
-            Country: {{$booking->addressCountry}}
-            CourseDate: {{$booking->courseDate}}</p>
-        <hr>
-    @endforeach
-
-
-@endsection--}}
-
 @extends('layouts.app')
 @section('content')
 
-    bookings.show
-{{--
-    @foreach($bookings as $booking)
-
-        <h3>{{$booking->firstname}} {{$booking->lastname}}</h3>
-        <p>Email {{$booking->email}}, DOB {{$booking->dob}}, Gender {{$booking->gender}} Mobile: {{$booking->mobile}}
-            CompName: {{$booking->companyName}} Street: {{$booking->addressStreet}}
-            Suburb: {{$booking->addressSuburb}} City: {{$booking->addressCity}} PostCode: {{$booking->addressPostcode}}
-            Country: {{$booking->addressCountry}}
-            CourseDate: {{$booking->courseDate}}</p>
-        <hr>
-    @endforeach--}}
-
-
     <div class="container">
 
-        <a class="btn btn-primary mx-1" href="/courses/show">View and Amend Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates/show">View and Amend Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings/show">View and Amend Booking</a>
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
+        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
 
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>View Bookings</h2>
+                    <h2>Show the booking</h2>
                     <hr>
                 </div>
 
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Firstname</th>
-                        <th scope="col">Lastname</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">DOB</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Mobile</th>
-                        <th scope="col">Company Name</th>
-                        <th scope="col">Street</th>
-                        <th scope="col">Suburb</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Postcode</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Field</th>
+                        <th scope="col">Entry</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>test</td>
-                        <td>xxx</td>
-                        <td>yyy</td>
+                        <th scope="col">ID</th>
+                        <th scope="row">{{$booking->id}}</th>
                     </tr>
-                    {{--@foreach($bookings as $b)
-                        <tr>
-                            <th scope="row">{{$booking->id}}</th>
-                            <td>{{$booking->firstname}} </td>
-                            <td>{{$booking->lastname}}</td>
---}}{{--                            <td>{{$booking->email}}</td>
-                            <td>{{$booking->dob}}</td>
-                            <td>{{$booking->gender}}</td>
-                            <td>{{$booking->mobile}}</td>
-                            <td>{{$booking->companyName}}</td>
-                            <td>{{$booking->addressStreet}}</td>
-                            <td>{{$booking->addressSuburb}}</td>
-                            <td>{{$booking->addressCity}}</td>
-                            <td>{{$booking->addressPostcode}}</td>
-                            <td>{{$booking->addressCountry}}</td>--}}{{--
-                            --}}{{--<td>
-                                <form action="/bookings/{{$bookings->id}}" method="POST">
-                                    @method('DELETE')
-                                    @csrf
-                                    @auth
-                                        <a class="btn btn-primary mx-1"
-                                           href="/bookings/{{$bookings->id}}">Show More</a>
-                                        <a class="btn btn-success mx-1" href="/bookings/{{$bookings->id}}/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
-                                    @endauth
-                                </form>
-                            </td>--}}{{--
-                        </tr>
-                    @endforeach--}}
+                    <tr>
+                        <th scope="col">Firstname</th>
+                        <th scope="row">{{$booking->first_name}}</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Lastname</th>
+                        <td scope="row">{{$booking->last_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Email</th>
+                        <td scope="row">{{$booking->email}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Date of birth</th>
+                        <td scope="row">{{$booking->dob}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Gender</th>
+                        <td scope="row">{{$booking->gender}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Mobile</th>
+                        <td scope="row">{{$booking->mobile}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Company Name</th>
+                        <td scope="row">{{$booking->company_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Street</th>
+                        <td scope="row">{{$booking->add_street}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Suburb</th>
+                        <td scope="row">{{$booking->add_suburb}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">City</th>
+                        <td scope="row">{{$booking->add_city}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Postcode</th>
+                        <td scope="row">{{$booking->add_postcode}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <td scope="row">{{$booking->add_country}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Course Booked </th>
+                        <td scope="row">Not implemented</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Course Date </th>
+                        <td scope="row">Not implemented</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @auth
+                                <a class="btn btn-primary" href="/bookings/{{$booking->id}}/edit">Edit Booking</a>
+                            @endauth
+                            <a class="btn btn-warning mx-1" href="/bookings/">View Booking List</a>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
 
             </div>
         </div>
     </div>
+    </div>
+
 @endsection
 {{--
 

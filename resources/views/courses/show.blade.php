@@ -4,8 +4,8 @@
     <div class="container">
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates/index">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings/index">View Bookings</a>
+        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
         <div class="row">
             <div class="col-md-12">
@@ -92,7 +92,6 @@
 
             </div>
         </div>
-    </div>
     </div>
 
 

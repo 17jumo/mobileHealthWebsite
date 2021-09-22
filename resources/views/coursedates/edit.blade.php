@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
+
+    <a class="btn btn-primary mx-1" href="/">View Courses</a>
+    <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+    <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
+
     <div class="row">
         <div class="col-md-12">
             <div class="section-heading">

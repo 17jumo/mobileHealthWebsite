@@ -3,12 +3,15 @@
 
     show test course dates
 
-    @foreach($coursedates as $coursedate)
+    <a class="btn btn-primary mx-1" href="/">View Courses</a>
+    <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+    <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
-        {{--<h3>{{$coursedate->course_id}}</h3>--}}
-        <p>{{$coursedate->availableDates}}</p>
-        <p>{{$coursedate->spacesAvailable}}</p>
+{{--    @foreach($coursedates as $coursedate)
 
-    @endforeach
+        --}}{{--<h3>{{$coursedate->course_id}}</h3>--}}{{--
+        <p>{{$coursedate->id}}</p>
+
+    @endforeach--}}
 
 @endsection

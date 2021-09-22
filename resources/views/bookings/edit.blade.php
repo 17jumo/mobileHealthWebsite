@@ -5,9 +5,9 @@
 
     <div class="container">
 
-        <a class="btn btn-primary mx-1" href="/courses/show">View and Amend Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates/show">View and Amend Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings/show">View and Amend Booking</a>
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
+        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
         <div class="row">
             <div class="col-md-12">

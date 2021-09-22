@@ -2,6 +2,11 @@
 @section('content')
 
     bookings.create
+    <div class="container">
+
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
+        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
     <div class="about-page">
         <div class="container">
