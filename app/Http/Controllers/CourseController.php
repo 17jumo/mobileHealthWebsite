@@ -38,22 +38,23 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'courseName' => 'required',
-            'courseDescLong' => 'required',
-            'courseDescShort' => 'required',
-            'startTime' => 'required',
-            'endTime' => 'required',
+            'course_name' => 'required',
+            'course_desc_long' => 'required',
+            'course_desc_short' => 'required',
+            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'start_time' => 'required',
+            'end_time' => 'required',
             'price' => 'required',
         ]);
 
         $course = new course();
-        $course->courseName = request('courseName');
-        $course->courseDesclong = request('courseDescLong');
-        $course->courseDescShort = request('courseDescShort');
-        $course->startTime = request('startTime');
-        $course->endTime = request('endTime');
+        $course->course_name = request('course_name');
+        $course->course_desc_long = request('course_desc_long');
+        $course->course_desc_short = request('course_desc_short');
+        $course->start_time = request('start_time');
+        $course->end_time = request('end_time');
         $course->price = request('price');
-        $course->courseImage = request('courseImage');
+        /*$course->course_image = request('course_image');*/
         $course->save();
 
         return redirect('courses');
@@ -91,11 +92,12 @@ class CourseController extends Controller
     public function update(Request $request, Course $course)
     {
         request()->validate([
-            'courseName' => 'required',
-            'courseDescLong' => 'required',
-            'courseDescShort' => 'required',
-            'startTime' => 'required',
-            'endTime' => 'required',
+            'course_name' => 'required',
+            'course_desc_long' => 'required',
+            'course_desc_short' => 'required',
+            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'start_time' => 'required',
+            'end_time' => 'required',
             'price' => 'required',
         ]);
 

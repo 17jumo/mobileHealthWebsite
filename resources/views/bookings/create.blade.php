@@ -65,7 +65,7 @@
                                 <span class="validationtext" style="color:darkorange;font-size:0.8em;"><?php print($errEmail); ?></span>
                                 <br />--}}
                         </div>
-                        {{--
+
                         <div class="col-md-6">
                             <label for="phone">Mobile Phone*</label>
                             <input class="form-control" type="text" name="phone" >
@@ -90,13 +90,13 @@
                                     required>
                                 <option value="Male">Male</option>
                                 <option value="female">Female</option>
-                                <option value="Other">Or please specify</option>
+{{--                                <option value="Other">Or please specify</option>--}}
                             </select>
                         </div>
-                        <div class="col-md-6">
+{{--                        <div class="col-md-6">
                             <div id="div1"></div>
                         </div>--}}
-{{--
+
                         <div class="col-md-6">
                             <label for="companyName">Company Name *</label>
                             <input type="text" class="form-control @error('companyName') is-invalid @enderror"
@@ -131,7 +131,7 @@
                             <label for="addressCountry">Country *</label>
                             <input type="text" class="form-control @error('addressCountry') is-invalid @enderror"
                                    name="addressCountry" id="addressCountry" required>
-                        </div>--}}
+                        </div>
 
 
                         <div class="form-button mt-3">

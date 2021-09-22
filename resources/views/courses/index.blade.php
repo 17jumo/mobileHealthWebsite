@@ -35,18 +35,18 @@ courses.index.blade
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($courses as $c)
+                    @foreach($courses as $course)
                         <tr>
-                            <th scope="row">{{$c->id}}</th>
-                            <td>{{$c->course_name}} </td>
-                            <td>{{$c->course_desc_long}}</td>
-                            <td>{{$c->course_desc_short}}</td>
-                            <td>{{$c->start_time}}</td>
-                            <td>{{$c->end_time}}</td>
-                            <td>{{$c->price}}</td>
+                            <th scope="row">{{$course->id}}</th>
+                            <td>{{$course->course_name}} </td>
+                            <td>{{$course->course_desc_long}}</td>
+                            <td>{{$course->course_desc_short}}</td>
+                            <td>{{$course->start_time}}</td>
+                            <td>{{$course->end_time}}</td>
+                            <td>{{$course->price}}</td>
 
                             <td>
-                                <form action="/courses" method="POST">
+{{--                                <form action="/courses" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
@@ -54,6 +54,19 @@ courses.index.blade
                                            href="/courses/show/{{$c->id}}">Show</a>
                                         <a class="btn btn-success mx-1" href="/courses/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
+                                    @endauth
+                                </form>--}}
+
+                                <form action="/courses/{{$course->id}}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    @auth
+                                        <a class="btn btn-primary mx-1 " href="/courses/{{$course->id}}">Show</a>
+                                        <a class="btn btn-success mx-1"
+                                           href="/courses/{{$course->id}}/edit">Edit</a>
+                                        <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
+                                            Delete
+                                        </button>
                                     @endauth
                                 </form>
                             </td>

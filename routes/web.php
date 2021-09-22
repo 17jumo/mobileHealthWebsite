@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('courses', CourseController::class);
 
-Route::resource('courses', CourseController::class)->only(['index','show','create','store','edit','update',]);
-Route::resource('courses', CourseController::class)->only(['destroy'])->middleware('auth');
+Route::resource('courses', CourseController::class)->only(['index','create','store','edit','update',]);
+Route::resource('courses', CourseController::class)->only(['show','destroy'])->middleware('auth');
 
 
 //Route::get('/', function () {
@@ -27,7 +27,7 @@ Route::resource('courses', CourseController::class)->only(['destroy'])->middlewa
 //});
 Route::get('/', [CourseController::class, 'index']);
 Route::get('/courses/index', [CourseController::class, 'index']);
-Route::get('/courses/show', [CourseController::class, 'show']);
+Route::get('/courses/show/{{id}}', [CourseController::class, 'show']);
 Route::get('/courses/create', [CourseController::class, 'create']);
 Route::get('/courses/edit', [CourseController::class, 'edit']);
 
@@ -47,8 +47,17 @@ Route::get('/contactus', function () {return view('home.contactus');});
 Route::get('/payment', function () {return view('home.payment');});*/
 
 
-Route::get('/dashboard', function () {
-    return view('/bookings/index');
-})->middleware(['auth'])->name('dashboard');
+/*Route::get('/dashboard', function () {
+    return view('index');
+})->middleware(['auth'])->name('dashboard');*/
+
+
+//both of below functions work for Dashboard
+/*Route::get('/', function () {
+//    return view('dashboard');
+    return redirect('/courses');
+})->middleware(['auth'])->name('/');*/
+
+Route::get('/dashboard', 'App\Http\Controllers\CourseController@index');
 
 require __DIR__.'/auth.php';

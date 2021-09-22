@@ -44,7 +44,7 @@
         <a class="logoImage" href="/">
 
         </a>
-    <a class="logoText" id="actDOCK" href="/">activityDOCK</a>
+    <a class="logoText" id="actDOCK" href="/">Mobile Health Administration</a>
 
     <ul class="nav">
         <li>
@@ -54,7 +54,7 @@
         <li>
 {{--            <a class="nav" href="profiles/index">Profile</a>--}}
             <a href="/profiles/index">
-            xxx</a>
+            profiles.index</a>
 
         </li>
         @else
@@ -63,6 +63,7 @@
 
             @if (Route::has('register'))
                 <a class="nav" href="{{ route('register') }}" id="navRegister">Register</a>
+                <a class="nav" href="{{ route('login') }}" id="navRegister">Login</a>
             @endif
 
 

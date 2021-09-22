@@ -39,7 +39,7 @@
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>
                             <td>
-                                <form action="/coursedates/{{$coursedate->id}}" method="POST">
+{{--                                <form action="/coursedates/{{$coursedate->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
@@ -47,6 +47,19 @@
                                            href="/coursedates/{{$coursedate->id}}">Show More</a>
                                         <a class="btn btn-success mx-1" href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
+                                    @endauth
+                                </form>--}}
+
+                                <form action="/coursedates/{{$coursedate->id}}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    @auth
+                                        <a class="btn btn-primary mx-1 " href="/coursedates/{{$coursedate->id}}">Show</a>
+                                        <a class="btn btn-success mx-1"
+                                           href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
+                                        <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
+                                            Delete
+                                        </button>
                                     @endauth
                                 </form>
                             </td>

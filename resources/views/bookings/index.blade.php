@@ -17,6 +17,12 @@
                     <hr>
                 </div>
 
+                <p>
+                    <a class="btn btn-primary mx-1 "
+                       href="/bookings/create">Create new booking</a>
+                </p>
+
+
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -53,16 +59,16 @@
                             <td>{{$booking->add_postcode}}</td>
                             <td>{{$booking->add_country}}</td>
                             <td>
-                                {{--<form action="/bookings/{{$bookings->firstname}}" method="POST">
+                                <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
                                         <a class="btn btn-primary mx-1"
-                                           href="/bookings/{{$bookings->firstname}}">Show More</a>
-                                        <a class="btn btn-success mx-1" href="/bookings/{{$bookings->firstname}}/edit">Edit</a>
+                                           href="/bookings/{{$booking->id}}">Show More</a>
+                                        <a class="btn btn-success mx-1" href="/bookings/{{$booking->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
                                     @endauth
-                                </form>--}}
+                                </form>
                             </td>
                         </tr>
                     @endforeach
