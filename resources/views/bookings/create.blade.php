@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
+    bookings.create
+
     <div class="about-page">
         <div class="container">
             <div class="row col-md-12 section-heading">
@@ -9,7 +11,7 @@
             </div>
             {{--<div class="row form-body form-holder form-content form-items">--}}
 
-            <form method="POST" action="/books">
+            <form method="POST" action="/bookings">
                 @csrf
                 <div class="checkout-form">
                     <h4>Course Details</h4>

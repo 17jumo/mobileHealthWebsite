@@ -5,9 +5,9 @@ courses.index.blade
 
     <div class="container">
 
-        <a class="btn btn-primary mx-1" href="/courses/index">View Courses</a>
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates/index">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/books/index">View Bookings</a>
+        <a class="btn btn-primary mx-1 " href="/bookings/index">View Bookings</a>
 
         <div class="row">
             <div class="col-md-12">
@@ -15,6 +15,11 @@ courses.index.blade
                     <h2>View Courses</h2>
                     <hr>
                 </div>
+
+                <p>
+                    <a class="btn btn-primary mx-1 "
+                       href="/courses/create">Create new courses</a>
+                </p>
 
                 <table class="table table-striped">
                     <thead>
@@ -33,11 +38,11 @@ courses.index.blade
                     @foreach($courses as $c)
                         <tr>
                             <th scope="row">{{$c->id}}</th>
-                            <td>{{$c->courseName}} </td>
-                            <td>{{$c->courseDescLong}}</td>
-                            <td>{{$c->courseDescShort}}</td>
-                            <td>{{$c->startTime}}</td>
-                            <td>{{$c->endTime}}</td>
+                            <td>{{$c->course_name}} </td>
+                            <td>{{$c->course_desc_long}}</td>
+                            <td>{{$c->course_desc_short}}</td>
+                            <td>{{$c->start_time}}</td>
+                            <td>{{$c->end_time}}</td>
                             <td>{{$c->price}}</td>
 
                             <td>
@@ -46,7 +51,7 @@ courses.index.blade
                                     @csrf
                                     @auth
                                         <a class="btn btn-primary mx-1"
-                                           href="/courses/show/">Show</a>
+                                           href="/courses/show/{{$c->id}}">Show</a>
                                         <a class="btn btn-success mx-1" href="/courses/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
                                     @endauth

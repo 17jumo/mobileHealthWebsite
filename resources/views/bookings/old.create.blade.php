@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')
 @section('content')
 
-    create test books
+    create test bookings
 
 @endsection--}}
 

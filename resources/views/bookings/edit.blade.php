@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
+    bookings.edit
+
     <div class="container">
 
         <a class="btn btn-primary mx-1" href="/courses/show">View and Amend Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates/show">View and Amend Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/books/show">View and Amend Booking</a>
+        <a class="btn btn-primary mx-1 " href="/bookings/show">View and Amend Booking</a>
 
         <div class="row">
             <div class="col-md-12">
@@ -22,12 +24,12 @@
 
                         @auth
                             <div class="buttonContainer">
-                                <a class="btn btn-primary" href="/books/{{$book->id}}/edit">Edit Booking</a>
+                                <a class="btn btn-primary" href="/bookings/{{$booking->id}}/edit">Edit Booking</a>
                             </div>
                         @endauth
 
-                        <h3>{{$book->firstname}}</h3>
-                        <p>{{$book->lastname}}</p>
+                        <h3>{{$booking->firstname}}</h3>
+                        <p>{{$booking->lastname}}</p>
 
 
                         @method('PUT')
@@ -35,36 +37,33 @@
 
                         <div id="activityContainer">
 
-                            <h3>{{$book->firstname}} {{$book->lastname}}</h3>
-                            <p>Email {{$book->email}}, DOB {{$book->dob}}, Gender {{$book->gender}} Mobile: {{$book->mobile}}
-                                CompName: {{$book->companyName}} Street: {{$book->addressStreet}}
-                                Suburb: {{$book->addressSuburb}} City: {{$book->addressCity}} PostCode: {{$book->addressPostcode}}
-                                Country: {{$book->addressCountry}}
-                                CourseDate: {{$book->courseDate}}</p>
+                            <h3>{{$booking->firstname}} {{$booking->lastname}}</h3>
+                            <p>Email {{$booking->email}}, DOB {{$booking->dob}}, Gender {{$booking->gender}} Mobile: {{$booking->mobile}}
+                                CompName: {{$booking->companyName}} Street: {{$booking->addressStreet}}
+                                Suburb: {{$booking->addressSuburb}} City: {{$booking->addressCity}} PostCode: {{$booking->addressPostcode}}
+                                Country: {{$booking->addressCountry}}
+                                CourseDate: {{$booking->courseDate}}</p>
 
                             <div>
                                 <p>Distance</p>
-                                <h2>{{$book->email}}</h2>
+                                <h2>{{$booking->email}}</h2>
                             </div>
                             <div>
                                 <p>Total Minutes</p>
-                                <h2>{{$book->dob}}</h2>
+                                <h2>{{$booking->dob}}</h2>
                             </div>
                             <div>
                                 <p>Date</p>
-                                <h2>{{$book->gender}}</h2>
+                                <h2>{{$booking->gender}}</h2>
                             </div>
                             <div>
                                 <p>Sport</p>
-                                <h2>{{$book->mobile}}</h2>
+                                <h2>{{$booking->mobile}}</h2>
                             </div>
                         </div>
 
-
-
-
                         <br>
-                        <a class="btn btn-warning mx-1" href="/books/">Cancel</a>
+                        <a class="btn btn-warning mx-1" href="/bookings/">Cancel</a>
                         <br><br>
 
                     </div>

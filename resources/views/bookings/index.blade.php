@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
+    bookings index
+
     <div class="container">
 
-        <a class="btn btn-primary mx-1" href="/courses/index">View Courses</a>
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates/index">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/books/index">View Bookings</a>
+        <a class="btn btn-primary mx-1 " href="/bookings/index">View Bookings</a>
 
 
         <div class="row">
@@ -25,39 +27,39 @@
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Mobile</th>
-{{--                        <th scope="col">Company Name</th>
+                        <th scope="col">Company Name</th>
                         <th scope="col">Street</th>
                         <th scope="col">Suburb</th>
                         <th scope="col">City</th>
                         <th scope="col">Postcode</th>
-                        <th scope="col">Country</th>--}}
+                        <th scope="col">Country</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($books as $book)
+                    @foreach($bookings as $booking)
                         <tr>
-                            <th scope="row">{{$book->id}}</th>
-                            <td>{{$book->firstname}} </td>
-                            <td>{{$book->lastname}}</td>
-                            <td>{{$book->email}}</td>
-                            <td>{{$book->dob}}</td>
-                            <td>{{$book->gender}}</td>
-                            <td>{{$book->mobile}}</td>
-{{--                            <td>{{$book->companyName}}</td>
-                            <td>{{$book->addressStreet}}</td>
-                            <td>{{$book->addressSuburb}}</td>
-                            <td>{{$book->addressCity}}</td>
-                            <td>{{$book->addressPostcode}}</td>
-                            <td>{{$book->addressCountry}}</td>--}}
+                            <th scope="row">{{$booking->id}}</th>
+                            <td>{{$booking->first_name}} </td>
+                            <td>{{$booking->last_name}}</td>
+                            <td>{{$booking->email}}</td>
+                            <td>{{$booking->dob}}</td>
+                            <td>{{$booking->gender}}</td>
+                            <td>{{$booking->mobile}}</td>
+                            <td>{{$booking->company_name}}</td>
+                            <td>{{$booking->add_street}}</td>
+                            <td>{{$booking->add_suburb}}</td>
+                            <td>{{$booking->add_city}}</td>
+                            <td>{{$booking->add_postcode}}</td>
+                            <td>{{$booking->add_country}}</td>
                             <td>
-                                {{--<form action="/books/{{$books->firstname}}" method="POST">
+                                {{--<form action="/bookings/{{$bookings->firstname}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
                                         <a class="btn btn-primary mx-1"
-                                           href="/books/{{$books->firstname}}">Show More</a>
-                                        <a class="btn btn-success mx-1" href="/books/{{$books->firstname}}/edit">Edit</a>
+                                           href="/bookings/{{$bookings->firstname}}">Show More</a>
+                                        <a class="btn btn-success mx-1" href="/bookings/{{$bookings->firstname}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
                                     @endauth
                                 </form>--}}
@@ -66,7 +68,6 @@
                     @endforeach
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>

@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
+    coursedates.index
+
     <div class="container">
 
-        <a class="btn btn-primary mx-1" href="/courses/index">View Courses</a>
+        <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates/index">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/books/index">View Bookings</a>
+        <a class="btn btn-primary mx-1 " href="/bookings/index">View Bookings</a>
 
         <div class="row">
             <div class="col-md-12">
@@ -23,8 +25,9 @@
                     <thead>
                     <tr>
                         <th scope="col">Course ID</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Spaces Available</th>
+                        <th scope="col">Scheduled Date</th>
+                        <th scope="col">Attendee Max</th>
+                        <th scope="col">Venue</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -32,8 +35,9 @@
                     @foreach($coursedates as $coursedate)
                         <tr>
                             <th scope="row">{{$coursedate->id}}</th>
-                            <td>{{$coursedate->startdate}}</td>
-                            <td>{{$coursedate->spacesAvailable}}</td>
+                            <td>{{$coursedate->scheduled_date}}</td>
+                            <td>{{$coursedate->max_attendee}}</td>
+                            <td>{{$coursedate->venue}}</td>
                             <td>
                                 <form action="/coursedates/{{$coursedate->id}}" method="POST">
                                     @method('DELETE')

@@ -17,12 +17,12 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('courseName');
-            $table->string('courseDescShort');
-            $table->string('courseDescLong');
-            $table->string('courseImage');
-            $table->time('startTime');
-            $table->time('endTime');
+            $table->string('course_name');
+            $table->string('course_desc_short');
+            $table->string('course_desc_long');
+            $table->string('course_image');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->float('price');
         });
     }

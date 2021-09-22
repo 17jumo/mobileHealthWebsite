@@ -48,7 +48,7 @@ class CourseController extends Controller
 
         $course = new course();
         $course->courseName = request('courseName');
-        $course->courseDescLong = request('courseDescLong');
+        $course->courseDesclong = request('courseDescLong');
         $course->courseDescShort = request('courseDescShort');
         $course->startTime = request('startTime');
         $course->endTime = request('endTime');
