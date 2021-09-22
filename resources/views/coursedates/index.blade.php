@@ -1,5 +1,3 @@
-courses.index.blade
-
 @extends('layouts.app')
 @section('content')
 
@@ -12,42 +10,38 @@ courses.index.blade
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>View Courses</h2>
+                    <h2>Course Dates</h2>
                     <hr>
                 </div>
+
+                <p>
+                    <a class="btn btn-primary mx-1 "
+                       href="/coursedates/create">Create new dates</a>
+                </p>
 
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">courseName</th>
-                        <th scope="col">courseDescLong</th>
-                        <th scope="col">courseDescShort</th>
-                        <th scope="col">startTime</th>
-                        <th scope="col">endTime</th>
-                        <th scope="col">price</th>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Spaces Available</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($courses as $c)
+                    @foreach($coursedates as $coursedate)
                         <tr>
-                            <th scope="row">{{$c->id}}</th>
-                            <td>{{$c->courseName}} </td>
-                            <td>{{$c->courseDescLong}}</td>
-                            <td>{{$c->courseDescShort}}</td>
-                            <td>{{$c->startTime}}</td>
-                            <td>{{$c->endTime}}</td>
-                            <td>{{$c->price}}</td>
-
+                            <th scope="row">{{$coursedate->id}}</th>
+                            <td>{{$coursedate->startdate}}</td>
+                            <td>{{$coursedate->spacesAvailable}}</td>
                             <td>
-                                <form action="/courses" method="POST">
+                                <form action="/coursedates/{{$coursedate->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
                                         <a class="btn btn-primary mx-1"
-                                           href="/courses/show/">Show</a>
-                                        <a class="btn btn-success mx-1" href="/courses/edit">Edit</a>
+                                           href="/coursedates/{{$coursedate->id}}">Show More</a>
+                                        <a class="btn btn-success mx-1" href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
                                     @endauth
                                 </form>
@@ -56,7 +50,10 @@ courses.index.blade
                     @endforeach
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
+
 @endsection
+

@@ -26,6 +26,7 @@ Route::resource('courses', CourseController::class)->only(['destroy'])->middlewa
 //    return view('courses.index');
 //});
 Route::get('/', [CourseController::class, 'index']);
+Route::get('/courses/show', [CourseController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
