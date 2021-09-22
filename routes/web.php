@@ -21,6 +21,15 @@ Route::resource('courses', CourseController::class);
 Route::resource('courses', CourseController::class)->only(['index','create','store','edit','update',]);
 Route::resource('courses', CourseController::class)->only(['show','destroy'])->middleware('auth');
 
+Route::resource('coursedates', CoursedateController::class);
+
+Route::resource('coursedates', CoursedateController::class)->only(['index','create','store','edit','update',]);
+Route::resource('coursedates', CoursedateController::class)->only(['show','destroy'])->middleware('auth');
+
+Route::resource('bookings', BookingController::class);
+
+Route::resource('bookings', BookingController::class)->only(['index','create','store','edit','update',]);
+Route::resource('bookings', BookingController::class)->only(['show','destroy'])->middleware('auth');
 
 //Route::get('/', function () {
 //    return view('courses.index');
@@ -37,9 +46,9 @@ Route::get('/coursedates/create', [CoursedateController::class, 'create']);
 Route::get('/coursedates/edit', [CoursedateController::class, 'edit']);
 
 Route::get('/bookings/index', [BookingController::class, 'index']);
-Route::get('/bookings/show', [BookingController::class, 'show']);
+Route::get('/bookings/show/{{id}}', [BookingController::class, 'show']);
 Route::get('/bookings/create', [BookingController::class, 'create']);
-Route::get('/bookings/edit', [BookingController::class, 'edit']);
+Route::get('/bookings/{{id}}/edit', [BookingController::class, 'edit']);
 
 
 /*Route::get('/aboutus', function () {return view('home.aboutus');});

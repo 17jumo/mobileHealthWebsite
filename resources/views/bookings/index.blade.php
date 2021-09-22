@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    bookings index
-
     <div class="container">
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
@@ -59,7 +57,7 @@
                             <td>{{$booking->add_postcode}}</td>
                             <td>{{$booking->add_country}}</td>
                             <td>
-                                <form action="/bookings/{{$booking->id}}" method="POST">
+{{--                                <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
@@ -67,6 +65,19 @@
                                            href="/bookings/{{$booking->id}}">Show More</a>
                                         <a class="btn btn-success mx-1" href="/bookings/{{$booking->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
+                                    @endauth
+                                </form>--}}
+
+                                <form action="/bookings/{{$booking->id}}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    @auth
+                                        <a class="btn btn-primary mx-1 " href="/bookings/{{$booking->id}}">Show card</a>
+                                        <a class="btn btn-success mx-1"
+                                           href="/bookings/{{$booking->id}}/edit">Edit</a>
+                                        <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
+                                            Delete
+                                        </button>
                                     @endauth
                                 </form>
                             </td>

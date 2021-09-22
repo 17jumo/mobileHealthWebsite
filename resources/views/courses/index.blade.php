@@ -12,7 +12,7 @@ courses.index.blade
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>View Courses</h2>
+                    <h2>View all courses</h2>
                     <hr>
                 </div>
 
@@ -46,22 +46,11 @@ courses.index.blade
                             <td>{{$course->price}}</td>
 
                             <td>
-{{--                                <form action="/courses" method="POST">
-                                    @method('DELETE')
-                                    @csrf
-                                    @auth
-                                        <a class="btn btn-primary mx-1"
-                                           href="/courses/show/{{$c->id}}">Show</a>
-                                        <a class="btn btn-success mx-1" href="/courses/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
-                                    @endauth
-                                </form>--}}
-
                                 <form action="/courses/{{$course->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
-                                        <a class="btn btn-primary mx-1 " href="/courses/{{$course->id}}">Show</a>
+                                        <a class="btn btn-primary mx-1 " href="/courses/{{$course->id}}">Show card</a>
                                         <a class="btn btn-success mx-1"
                                            href="/courses/{{$course->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">

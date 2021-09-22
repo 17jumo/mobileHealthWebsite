@@ -10,12 +10,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Courses - CREATE</h2>
+                    <h2>Create a new course</h2>
                     <hr>
                 </div>
 
-
-                        <div class="container">
 
                             <form method="POST" action="/courses">
                                 @csrf

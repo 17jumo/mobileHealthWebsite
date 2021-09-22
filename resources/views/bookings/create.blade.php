@@ -11,7 +11,7 @@
             </div>
             {{--<div class="row form-body form-holder form-content form-items">--}}
 
-            <form method="POST" action="/bookings">
+            <form method="POST" action="/bookings/index">
                 @csrf
                 <div class="checkout-form">
                     <h4>Course Details</h4>
