@@ -51,7 +51,7 @@ class CoursedateController extends Controller
 
         $coursedate->save();
 
-        return redirect('coursedate');
+        return redirect('coursedates');
     }
 
     /**
@@ -94,7 +94,7 @@ class CoursedateController extends Controller
 
         $coursedate->update($request->all());
 
-        return redirect('coursedate');
+        return redirect('coursedates');
     }
 
     /**

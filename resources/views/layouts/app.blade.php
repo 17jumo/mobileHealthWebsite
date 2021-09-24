@@ -27,65 +27,38 @@
 </head>
 <body>
 
-    <div class="container">
-            <h4>Mobile Health Administration</h4>
+<div class="container">
+    <h4>Mobile Health Administration</h4>
 
-        <ul class="nav">
-            <li>
-                @if (Auth::check())
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
+    <span style="float: right">
+
+        @if (Auth::check())
+            <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
-                    {{--<a href="{{ route('logout') }}" id="navLogout" class="nav" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">Logout</a>--}}
-            </li>
-            <li>
-                {{--            <a class="nav" href="profiles/index">Profile</a>--}}
-                <a class="btn btn-outline-secondary mx-1" href="/profiles/index">profiles.index</a>
-{{--                <a href="/profiles/index">
-                    profiles.index</a>--}}
-            </li>
-            <li>
-                @else
-                    {{--            <a class="nav" id="navRegister" href="/auth/register/">Register</a>--}}
-                    {{-- <a href="{{ route('login') }}" class="nav">Login</a>--}}
-
-                    @if (Route::has('register'))
-                        <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register</a>
-
-                        {{--<a class="nav" href="{{ route('login') }}" id="navRegister">Login</a>--}}
-{{--                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                        <a class="nav" href="{{ route('register') }}" id="navRegister">Register</a>--}}
-                    @endif
-            </li>
-
-
-            {{--            @if (Route::has('login'))
-                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                @auth
-                                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                                @else
-                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                                    @endif
-                                @endauth--}}
-
-
+{{--
+            @if (Auth::check(isAdmin))
+--}}
+            <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
+{{--
             @endif
+--}}
+        @else
+            @if (Route::has('register'))
+                <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
+                <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
+            @endif
+        @endif
             <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            </li>
-        </ul>
-    </div>
-    <div>
-        @yield('content')
-    </div>
+
+    </span>
+</div>
+
+<div>
+    @yield('content')
+</div>
+
 </body>
 </html>
-
-
-
 

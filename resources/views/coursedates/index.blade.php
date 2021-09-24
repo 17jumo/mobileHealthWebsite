@@ -54,8 +54,8 @@
                                     @method('DELETE')
                                     @csrf
                                     @auth
-                                        <a class="btn btn-primary mx-1 " href="/coursedates/{{$coursedate->id}}">Show</a>
-                                        <a class="btn btn-success mx-1"
+                                        <a class="btn btn-outline-primary mx-1 " href="/coursedates/{{$coursedate->id}}">Show</a>
+                                        <a class="btn btn-outline-success mx-1"
                                            href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
                                             Delete

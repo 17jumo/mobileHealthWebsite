@@ -48,8 +48,8 @@
                         <td scope="row">{{$booking->gender}}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Mobile</th>
-                        <td scope="row">{{$booking->mobile}}</td>
+                        <th scope="col">Phone number</th>
+                        <td scope="row">{{$booking->phone}}</td>
                     </tr>
                     <tr>
                         <th scope="col">Company Name</th>

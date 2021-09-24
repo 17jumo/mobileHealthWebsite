@@ -19,7 +19,7 @@ class CreateBookingsTable extends Migration
 
             $table->string	('first_name');
             $table->string ('last_name');
-            $table->string ('mobile');
+            $table->string ('phone');
             $table->string ('email');
             $table->date ('dob');
             $table->string ('gender');

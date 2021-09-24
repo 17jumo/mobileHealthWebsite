@@ -41,7 +41,7 @@ class BookingController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
-            'mobile' => 'required',
+            'phone' => 'required',
             'dob' => 'required',
             'gender' => 'required',
             'company_name' => '',
@@ -56,7 +56,7 @@ class BookingController extends Controller
         $booking->first_name = request('firstname');
         $booking->last_name = request('lastname');
         $booking->email = request('email');
-        $booking->mobile = request('mobile');
+        $booking->phone = request('phone');
         $booking->dob = request('dob');
         $booking->gender = request('gender');
         $booking->company_name = request('company_name');
@@ -65,7 +65,7 @@ class BookingController extends Controller
         $booking->add_city = request('add_city');
         $booking->add_postcode = request('add_postcode');
         $booking->add_country = request('add_country');
-        $booking->coursedate_id = Auth::courseDate()->id;
+/*        $booking->coursedate_id = Auth::courseDate()->id;*/
 
         $booking->save();
 
@@ -109,7 +109,7 @@ class BookingController extends Controller
             'email' => 'required',
             'dob' => 'required',
             'gender' => 'required',
-            'mobile' => 'required',
+            'phone' => 'required',
             'company_name' => '',
             'add_street' => '',
             'add_suburb' => '',

@@ -24,8 +24,8 @@ class BookingFactory extends Factory
         return [
             'first_name' => $this->faker-> firstName,
             'last_name' => $this->faker->lastName,
-            'mobile' => $this->faker->phonenumber,
-            'email' => $this->faker->word(1),
+            'phone' => $this->faker->phonenumber,
+            'email' => $this->faker->email(),
             'dob' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'gender' => "female",
             'company_name' => $this->faker->word(1),

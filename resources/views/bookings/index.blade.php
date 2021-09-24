@@ -4,8 +4,8 @@
     <div class="container">
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates/index">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings/index">View Bookings</a>
+        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
 
 
         <div class="row">
@@ -30,13 +30,13 @@
                         <th scope="col">Email</th>
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>
-                        <th scope="col">Mobile</th>
+                        <th scope="col">Phone Number</th>
                         <th scope="col">Company Name</th>
-                        <th scope="col">Street</th>
+{{--                        <th scope="col">Street</th>
                         <th scope="col">Suburb</th>
                         <th scope="col">City</th>
                         <th scope="col">Postcode</th>
-                        <th scope="col">Country</th>
+                        <th scope="col">Country</th>--}}
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -49,13 +49,13 @@
                             <td>{{$booking->email}}</td>
                             <td>{{$booking->dob}}</td>
                             <td>{{$booking->gender}}</td>
-                            <td>{{$booking->mobile}}</td>
+                            <td>{{$booking->phone}}</td>
                             <td>{{$booking->company_name}}</td>
-                            <td>{{$booking->add_street}}</td>
+    {{--                        <td>{{$booking->add_street}}</td>
                             <td>{{$booking->add_suburb}}</td>
                             <td>{{$booking->add_city}}</td>
                             <td>{{$booking->add_postcode}}</td>
-                            <td>{{$booking->add_country}}</td>
+                            <td>{{$booking->add_country}}</td>--}}
                             <td>
 {{--                                <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')
@@ -72,8 +72,8 @@
                                     @method('DELETE')
                                     @csrf
                                     @auth
-                                        <a class="btn btn-primary mx-1 " href="/bookings/{{$booking->id}}">Show card</a>
-                                        <a class="btn btn-success mx-1"
+                                        <a class="btn btn-outline-primary mx-1 " href="/bookings/{{$booking->id}}">Show</a>
+                                        <a class="btn btn-outline-success mx-1"
                                            href="/bookings/{{$booking->id}}/edit">Edit</a>
                                         <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
                                             Delete
