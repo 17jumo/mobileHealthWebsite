@@ -1,9 +1,8 @@
-courses.index.blade
-
 @extends('layouts.app')
 @section('content')
 
     <div class="container">
+        <h4>Mobile Health Administration</h4>
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
@@ -27,8 +26,8 @@ courses.index.blade
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Course Name</th>
-                            <th scope="col">Description - Long</th>
                             <th scope="col">Description - Short</th>
+                            <th scope="col">Description - Long</th>
                             <th scope="col">Start Time</th>
                             <th scope="col">End Time</th>
                             <th scope="col">Price</th>
@@ -40,8 +39,8 @@ courses.index.blade
                             <tr>
                                 <th scope="row">{{$course->id}}</th>
                                 <td>{{$course->course_name}} </td>
-                                <td>{{$course->course_desc_long}}</td>
                                 <td>{{$course->course_desc_short}}</td>
+                                <td>{{$course->course_desc_long}}</td>
                                 <td>{{$course->start_time}}</td>
                                 <td>{{$course->end_time}}</td>
                                 <td>{{$course->price}}</td>

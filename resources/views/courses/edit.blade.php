@@ -2,6 +2,7 @@
 @section('content')
 
     <div class="container">
+        <h4>Mobile Health Administration</h4>
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
@@ -23,28 +24,35 @@
                         <div class="row">
 
                             <div class="form-group col-12">
-                                <label for="courseName">Course Name</label>
-                                <input type="text" class="form-control @error('courseName') is-invalid @enderror" id="courseName" name="courseName" value="{{$courses->course_name}}">
+                                <label for="course_name">Course Name</label>
+                                <input type="text" class="form-control @error('course_name') is-invalid @enderror" id="course_name" name="course_name" value="{{$courses->course_name}}">
                             </div>
 
                             <div class="form-group col-12">
-                                <label for="courseDescShort">Course Short Description</label>
-                                <input type="textarea" class="form-control @error('courseDescShort') is-invalid @enderror" id="courseDescShort" name="courseDescShort" value="{{$courses->course_desc_short}}">
+                                <label for="course_desc_short">Course Short Description</label>
+                                {{--<textarea rows="4" cols="50" class="form-control @error('course_desc_short') is-invalid @enderror" id="course_desc_short" name="course_desc_short" value="{{$courses->course_desc_short}}">
+
+                                    </textarea>--}}
+
+                                <input type="textarea" class="form-control @error('course_desc_short') is-invalid @enderror" id="course_desc_short" name="course_desc_short" value="{{$courses->course_desc_short}}">
+
                             </div>
 
                             <div class="form-group col-12">
-                                <label for="courseDescLong">Course Long Description</label>
+                                <label for="course_desc_long">Course Long Description</label>
+                                <textarea rows="4" cols="50" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" value="{{$courses->course_desc_long}}">
                                 <input type="textarea" class="form-control @error('courseDescLong') is-invalid @enderror" id="courseDescLong" name="courseDescLong" value="{{$courses->course_desc_long}}">
+                                    </textarea>
                             </div>
 
                             <div class="form-group col-6">
-                                <label for="startTime">Start Time</label>
-                                <input type="text" class="form-control @error('startTime') is-invalid @enderror" id="startTime" name="startTime" value="{{$courses->start_time}}">
+                                <label for="start_time">Start Time</label>
+                                <input type="text" class="form-control @error('start_time') is-invalid @enderror" id="start_time" name="start_time" value="{{$courses->start_time}}">
                             </div>
 
                             <div class="form-group col-6">
-                                <label for="endTime">End Time</label>
-                                <input type="text" class="form-control @error('endTime') is-invalid @enderror" id="endTime" name="endTime" value="{{$courses->end_time}}">
+                                <label for="end_time">End Time</label>
+                                <input type="text" class="form-control @error('end_time') is-invalid @enderror" id="end_time" name="end_time" value="{{$courses->end_time}}">
                             </div>
 
                             <div class="form-group col-6">

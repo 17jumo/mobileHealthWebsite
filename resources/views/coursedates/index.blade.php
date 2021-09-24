@@ -1,9 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-    coursedates.index
-
     <div class="container">
+        <h4>Mobile Health Administration</h4>
 
         <a class="btn btn-primary mx-1" href="/">View Courses</a>
         <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
