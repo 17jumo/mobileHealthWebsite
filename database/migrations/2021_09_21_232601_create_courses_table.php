@@ -21,6 +21,7 @@ class CreateCoursesTable extends Migration
             $table->string('course_desc_short');
             $table->string('course_desc_long');
             /*$table->string('course_image');*/
+            $table->string('duration');
             $table->time('start_time') ->format('h:i');
             $table->time('end_time') ->format('h:i');
             $table->float('price');

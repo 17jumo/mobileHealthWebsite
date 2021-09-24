@@ -42,6 +42,7 @@ class CourseController extends Controller
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
             /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
             'price' => 'required',
@@ -51,6 +52,7 @@ class CourseController extends Controller
         $course->course_name = request('course_name');
         $course->course_desc_long = request('course_desc_long');
         $course->course_desc_short = request('course_desc_short');
+        $course->duration = request('duration');
         $course->start_time = request('start_time');
         $course->end_time = request('end_time');
         $course->price = request('price');
@@ -96,6 +98,7 @@ class CourseController extends Controller
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
             /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
             'price' => 'required',

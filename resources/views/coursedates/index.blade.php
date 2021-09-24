@@ -20,6 +20,7 @@
                        href="/coursedates/create">Create new dates</a>
                 </p>
 
+                <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -70,6 +71,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                </div>
 
             </div>
         </div>

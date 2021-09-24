@@ -68,9 +68,6 @@
                             <label for="email">Email*</label>
                             <input type="text" id="email" name="email" class="form-control"
                                    required/>
-                            {{--<input type="text" id="email" name="email" value="<?php echo($email); ?>" class="form-control" placeholder="Email" required/>
-                                <span class="validationtext" style="color:darkorange;font-size:0.8em;"><?php print($errEmail); ?></span>
-                                <br />--}}
                         </div>
 
                         <div class="col-md-6">
@@ -138,7 +135,10 @@
 
                         <div class="form-button mt-3">
                             <input class="btn btn-primary" type="submit" value="Submit Booking">
-                            <a class="btn btn-warning" href="/courses/">Cancel</a>
+                            <a class="btn btn-outline-dark" href="/">Cancel</a>
+                            @auth
+                                <a class="btn btn-outline-dark" href="/courses/">View Bookings</a>
+                            @endauth
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
 
     {{--Browser Icon--}}
     <link rel="icon" href="/images/MobileHealthTabLogo.png" type="/image/MobileHealthTabLogo.png">
@@ -26,14 +27,14 @@
 
 </head>
 <body>
-
-
 <header>
-    <!--Navbar -->
-    <div class="bk">
+
+    {{--new navbar--}}
+
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div class="container">
-            <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-                <a class="navbar-brand nav-img" id="logoimage" href="/"><img src="/images/MobileHealth1.png"
+
+                <a class="navbar-brand d-flex w-50 me-auto nav-img" id="logoimage" href="/"><img src="/images/MobileHealth1.png"
                                                                              alt="Mobile Health Logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent-333"
@@ -41,46 +42,46 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
-                    <ul class="navbar-nav mr-auto page-navigation">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/show">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/bookings/create">Bookings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/aboutus">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contactus">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/payment">Payment</a>
-                        </li>
-                        <li>
-                            <div class="secondary-button" style="text-align: right"><a href="/books/create">Book Now</a>
-                            </div>
-                        </li>
+{{--            </a>--}}
+            {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>--}}
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
-                    </ul>
-                </div>
-            </nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/show">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bookings/create">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactus">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/payment">Payment</a>
+                    </li>
+                    <li>
+                        <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-    </div>
-    <!--/.Navbar -->
-
-
+    </nav>
 </header>
 
-
-
 <main>
-<div>
-    @yield('content')
-</div>
+    <div>
+        @yield('content')
+    </div>
 </main>
 
 
@@ -94,7 +95,8 @@
                     <div class="course-container-box">
                         <div class="footer-item">
                             <div class="flex-column">
-                                <a href="/"> <img src="/images/MobileHealth1.png" alt="Company Logo" id="logoimage"
+                                <a href="/"> <img src="/images/MobileHealth1.png" alt="Company Logo"
+                                                  title="Mobile Health Logo" id="logoimage"
                                                   class="logo"></a>
                             </div>
                         </div>
@@ -114,8 +116,6 @@
                                     firstaid@mobilehealth.co.nz</a>
                             </p>
                         </div>
-                    </div>
-                    <div class="course-container-box">
                         <div>
                             <p>
                                 <a href="https://engagesafety.co.nz/" target="_blank">
@@ -135,6 +135,26 @@
                             </a>
                         </div>
                     </div>
+                    {{--<div class="course-container-box">
+                        <div>
+                            <p>
+                                <a href="https://engagesafety.co.nz/" target="_blank">
+                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                         class="footer-media">&nbsp
+                                    www.engagesafety.co.nz
+                                </a>
+                            </p>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                               target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>--}}
                 </div>
             </div>
         </div>
@@ -148,7 +168,7 @@
                     <div class="col-md-12">
                         <div class="copyright-text">
                             <p>Copyright &copy; 2021 Mobile Health | <a href="/courses">Design by:
-                                    SIT-STUDENTS-DESIGN-IT</a></p>
+                                    SIT-SS-DESIGN</a></p>
                         </div>
                     </div>
                 </div>
@@ -190,23 +210,13 @@
 
 
 <!-- Additional Scripts -->
-<script src="js/custom.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/flex-slider.js"></script>
+{{--<script src="js/custom.js"></script>--}}
+{{--<script src="js/owl.js"></script>
+<script src="js/isotope.js"></script>--}}
+{{--<script src="js/flex-slider.js"></script>--}}
 
-
-{{--<script language="text/Javascript">--}}
-{{--    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field--}}
-{{--    function clearField(t) {                   //declaring the array outside of the--}}
-{{--        if (!cleared[t.id]) {                      // function makes it static and global--}}
-{{--            cleared[t.id] = 1;  // you could use true and false, but that's more typing--}}
-{{--            t.value = '';         // with more chance of typos--}}
-{{--            t.style.color = '#fff';--}}
-{{--        }--}}
-{{--    }--}}
-{{--</script>--}}
 
 </body>
 </html>
+
 

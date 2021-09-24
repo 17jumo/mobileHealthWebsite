@@ -1,7 +1,3 @@
-<div id="pre-header">
-    <span>We are running courses during Covid Alert Level 2</span>
-</div>
-
 @extends('layouts.app')
 @section('content')
 
@@ -10,7 +6,7 @@
     <div class="banner" alt="First Aid Course Image">
         <div class="container">
             <div class="caption">
-                <h2>Mobile Health and Safety</h2>
+                <h3>Mobile Health and Safety</h3>
                 <hr>
                 <p>The premier <strong>locally owned and operated</strong> provider of Workplace Health and
                     Safety Services in the Queenstown Lakes and Central Otago region.
@@ -19,11 +15,15 @@
                     <strong>Providing First Aid courses now.</strong>
                     <br>Attend a course with us to get your First Aid qualifications.
                 </p>
-                <div class="primary-button">
+                <div class="btn-book-primary">
                     <a href="/book">Book your First Aid Course now!</a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="pre-header">
+        <span>We can run courses at your workplace to meet your needs. Please call us for more information.</span>
     </div>
     <!-- Banner Ends Here -->
 
@@ -38,107 +38,152 @@
                     </div>
                 </div>
 
+
                 <div class="row ">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Course ipsum dolor</h3>
-                                </div>
-                                <img class="card-img-top" src="/storage/images/FA6.png"
-                                     alt="picture of course being held">
-                                <div class="card-body" style="height: 250px">
-
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                        </p>
-                                    <h5 style="text-align: right; color: #0a53be">$149</h5>
-
-                                    <div class="secondary-button" style="text-align: right">
-                                        <span>
-                                        <a href="/courses/1">Show Course</a>
-                                        <a href="/books/create">Book course</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Course ipsum dolor</h3>
-                            </div>
-                            <img class="card-img-top" src="/storage/images/FA5.png"
+                        <div class="card card-body" >
+                            <img src="/storage/images/FA14.jpg"
                                  alt="picture of course being held">
-                            <div class="card-body" style="height: 250px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                </p>
-                                <h5 style="text-align: right; color: #0a53be">$149</h5>
-
-                                <div class="secondary-button" style="text-align: right">
-                                        <span>
-                                        <a href="/courses/1">Show Course</a>
-                                        <a href="/books/create">Book course</a>
-                                        </span>
-                                </div>
+                            <h3>First Aid Basics</h3>
+                            <p>Course description short course description short course description short</p>
+                            <h5 style="text-align: right; color: #0a53be">
+                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <span>
+                            <span>
+                                <div class="btn-readmore">
+                                        <a href="/courses/1">Read more</a>
                             </div>
+                                <div class="btn-book-secondary">
+                                        <a href="/bookings/create">Book</a>
+                            </div>
+                            </span>
                         </div>
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Course ipsum dolor</h3>
-                            </div>
-                            <img class="card-img-top" src="/storage/images/FA4.png"
+                        <div class="card card-body " style="text-align: center; align-items: center">
+                            <img src="/storage/images/FA13.jpg"
                                  alt="picture of course being held">
-                            <div class="card-body" style="height: 250px">
+                            <h3>First Aid Refresher</h3>
+                            <p>Course description short course description short course description short</p>
+                            <h5 style="text-align: right; color: #0a53be">
+                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                </p>
-                                <h5 style="text-align: right; color: #0a53be">$149</h5>
-
-                                <div class="secondary-button" style="text-align: right">
-                                        <span>
-                                        <a href="/courses/1">Show Course</a>
-                                        <a href="/books/create">Book course</a>
-                                        </span>
-                                </div>
+                            <span>
+                                <div class="btn-readmore">
+                                        <a href="/courses/1">Read more</a>
                             </div>
+                                <div class="btn-book-secondary">
+                                        <a href="/bookings/create">Book</a>
+                            </div>
+                            </span>
                         </div>
                     </div>
 
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card card-body" style="text-align: center; align-items: center">
+                            <img src="/storage/images/FA10.jpg"
+                                 alt="picture of course being held">
+                            <h3>Some other course</h3>
+                            <p>Course description short course description short course description short</p>
+                            <h5 style="text-align: right; color: #0a53be">
+                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <span>
+                                <div class="btn-readmore">
+                                        <a href="/courses/1">Read more</a>
+                            </div>
+                                <div class="btn-book-secondary">
+                                        <a href="/bookings/create">Book</a>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card card-body" style="text-align: center; align-items: center">
+                            <img src="/storage/images/FA12.jpg"
+                                 alt="picture of course being held">
+                            <h3>And another course</h3>
+                            <p>Course description short course description short course description short</p>
+                            <h5 style="text-align: right; color: #0a53be">
+                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <span>
+                                <div class="btn-readmore">
+                                        <a href="/courses/1">Read more</a>
+                            </div>
+                                <div class="btn-book-secondary">
+                                        <a href="/bookings/create">Book</a>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{--Reviews starts here--}}
+
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="section-heading">
+                        <h4>
+                            We are trusted by many companies in the Queenstown Lakes and Central Otago region,
+                            including:
+                        </h4>
+                        <hr>
+                    </div >
+                    <div class="referencelogo">
+                    <p>Mitre10, Skyline, other companies (show logos)</p>
+                    <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
+                    <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="section-heading">
+                        <h4>
+                            What our learners like most about the courses:
+                        </h4>
+                        <hr>
+                    </div>
+
+                    <blockquote>
+                        <p>CPR, burns, choking, heart attack. Enjoyed all the training.</p>
+                        <p id="referee">Nathanial</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>How interactive and easy going it was.</p>
+                        <p id="referee">Karli</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>The delivery and content was very relevant to me.</p>
+                        <p id="referee">Amber</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>Examples were fun.</p>
+                        <p id="referee">Angela</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>I enjoyed the course today. I learned a lot. Actually to do CPR.</p>
+                        <p id="referee">Ervin</p>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </div>
 
-    {{--Reviews starts here--}}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Testimonials</h2>
-                    <hr>
-                    <h5>What our learners like most about the courses</h5>
-                    <p>CPR, burns, choking, heart attack. Enjoyed all the training. <em>- Nathanial</em></p>
-                    <p>How interactive and easy going it was. <em>- Karli</em></p>
-                    <p>The delivery and content was very relevant to me. <em>- Amber</em></p>
-                    <p>Examples were fun. <em>- Angela</em></p>
-                    <p>I enjoyed the course today. I learned a lot. Actually to do CPR. <em>- Ervin</em></p>
-
-                </div>
-            </div>
-        </div>
-    </div>
     {{--Reviews end here--}}
 
 @endsection
 
 
 
-OLD DISPLAY FOR CARDS
-{{--                <div class="container-fluid mt-4">
+
+{{--                OLD DISPLAY FOR CARDS
+<div class="container-fluid mt-4">
                     <div class="row text-left">
                         @foreach($courses as $course)
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
