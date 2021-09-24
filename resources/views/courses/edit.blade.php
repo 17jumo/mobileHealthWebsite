@@ -40,9 +40,10 @@
 
                             <div class="form-group col-12">
                                 <label for="course_desc_long">Course Long Description</label>
-                                <textarea rows="4" cols="50" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" value="{{$courses->course_desc_long}}">
-                                <input type="textarea" class="form-control @error('courseDescLong') is-invalid @enderror" id="courseDescLong" name="courseDescLong" value="{{$courses->course_desc_long}}">
+                                <textarea rows="4" cols="50" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long">
                                     </textarea>
+                                <input type="text" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" value="{{$courses->course_desc_long}}">
+
                             </div>
 
                             <div class="form-group col-6">

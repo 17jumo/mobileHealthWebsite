@@ -15,7 +15,6 @@
                     <hr>
                 </div>
 
-
                 <div class="form-content">
                     <form method="POST" action="/coursedates/{{$coursedate->id}}">
                         @method('PUT')
@@ -24,8 +23,27 @@
                         <div class="row">
 
                             <div class="form-group col-12">
-                                ID&nbsp&nbsp{{$coursedate->id}}
+                                <label for="id">ID</label>
+                                <input type="text" class="form-control @error('id') is-invalid @enderror" id="id"
+                                       name="id" value="{{$coursedate->id}}" readonly>
                             </div>
+
+
+                            <div class="form-group col-6">
+                                <label for="course_id">Course ID</label>
+                                <input type="text" class="form-control @error('course_id') is-invalid @enderror" id="course_id"
+                                       name="course_id" value="{{$coursedate->course_id}}">
+                            </div>
+
+                            <div class="form-group col-6">
+                                space for Course Name
+                            </div>
+
+{{--                            <div class="form-group col-6">
+                                <label for="course_name">Course Name</label>
+                                <input type="text" class="form-control @error('course_name') is-invalid @enderror" id="course_name"
+                                       name="course_name" value="{{$coursedate->course_id}} Name not setup yet">
+                            </div>--}}
 
                             <div class="form-group col-6">
                                 <label for="scheduled_date">Course Date</label>
@@ -45,7 +63,6 @@
                                 <input type="text" class="form-control @error('venue') is-invalid @enderror" id="venue"
                                        name="venue" value="{{$coursedate->venue}}">
                             </div>
-
                         </div>
 
                         <input class="btn btn-primary" type="submit" value="Submit">

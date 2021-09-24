@@ -27,21 +27,149 @@
 </head>
 <body>
 
-<div class="container">
-    <h4>Mobile Health Administration</h4>
 
+<header>
+    <!--Navbar -->
+    <div class="bk">
+        <div class="container">
+            <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+                <a class="navbar-brand nav-img" id="logoimage" href="/"><img src="/images/MobileHealth1.png"
+                                                                             alt="Mobile Health Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent-333"
+                        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
+                    <ul class="navbar-nav mr-auto page-navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/show">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bookings/create">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactus">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/payment">Payment</a>
+                        </li>
+                        <li>
+                            <div class="secondary-button" style="text-align: right"><a href="/books/create">Book Now</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--/.Navbar -->
+
+
+</header>
+
+
+
+<main>
+<div>
+    @yield('content')
+</div>
+</main>
+
+
+<!-- Footer Starts Here -->
+<footer>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="course-container course-theme">
+                    <div class="course-container-box">
+                        <div class="footer-item">
+                            <div class="flex-column">
+                                <a href="/"> <img src="/images/MobileHealth1.png" alt="Company Logo" id="logoimage"
+                                                  class="logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-container-box">
+                        <div class="footer-item">
+
+                            <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
+                            <p>PO Box 2036, Queenstown</p>
+                            <p>
+                                <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
+                                <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
+                            </p>
+                            <p>
+                                <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
+                                        class="fa fa-envelope"></i>
+                                    firstaid@mobilehealth.co.nz</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="course-container-box">
+                        <div>
+                            <p>
+                                <a href="https://engagesafety.co.nz/" target="_blank">
+                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                         class="footer-media">&nbsp
+                                    www.engagesafety.co.nz
+                                </a>
+                            </p>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                               target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Ends Here -->
+
+        <!-- Sub Footer Starts Here -->
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021 Mobile Health | <a href="/courses">Design by:
+                                    SIT-STUDENTS-DESIGN-IT</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Footer Ends Here -->
+
+    <div class="container">
     <span style="float: right">
 
         @if (Auth::check())
             <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
-{{--
-            @if (Auth::check(isAdmin))
---}}
+            {{--
+                        @if (Auth::check(isAdmin))
+            --}}
             <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
-{{--
-            @endif
---}}
+            {{--
+                        @endif
+            --}}
         @else
             @if (Route::has('register'))
                 <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
@@ -53,11 +181,31 @@
             </form>
 
     </span>
-</div>
+    </div>
+</footer>
 
-<div>
-    @yield('content')
-</div>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Additional Scripts -->
+<script src="js/custom.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/flex-slider.js"></script>
+
+
+{{--<script language="text/Javascript">--}}
+{{--    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field--}}
+{{--    function clearField(t) {                   //declaring the array outside of the--}}
+{{--        if (!cleared[t.id]) {                      // function makes it static and global--}}
+{{--            cleared[t.id] = 1;  // you could use true and false, but that's more typing--}}
+{{--            t.value = '';         // with more chance of typos--}}
+{{--            t.style.color = '#fff';--}}
+{{--        }--}}
+{{--    }--}}
+{{--</script>--}}
 
 </body>
 </html>

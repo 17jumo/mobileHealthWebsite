@@ -24,6 +24,12 @@
 
                             <h6>ID</h6>
                             <p>{{$coursedate->id}}</p>
+                            <h6>Course ID</h6>
+                            <p>{{$coursedate->course_id}}</p>
+                            <h6>Course Name</h6>
+                            <p>course_name - Yet to show</p>
+                            <h6>Scheduled Date</h6>
+                            <p>{{$coursedate->scheduled_date}}</p>
                             <h6>Attendee Maximum </h6>
                             <p>{{$coursedate->max_attendee}}</p>
                             <h6>Venue</h6>
@@ -51,24 +57,31 @@
                         <td scope="row">{{$coursedate->id}}</td>
                     </tr>
                     <tr>
+                        <th scope="col">Course ID</th>
+                        <td scope="row">{{$coursedate->course_id}}</td>
+                    </tr>
+                    <tr>
                         <th scope="col">Course Name</th>
+                        <td scope="row">course_name - yet to show</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Course Date</th>
                         <th scope="row">{{$coursedate->scheduled_date}}</th>
                     </tr>
                     <tr>
-                        <th scope="col">Description Long</th>
-                        <td scope="row">{{$coursedate->venue}}</td>
+                        <th scope="col">Attendee Maximum</th>
+                        <th scope="row">{{$coursedate->max_attendee}}</th>
                     </tr>
                     <tr>
-                        <td colspan="2">
-                            @auth
-                                <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit Course Date</a>
-                            @endauth
-                            <a class="btn btn-warning mx-1" href="/coursedates/">View Course List</a>
-                        </td>
+                        <th scope="col">Venue</th>
+                        <td scope="row">{{$coursedate->venue}}</td>
                     </tr>
                     </tbody>
                 </table>
-
+                    @auth
+                        <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit Course Date</a>
+                    @endauth
+                    <a class="btn btn-warning mx-1" href="/coursedates/">View Course List</a>
             </div>
         </div>
     </div>

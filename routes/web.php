@@ -18,23 +18,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('courses', CourseController::class);
 
-Route::resource('courses', CourseController::class)->only(['index','create','store','edit','update',]);
-Route::resource('courses', CourseController::class)->only(['show','destroy'])->middleware('auth');
+Route::resource('courses', CourseController::class)->only(['show',]);
+Route::resource('courses', CourseController::class)->only(['index','create','store','edit','update','destroy'])->middleware('auth');
 
 Route::resource('coursedates', CoursedateController::class);
 
-Route::resource('coursedates', CoursedateController::class)->only(['index','create','store','edit','update',]);
-Route::resource('coursedates', CoursedateController::class)->only(['show','destroy'])->middleware('auth');
+/*Route::resource('coursedates', CoursedateController::class)->only([]);*/
+Route::resource('coursedates', CoursedateController::class)->only(['index','create','store','edit','update','show','destroy'])->middleware('auth');
 
 Route::resource('bookings', BookingController::class);
 
-Route::resource('bookings', BookingController::class)->only(['index','create','store','edit','update',]);
-Route::resource('bookings', BookingController::class)->only(['show','destroy'])->middleware('auth');
+Route::resource('bookings', BookingController::class)->only(['create','store',]);
+Route::resource('bookings', BookingController::class)->only(['index','edit','update','show','destroy'])->middleware('auth');
 
-//Route::get('/', function () {
-//    return view('courses.index');
-//});
-Route::get('/', [CourseController::class, 'index']);
+Route::get('/', function () {
+    return view('home.index');
+});
+
+/*Route::get('/', [CourseController::class, 'index']);*/
+/*Route::get('/', 'App\Http\Controllers\HomeController@index');*/
+Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
+/*JUST COMMENTING THIS
+
 Route::get('/courses/index', [CourseController::class, 'index']);
 Route::get('/courses/show/{{id}}', [CourseController::class, 'show']);
 Route::get('/courses/create', [CourseController::class, 'create']);
@@ -49,6 +54,7 @@ Route::get('/bookings/index', [BookingController::class, 'index']);
 Route::get('/bookings/show/{{id}}', [BookingController::class, 'show']);
 Route::get('/bookings/create', [BookingController::class, 'create']);
 Route::get('/bookings/{{id}}/edit', [BookingController::class, 'edit']);
+JUST COMMENTING THIS*/
 
 
 /*Route::get('/aboutus', function () {return view('home.aboutus');});
@@ -67,6 +73,6 @@ Route::get('/payment', function () {return view('home.payment');});*/
     return redirect('/courses');
 })->middleware(['auth'])->name('/');*/
 
-Route::get('/dashboard', 'App\Http\Controllers\CourseController@index');
+Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
 
 require __DIR__.'/auth.php';

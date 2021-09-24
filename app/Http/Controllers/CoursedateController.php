@@ -47,7 +47,7 @@ class CoursedateController extends Controller
         $coursedate->scheduled_date = request('scheduled_date');
         $coursedate->max_attendee = request('max_attendee');
         $coursedate->venue = request('venue');
-        /*$coursedate->course_id = Auth::course()->id;*/
+        $coursedate->course_id = Auth::course()->id;
 
         $coursedate->save();
 

@@ -26,7 +26,9 @@
                             <h4>Attendee Details</h4>
 
                             <div class="form-group col-12">
-                                ID&nbsp&nbsp{{$booking->id}}
+                                <label for="id">ID</label>
+                                <input type="text" class="form-control @error('id') is-invalid @enderror" id="id"
+                                       name="id" value="{{$booking->id}}" readonly>
                             </div>
 
                             <div class="row">

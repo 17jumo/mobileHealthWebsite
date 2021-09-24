@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    create test coursedates
-
     <div class="container">
             <h4>Mobile Health Administration</h4>
 
@@ -21,6 +19,21 @@
                     @csrf
                     <div class="checkout-form">
                         <h4>Add New Dates</h4>
+
+{{--                        <div class="form-group col-12">
+                            <label for="id">ID</label>
+                            <input type="text" class="form-control @error('id') is-invalid @enderror" id="id"
+                                   name="id" value="">
+                        </div>--}}
+
+                        <label for="cars">Choose a course:</label>
+
+                        <select name="course_id" id="course_id" class="form-control @error('id') is-invalid @enderror" >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
 
                         <div class="row">
                             <div class="col-md-6">

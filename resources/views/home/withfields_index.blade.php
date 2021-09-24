@@ -39,75 +39,31 @@
                 </div>
 
                 <div class="row ">
+                    @foreach($courses as $course)
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3>Course ipsum dolor</h3>
+                                    <h3>{{$course->courseName}}</h3>
                                 </div>
-                                <img class="card-img-top" src="/storage/images/FA6.png"
+                                <img class="card-img-top" src="/storage/images/{{$course->courseImage}}"
                                      alt="picture of course being held">
                                 <div class="card-body" style="height: 250px">
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                        </p>
-                                    <h5 style="text-align: right; color: #0a53be">$149</h5>
+                                    <p>{{$course->courseDescShort}}</p>
+                                    <h5 style="text-align: right; color: #0a53be">${{$course->price}}</h5>
 
                                     <div class="secondary-button" style="text-align: right">
                                         <span>
-                                        <a href="/courses/1">Show Course</a>
+                                        <a href="/courses/{{$course->id}}">Show Course</a>
                                         <a href="/books/create">Book course</a>
                                         </span>
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Course ipsum dolor</h3>
-                            </div>
-                            <img class="card-img-top" src="/storage/images/FA5.png"
-                                 alt="picture of course being held">
-                            <div class="card-body" style="height: 250px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                </p>
-                                <h5 style="text-align: right; color: #0a53be">$149</h5>
-
-                                <div class="secondary-button" style="text-align: right">
-                                        <span>
-                                        <a href="/courses/1">Show Course</a>
-                                        <a href="/books/create">Book course</a>
-                                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Course ipsum dolor</h3>
-                            </div>
-                            <img class="card-img-top" src="/storage/images/FA4.png"
-                                 alt="picture of course being held">
-                            <div class="card-body" style="height: 250px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ererum! Cum distinctio dolore eligendi explicabo fugiat mollitia nesciunt pariatur quod rerum totam.
-                                </p>
-                                <h5 style="text-align: right; color: #0a53be">$149</h5>
-
-                                <div class="secondary-button" style="text-align: right">
-                                        <span>
-                                        <a href="/courses/1">Show Course</a>
-                                        <a href="/books/create">Book course</a>
-                                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>

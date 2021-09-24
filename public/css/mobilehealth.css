@@ -4,7 +4,6 @@ body {
     font-family: 'Inter', sans-serif;
     transition: all 0.5s;
     background-color: #f9f9f9;
-
 }
 
 p {
@@ -113,6 +112,7 @@ a {
 .navbar {
     position: relative;
     margin-bottom: 0;
+    color: #4a4a4a;
 }
 
 /*Logo will expand on hoover*/
@@ -127,10 +127,12 @@ a {
     background-color: #000;
     border: #000 solid 1px;
 }*/
-.bk {
+
+/*.bk {
     background-color: #5D5C5C;
     border: #5d5c5c solid 1px;
-}
+}*/
+
 
 .navbar .navbar-brand {
     text-align: left;
@@ -161,7 +163,8 @@ a {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
-    color: #f9f9f9;
+/*    color: #f9f9f9;*/
+    color: #4a4a4a;
     transition: all 0.5s;
 }
 .navbar-dark .navbar-nav .nav-link:hover,
