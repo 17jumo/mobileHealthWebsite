@@ -134,11 +134,18 @@
 
 
                         <div class="form-button mt-3">
-                            <input class="btn btn-primary" type="submit" value="Submit Booking">
-                            <a class="btn btn-outline-dark" href="/">Cancel</a>
-                            @auth
-                                <a class="btn btn-outline-dark" href="/courses/">View Bookings</a>
-                            @endauth
+
+                                @auth
+                                <input class="btn btn-primary" type="submit" value="Submit Booking">
+                                <a class="btn btn-outline-dark" href="/">Cancel</a>
+
+                                @endauth
+                                    <span><div class="btn-book-secondary">
+                                        <a href="/bookings/create">Submit Booking</a>
+                                    </div>
+                                    <a class="btn btn-outline-dark" href="/">Cancel</a>
+                                        </span>
+
                         </div>
                     </div>
                 </div>

@@ -43,13 +43,12 @@
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card card-body" >
-                            <img src="/storage/images/FA14.jpg"
+                            <img src="/storage/images/FA6.jpg"
                                  alt="picture of course being held">
                             <h3>First Aid Basics</h3>
                             <p>Course description short course description short course description short</p>
                             <h5 style="text-align: right; color: #0a53be">
                                 1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
-                            <span>
                             <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
@@ -63,7 +62,7 @@
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card card-body " style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA13.jpg"
+                            <img src="/storage/images/FA6.jpg"
                                  alt="picture of course being held">
                             <h3>First Aid Refresher</h3>
                             <p>Course description short course description short course description short</p>
@@ -83,7 +82,7 @@
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card card-body" style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA10.jpg"
+                            <img src="/storage/images/FA6.jpg"
                                  alt="picture of course being held">
                             <h3>Some other course</h3>
                             <p>Course description short course description short course description short</p>
@@ -96,13 +95,14 @@
                                 <div class="btn-book-secondary">
                                         <a href="/bookings/create">Book</a>
                             </div>
-                            </span>
+                                </span>
+
                         </div>
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card card-body" style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA12.jpg"
+                            <img src="/storage/images/FA6.jpg"
                                  alt="picture of course being held">
                             <h3>And another course</h3>
                             <p>Course description short course description short course description short</p>
@@ -137,6 +137,7 @@
                     <p>Mitre10, Skyline, other companies (show logos)</p>
                     <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
                     <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
+                        <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
                     </div>
                 </div>
             </div>

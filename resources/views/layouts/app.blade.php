@@ -8,7 +8,7 @@
     {{--    Google fonts--}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+{{--    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
@@ -34,45 +34,47 @@
     <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div class="container">
 
-                <a class="navbar-brand d-flex w-50 me-auto nav-img" id="logoimage" href="/"><img src="/images/MobileHealth1.png"
-                                                                             alt="Mobile Health Logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent-333"
-                        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
-{{--            </a>--}}
-            {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+            <a class="navbar-brand d-flex w-50 me-auto nav-img" id="logoimage" href="/"><img
+                    src="/images/MobileHealth1.png"
+                    alt="Mobile Health Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-333"
+                    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>--}}
-            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
+                {{--            </a>--}}
+                {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                    <span class="navbar-toggler-icon"></span>
+                </button>--}}
+                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home/show">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/bookings/create">Bookings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/aboutus">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contactus">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/payment">Payment</a>
-                    </li>
-                    <li>
-                        <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
-                        </div>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/show">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bookings/create">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/aboutus">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/contactus">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/payment">Payment</a>
+                        </li>
+                        <li>
+                            <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
+                            </div>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
