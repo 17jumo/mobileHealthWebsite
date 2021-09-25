@@ -140,11 +140,8 @@
                                 <a class="btn btn-outline-dark" href="/">Cancel</a>
 
                                 @endauth
-                                    <span><div class="btn-book-secondary">
-                                        <a href="/bookings/create">Submit Booking</a>
-                                    </div>
-                                    <a class="btn btn-outline-dark" href="/">Cancel</a>
-                                        </span>
+                                <a class="btn btn-info" href="/bookings/create">Submit Booking</a>
+                                <a class="btn btn-outline-dark" href="/">Cancel</a>
 
                         </div>
                     </div>

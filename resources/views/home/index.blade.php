@@ -47,8 +47,7 @@
                                  alt="picture of course being held">
                             <h3>First Aid Basics</h3>
                             <p>Course description short course description short course description short</p>
-                            <h5 style="text-align: right; color: #0a53be">
-                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
                             <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
@@ -66,9 +65,7 @@
                                  alt="picture of course being held">
                             <h3>First Aid Refresher</h3>
                             <p>Course description short course description short course description short</p>
-                            <h5 style="text-align: right; color: #0a53be">
-                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
-
+                                <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
                             <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
@@ -86,8 +83,7 @@
                                  alt="picture of course being held">
                             <h3>Some other course</h3>
                             <p>Course description short course description short course description short</p>
-                            <h5 style="text-align: right; color: #0a53be">
-                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
                             <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
@@ -106,8 +102,7 @@
                                  alt="picture of course being held">
                             <h3>And another course</h3>
                             <p>Course description short course description short course description short</p>
-                            <h5 style="text-align: right; color: #0a53be">
-                                1 day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$149</h5>
+                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
                             <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
@@ -134,10 +129,11 @@
                         <hr>
                     </div >
                     <div class="referencelogo">
-                    <p>Mitre10, Skyline, other companies (show logos)</p>
-                    <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
-                    <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
+                        <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
+                        <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
                         <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
+                        <img src="/images/rps-logo.jpg" alt="Remarkables Primary School Logo">
+                        <img src="/images/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
                     </div>
                 </div>
             </div>

@@ -4,9 +4,9 @@
     <div class="container">
         <h4>Mobile Health Administration</h4>
 
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
+        <a class="btn btn-outline-primary mx-1" href="/">View Courses</a>
+        <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
+        <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
 
         <div class="row">
             <div class="col-md-12">
@@ -16,7 +16,7 @@
                 </div>
 
                 <p>
-                    <a class="btn btn-primary mx-1 "
+                    <a class="btn btn-outline-primary mx-1 "
                        href="/courses/create">Create new courses</a>
                 </p>
 
