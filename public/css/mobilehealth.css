@@ -134,13 +134,13 @@ a {
     margin-top: 15px;
 }
 
-/* Pre Header Style */
-#pre-header {
+/* Notification Style */
+#notification {
     background-color: #0c46ab;
     text-align: center;
-/*    font-family: 'MonteCarlo', cursive;*/
 }
-#pre-header span {
+
+#notification span {
     color: #fff;
     font-size: 1em;
     padding: 5px 0;
@@ -243,7 +243,7 @@ color: #4a4a4a;
 }
 /* Banner Style */
 .banner {
-    margin-top: 0;
+    margin-top: 0.5rem;
     background-image: url(../images/banner-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -755,10 +755,10 @@ color: #4a4a4a;
 
 
 
-/* About Us Style */
+/*!* About Us Style *!
 .about-page {
     margin-bottom: 80px;
-}
+}*/
 .about-page .right-content h4 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -1163,8 +1163,11 @@ color: #4a4a4a;
     width: 70px;
 }
 
-.card-body {
+.card-body-align {
     text-align: center;
     align-items: center;
 }
 
+.form-control {
+    margin: 0 0 .5rem 0;
+}

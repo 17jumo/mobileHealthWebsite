@@ -8,7 +8,7 @@
     {{--    Google fonts--}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{--    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">--}}
+    {{--    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
@@ -81,9 +81,19 @@
 </header>
 
 <main>
-    <div>
-        @yield('content')
-    </div>
+    @auth
+        <div class="container">
+            <h4>Mobile Health Administration</h4>
+
+            <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
+            <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
+            <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
+            @endauth
+
+            <div>
+                @yield('content')
+            </div>
+        </div>
 </main>
 
 

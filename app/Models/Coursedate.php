@@ -9,4 +9,8 @@ class Coursedate extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    protected $casts = [
+        'scheduled_date' => 'datetime'
+    ];
 }

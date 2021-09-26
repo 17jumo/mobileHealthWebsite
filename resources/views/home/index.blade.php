@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
+    @if (Auth::check())
+        </div>
+</div>
+        @endif
     <!-- Page Content -->
     <!-- Banner Starts Here -->
     <div class="banner" alt="First Aid Course Image">
@@ -22,7 +26,7 @@
         </div>
     </div>
 
-    <div id="pre-header">
+    <div id="notification">
         <span>We can run courses at your workplace to meet your needs. Please call us for more information.</span>
     </div>
     <!-- Banner Ends Here -->
@@ -40,15 +44,16 @@
 
 
                 <div class="row ">
+                    @foreach($courses as $course)
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card card-body" >
-                            <img src="/storage/images/FA6.jpg"
-                                 alt="picture of course being held">
-                            <h3>First Aid Basics</h3>
-                            <p>Course description short course description short course description short</p>
-                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
-                            <span>
+                            <div class="card card-body card-body-align">
+                                <img src="/storage/images/FA6.jpg"
+                                     alt="picture of course being held">
+                                <h3>{{$course->course_name}}</h3>
+                                <p>{{$course->course_desc_short}}</p>
+                                <h5>{{$course->duration}} &nbsp &nbsp &nbsp &nbsp ${{$course->price}}</h5>
+                                <span>
                                 <div class="btn-readmore">
                                         <a href="/courses/1">Read more</a>
                             </div>
@@ -56,68 +61,13 @@
                                         <a href="/bookings/create">Book</a>
                             </div>
                             </span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card card-body " style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA6.jpg"
-                                 alt="picture of course being held">
-                            <h3>First Aid Refresher</h3>
-                            <p>Course description short course description short course description short</p>
-                                <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
-                            <span>
-                                <div class="btn-readmore">
-                                        <a href="/courses/1">Read more</a>
-                            </div>
-                                <div class="btn-book-secondary">
-                                        <a href="/bookings/create">Book</a>
-                            </div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card card-body" style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA6.jpg"
-                                 alt="picture of course being held">
-                            <h3>Some other course</h3>
-                            <p>Course description short course description short course description short</p>
-                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
-                            <span>
-                                <div class="btn-readmore">
-                                        <a href="/courses/1">Read more</a>
-                            </div>
-                                <div class="btn-book-secondary">
-                                        <a href="/bookings/create">Book</a>
-                            </div>
-                                </span>
-
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="card card-body" style="text-align: center; align-items: center">
-                            <img src="/storage/images/FA6.jpg"
-                                 alt="picture of course being held">
-                            <h3>And another course</h3>
-                            <p>Course description short course description short course description short</p>
-                            <h5>1 day &nbsp &nbsp &nbsp &nbsp $149</h5>
-                            <span>
-                                <div class="btn-readmore">
-                                        <a href="/courses/1">Read more</a>
-                            </div>
-                                <div class="btn-book-secondary">
-                                        <a href="/bookings/create">Book</a>
-                            </div>
-                            </span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
-
-            {{--Reviews starts here--}}
+            {{--Reviews start here--}}
 
             <div class="row">
                 <div class="col-md-12 ">
@@ -127,13 +77,14 @@
                             including:
                         </h4>
                         <hr>
-                    </div >
+                    </div>
                     <div class="referencelogo">
                         <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
                         <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
                         <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
                         <img src="/images/rps-logo.jpg" alt="Remarkables Primary School Logo">
                         <img src="/images/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
+                        <img src="/images/bluekanulogo.jpg" alt="Blue Kanu Queenstown Logo">
                     </div>
                 </div>
             </div>

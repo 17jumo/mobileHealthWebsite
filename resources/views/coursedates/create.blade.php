@@ -1,66 +1,52 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
-            <h4>Mobile Health Administration</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <h2>Add New Dates</h2>
+                <hr>
+            </div>
 
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
+            <div class="form-content">
+            <form method="POST" action="/coursedates">
+                @csrf
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Coursedates</h2>
-                    <hr>
-                </div>
-
-                <form method="POST" action="/coursedates">
-                    @csrf
-                    <div class="checkout-form">
-                        <h4>Add New Dates</h4>
-
-{{--                        <div class="form-group col-12">
-                            <label for="id">ID</label>
-                            <input type="text" class="form-control @error('id') is-invalid @enderror" id="id"
-                                   name="id" value="">
-                        </div>--}}
-
-                        <label for="cars">Choose a course:</label>
-
-                        <select name="course_id" id="course_id" class="form-control @error('id') is-invalid @enderror" >
+                    <div class="col-md-6">
+                        <label for="course_id">Choose a course:</label>
+                        <select name="course_id" id="course_id" class="form-control @error('id') is-invalid @enderror">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="scheduled_date">Scheduled Date</label>
-                                <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
-                                       id="scheduled_date" name="scheduled_date" value="" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="max_attendee">Maximum Attendees</label>
-                                <input type="text" class="form-control @error('max_attendee') is-invalid @enderror"
-                                       id="max_attendee" name="max_attendee" value="" required>
-                            </div>
-                            <div class="col-md-12">
-                                <label for="venue">Venue</label>
-                                <input type="text" class="form-control @error('venue') is-invalid @enderror"
-                                       id="venue" name="venue" value="18 Glenda Drive, Frankton, Queenstown" required>
-                            </div>
-
-                            <div class="form-button mt-3">
-                                <input class="btn btn-primary" type="submit" value="Submit Booking">
-                                <a class="btn btn-warning" href="/coursedates">Cancel</a>
-                            </div>
-                        </div>
                     </div>
-                </form>
-            </div>
+
+                    <div class="col-md-6">
+                        <label for="scheduled_date">Scheduled Date</label>
+                        <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
+                               id="scheduled_date" name="scheduled_date" value="" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="max_attendee">Maximum Attendees</label>
+                        <input type="text" class="form-control @error('max_attendee') is-invalid @enderror"
+                               id="max_attendee" name="max_attendee" value="" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="venue">Venue</label>
+                        <input type="text" class="form-control @error('venue') is-invalid @enderror"
+                               id="venue" name="venue" value="18 Glenda Drive, Frankton, Queenstown" required>
+                    </div>
+
+                    <div class="form-button mt-3">
+                        <input class="btn btn-primary" type="submit" value="Save">
+                        <a class="btn btn-warning" href="/coursedates">Cancel</a>
+                    </div>
+                </div>
         </div>
+        </form>
+    </div>
+    </div>
     </div>
 
 

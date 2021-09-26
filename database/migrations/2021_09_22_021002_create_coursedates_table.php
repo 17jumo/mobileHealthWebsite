@@ -18,8 +18,8 @@ class CreateCoursedatesTable extends Migration
             $table->timestamps();
 
             $table->date	('scheduled_date');
-            $table->integer	('max_attendee');
-            $table->string ('venue');
+            $table->integer	('max_attendee')->default(10);
+            $table->string ('venue') ->default("18 Glenda Drive, Frankton, Queenstown");
 
             $table->foreignID ('course_id')->contrained();
         });

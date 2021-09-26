@@ -1,23 +1,20 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
+    @if (Auth::check())
+    @else
+        <div class="container">
+            @endif
 
-        @if (Auth::check())
-        <h4>Mobile Health Administration</h4>
-
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
-        @endif
-
-
-        <div class="about-page">
+            {{--        <div class="about-page">--}}
             <div class="row col-md-12 section-heading">
-                <h2>Course Booking form</h2>
+                <h2>Create booking</h2>
                 <hr>
             </div>
             {{--<div class="row form-body form-holder form-content form-items">--}}
+            <div class="row col-md-12">
+                <p>Please complete the form below and make a payment to secure your place on a course.</p>
+            </div>
 
             <form method="POST" action="/bookings">
                 @csrf
@@ -55,12 +52,12 @@
                     <h4>Attendee Details</h4>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="first_name">First Name *</label>
+                            <label for="first_name">First name*</label>
                             <input type="text" class="form-control @error('first_name') is-invalid @enderror"
                                    name="first_name" id="first_name" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="last_name">Last Name *</label>
+                            <label for="last_name">Last name*</label>
                             <input type="text" class="form-control @error('last_name') is-invalid @enderror"
                                    id="last_name" name="last_name" value="" required>
                         </div>
@@ -71,7 +68,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="phone">Phone Number (mobile preferred)*</label>
+                            <label for="phone">Phone number (mobile preferred)*</label>
                             <input class="form-control" type="text" name="phone">
                         </div>
 
@@ -83,9 +80,6 @@
                                    pattern="\d{4}-\d{2}-\d{2}"
                                    required>
                         </div>
-                        <div class="col-md-6">
-
-                        </div>
 
                         <div class="col-md-6">
                             <label for="gender" class="form-control-label">Gender*</label>
@@ -93,23 +87,24 @@
                                     required>
                                 <option value="Male">Male</option>
                                 <option value="female">Female</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="company_name">Company Name *</label>
+                            <label for="company_name">Company Name</label>
                             <input type="text" class="form-control @error('company_name') is-invalid @enderror"
-                                   name="company_name" id="company_name" required>
+                                   name="company_name" id="company_name">
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_street">Street Address *</label>
+                            <label for="add_street">Street*</label>
                             <input type="text" class="form-control @error('add_street') is-invalid @enderror"
                                    name="add_street" id="add_street" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_suburb">Suburb *</label>
+                            <label for="add_suburb">Suburb*</label>
                             <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
                                    name="add_suburb" id="add_suburb" required>
                         </div>
@@ -121,34 +116,31 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_postcode">Postcode *</label>
+                            <label for="add_postcode">Postcode*</label>
                             <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
                                    name="add_postcode" id="add_postcode" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_country">Country *</label>
+                            <label for="add_country">Country*</label>
                             <input type="text" class="form-control @error('add_country') is-invalid @enderror"
                                    name="add_country" id="add_country" required>
                         </div>
 
-
                         <div class="form-button mt-3">
-
-                                @auth
+                            @if (Auth::check())
                                 <input class="btn btn-primary" type="submit" value="Submit Booking">
-                                <a class="btn btn-outline-dark" href="/">Cancel</a>
-
-                                @endauth
+                                <a class="btn btn-outline-dark" href="/bookings">Cancel</a>
+                            @else
                                 <a class="btn btn-info" href="/bookings/create">Submit Booking</a>
                                 <a class="btn btn-outline-dark" href="/">Cancel</a>
-
+                            @endif
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
+        </div>
 
 @endsection
 

@@ -1,13 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
-        <h4>Mobile Health Administration</h4>
-
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
@@ -16,7 +9,7 @@
                 </div>
 
                 <p>
-                    <a class="btn btn-primary mx-1 "
+                    <a class="btn btn-outline-primary mx-1 "
                        href="/coursedates/create">Create new dates</a>
                 </p>
 
@@ -39,7 +32,7 @@
                             <th scope="row">{{$coursedate->id}}</th>
                             <th>{{$coursedate->course_id}}</th>
                             <th>Yet to show</th>
-                            <td>{{$coursedate->scheduled_date}}</td>
+                            <td>{{$coursedate->scheduled_date->format('d-m-Y')}}</td>
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>
                             <td>

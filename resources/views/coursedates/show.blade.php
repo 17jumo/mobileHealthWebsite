@@ -1,47 +1,37 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
-        <h4>Mobile Health Administration</h4>
-
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Show Coursedates</h2>
+                    <h2>Course dates</h2>
                     <hr>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
+                @foreach($coursedates as $coursedate)
 
-                            @method('PUT')
-                            @csrf
+                            <div class="card" style="width: 18rem">
+                                <div class="card-body" >
+                                    @method('PUT')
+                                    @csrf
+                                    <h4 class="card-title" style="text-align: left">First Aid Course</h4>
+                                    <h6 class="card-title">Course Date: </h6>
+                                    <p class="card-text">{{$coursedate->scheduled_date->format('d-m-Y')}}</p>
+                                    <h6 class="card-title">Places available: </h6>
+                                    <p class="card-text">{{$coursedate->max_attendee}}</p>
+                                    <h6 class="card-title">Venue: </h6>
+                                    <p class="card-text">{{$coursedate->venue}}</p>
 
-                            <h6>ID</h6>
-                            <p>{{$coursedate->id}}</p>
-                            <h6>Course ID</h6>
-                            <p>{{$coursedate->course_id}}</p>
-                            <h6>Course Name</h6>
-                            <p>course_name - Yet to show</p>
-                            <h6>Scheduled Date</h6>
-                            <p>{{$coursedate->scheduled_date}}</p>
-                            <h6>Attendee Maximum </h6>
-                            <p>{{$coursedate->max_attendee}}</p>
-                            <h6>Venue</h6>
-                            <p>{{$coursedate->venue}}</p>
-
-                        </div>
-                    </div>
-                    @auth
-                        <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit Course Date</a>
-                    @endauth
-                    <a class="btn btn-warning mx-1" href="/coursedates/">View Course List</a>
-                </div>
+                                    @if (Auth::check())
+                                        <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
+                                    <a class="btn btn-warning mx-1" href="/coursedates/">Cancel</a>
+                                    @else
+                                        <a class="btn btn-book-secondary mx-1" href="/bookings">Select date</a>
+                                        <a class="btn btn-warning mx-1" href="/">Cancel</a>
+                                            @endif
+                                </div>
+                            </div>
+                @endforeach
 
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -66,7 +56,7 @@
                         </tr>
                         <tr>
                             <th scope="col">Course Date</th>
-                            <th scope="row">{{$coursedate->scheduled_date}}</th>
+                            <th scope="row">{{$coursedate->scheduled_date->format('d-m-Y')}}</th>
                         </tr>
                         <tr>
                             <th scope="col">Attendee Maximum</th>
@@ -80,12 +70,11 @@
                     </table>
                 </div>
                 @auth
-                    <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit Course Date</a>
+                    <a class="btn btn-primary" href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
                 @endauth
-                <a class="btn btn-warning mx-1" href="/coursedates/">View Course List</a>
+                <a class="btn btn-warning mx-1" href="/coursedates/">Cancel</a>
             </div>
         </div>
     </div>
-
 
 @endsection

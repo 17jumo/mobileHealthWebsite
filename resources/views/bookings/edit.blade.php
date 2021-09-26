@@ -1,17 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
-        <h4>Mobile Health Administration</h4>
-
-        <a class="btn btn-primary mx-1" href="/">View Courses</a>
-        <a class="btn btn-primary mx-1 " href="/coursedates">View Course Dates</a>
-        <a class="btn btn-primary mx-1 " href="/bookings">View Bookings</a>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Edit course dates</h2>
+                    <h2>Edit booking</h2>
                     <hr>
                 </div>
 
@@ -49,7 +42,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="phone">Phone Number (mobile preferred)*</label>
+                                    <label for="phone">Phone number (mobile preferred)*</label>
                                     <input class="form-control" type="text" name="phone" value="{{$booking->phone}}" required>
                                 </div>
 
@@ -62,16 +55,14 @@
                                            value="{{$booking->dob}}"
                                            required>
                                 </div>
-                                <div class="col-md-6">
-
-                                </div>
 
                                 <div class="col-md-6">
                                     <label for="gender" class="form-control-label">Gender*</label>
                                     <select name="gender" id="gender" class="form-control"
                                             value="{{$booking->gender}}" required>
                                         <option value="Male">Male</option>
-                                        <option value="female">Female</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
 
@@ -113,7 +104,7 @@
 
 
                                 <div class="form-button mt-3">
-                                    <input class="btn btn-primary" type="submit" value="Submit Booking">
+                                    <input class="btn btn-primary" type="submit" value="Save">
                                     <a class="btn btn-warning" href="/bookings/">Cancel</a>
                                 </div>
                             </div>

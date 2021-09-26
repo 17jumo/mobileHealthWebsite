@@ -26,6 +26,8 @@ class CourseController extends Controller
      */
     public function create()
     {
+/*        $courses = "xxx";
+        dd($courses);*/
         return view('courses.create');
     }
 
@@ -41,11 +43,11 @@ class CourseController extends Controller
             'course_name' => 'required',
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
-            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'price' => 'required',
             'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
-            'price' => 'required',
+            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
         ]);
 
         $course = new course();
