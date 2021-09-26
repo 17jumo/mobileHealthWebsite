@@ -22,7 +22,7 @@ class CourseFactory extends Factory
     public function definition()
     {
         return [
-            'course_name' => $this->faker->realText(50),
+            'course_name' => $this->faker->realText(25),
             'course_desc_long' => $this->faker->paragraph(1),
             'course_desc_short' => $this->faker->paragraph(2),
             'price' => $this->faker-> randomFloat($nbMaxDecimals = 2, $min = 100, $max = 200),

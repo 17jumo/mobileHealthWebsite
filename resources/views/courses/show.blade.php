@@ -38,7 +38,7 @@
                             <div class="btn-book-secondary">
                                 <a href="/bookings/create">Book now</a>
                             </div>
-                            <div class="btn-readmore">
+                            <div class="btn-other">
                                 <a href="/">Cancel</a>
                             </div>
                         </span>

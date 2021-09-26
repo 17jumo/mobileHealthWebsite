@@ -34,7 +34,7 @@
     <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div class="container">
 
-            <a class="navbar-brand d-flex w-50 me-auto nav-img" id="logoimage" href="/"><img
+            <a class="navbar-brand d-flex w-25 me-auto nav-img" id="logoimage" href="/"><img
                     src="/images/MobileHealth1.png"
                     alt="Mobile Health Logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -84,10 +84,35 @@
     @auth
         <div class="container">
             <h4>Mobile Health Administration</h4>
+            <div style="float: right">
+                @if (Auth::check())
+                    <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">Logout</a>
+                    {{--
+                                @if (Auth::check(isAdmin))
+                    --}}
+                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
+                        Administrator</a>
+                    {{--
+                                @endif
+                    --}}
+                @else
+                    @if (Route::has('register'))
+                        <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
+                            Administrator</a>
+                    @endif
+                @endif
+                <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
 
             <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
+
+
             @endauth
 
             <div>
@@ -100,43 +125,40 @@
 <!-- Footer Starts Here -->
 <footer>
 
-    <div class="footer">
+    <div class="footer footer-item">
         <div class="container">
             <div class="row">
-                <div class="course-container course-theme">
-                    <div class="course-container-box">
+                <div class="footer-container">
+                    <div class="flex-column footer-flex1">
                         <div class="footer-item">
-                            <div class="flex-column">
-                                <a href="/"> <img src="/images/MobileHealth1.png" alt="Company Logo"
-                                                  title="Mobile Health Logo" id="logoimage"
-                                                  class="logo"></a>
-                            </div>
+                        <a href="/">
+                            <img src="/images/MobileHealth1.png" alt="Company Logo"
+                                          title="Mobile Health Logo" id="logoimage"
+                                          class="logo">
+                        </a>
                         </div>
                     </div>
-                    <div class="course-container-box">
-                        <div class="footer-item">
+                    <div class="flex-column footer-flex2">
+                        <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
+                        <p>PO Box 2036, Queenstown</p>
+                        <p>
+                            <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
+                            <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
+                        </p>
+                        <p>
+                            <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
+                                    class="fa fa-envelope"></i>
+                                firstaid@mobilehealth.co.nz</a>
+                        </p>
 
-                            <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
-                            <p>PO Box 2036, Queenstown</p>
-                            <p>
-                                <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
-                                <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
-                            </p>
-                            <p>
-                                <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
-                                        class="fa fa-envelope"></i>
-                                    firstaid@mobilehealth.co.nz</a>
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                <a href="https://engagesafety.co.nz/" target="_blank">
-                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                         class="footer-media">&nbsp
-                                    www.engagesafety.co.nz
-                                </a>
-                            </p>
-                        </div>
+                        <p>
+                            <a href="https://engagesafety.co.nz/" target="_blank">
+                                <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                     class="footer-media">&nbsp
+                                www.engagesafety.co.nz
+                            </a>
+                        </p>
+
                         <div class="social-icons">
                             <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
                                target="_blank">
@@ -146,42 +168,75 @@
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
+
                     </div>
-                    {{--<div class="course-container-box">
-                        <div>
-                            <p>
-                                <a href="https://engagesafety.co.nz/" target="_blank">
-                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                         class="footer-media">&nbsp
-                                    www.engagesafety.co.nz
-                                </a>
-                            </p>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
-                               target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>--}}
                 </div>
             </div>
+        {{--<div class="course-container-box">
+            <div class="footer-item">
+
+                <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
+                <p>PO Box 2036, Queenstown</p>
+                <p>
+                    <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
+                    <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
+                </p>
+                <p>
+                    <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
+                            class="fa fa-envelope"></i>
+                        firstaid@mobilehealth.co.nz</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="https://engagesafety.co.nz/" target="_blank">
+                        <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                             class="footer-media">&nbsp
+                        www.engagesafety.co.nz
+                    </a>
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                   target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
         </div>
+        --}}{{--<div class="course-container-box">
+            <div>
+                <p>
+                    <a href="https://engagesafety.co.nz/" target="_blank">
+                        <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                             class="footer-media">&nbsp
+                        www.engagesafety.co.nz
+                    </a>
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                   target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>--}}{{--
+    </div>
+</div>--}}
 
         <!-- Footer Ends Here -->
 
-        <!-- Sub Footer Starts Here -->
-        <div class="sub-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2021 Mobile Health | <a href="/courses">Design by:
-                                    SIT-SS-DESIGN</a></p>
-                        </div>
+            <!-- Sub Footer Starts Here -->
+            <div class="sub-footer">
+                <div class="row col-md-12">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021 Mobile Health | <a href="/courses">Design by:
+                                SIT-SS-DESIGN</a></p>
                     </div>
                 </div>
             </div>
@@ -189,31 +244,31 @@
     </div>
     <!-- Sub Footer Ends Here -->
 
-    <div class="container">
-    <span style="float: right">
+    {{--    <div class="container">
+        <span style="float: right">
 
-        @if (Auth::check())
-            <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">Logout</a>
-            {{--
-                        @if (Auth::check(isAdmin))
-            --}}
-            <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
-            {{--
-                        @endif
-            --}}
-        @else
-            @if (Route::has('register'))
-                <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
+            @if (Auth::check())
+                <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">Logout</a>
+                --}}{{--
+                            @if (Auth::check(isAdmin))
+                --}}{{--
                 <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
+                --}}{{--
+                            @endif
+                --}}{{--
+            @else
+                @if (Route::has('register'))
+                    <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
+                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
+                @endif
             @endif
-        @endif
-            <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
+                <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
 
-    </span>
-    </div>
+        </span>
+        </div>--}}
 </footer>
 
 <!-- Bootstrap core JavaScript -->
