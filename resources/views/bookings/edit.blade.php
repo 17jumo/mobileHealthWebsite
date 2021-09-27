@@ -18,17 +18,17 @@
 
                             <h4>Course Details</h4>
 
-                            <div class="col-md-6">
+{{--                            <div class="col-md-6">
                                 <label for="course_total">Course Name</label>
                                 <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                        name="course_total" id="course_total" value="{{$booking->course_total}}" required>
-                            </div>
+                            </div>--}}
 
-                            <div class="col-md-6">
+{{--                            <div class="col-md-6">
                                 <label for="course_total">Course Date</label>
                                 <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                        name="course_total" id="course_total" value="{{$booking->course_total}}" required>
-                            </div>
+                            </div>--}}
 
                             <div class="col-md-6">
                                 <label for="course_total">Course total</label>

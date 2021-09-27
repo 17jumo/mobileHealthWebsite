@@ -19,46 +19,38 @@
                 @csrf
                 <div class="checkout-form">
                     <h4>Course Details</h4>
+{{--
 
-                    <h6>First Aid Course</h6>
-                    <h6>29 December 2021</h6>
-                    {{--
-                                        <div class="col-md-12">
-                                            <label for="course">Course</label>
-                                            <select id="course" name="course" class="form-control" required>
-                                                <option value="FirstAid">First Aid Course</option>
-                                                <option value="FirstAidRefresh">First Aid Refresher</option>
-                                                <option value="ManageEmergency">Managing Emergency Situations
-                                                </option>
-                                                <option value="ProvideLife">Provide Life Support</option>
-                                            </select>
-                                        </div>--}}
+                    <div class="col-md-12">
+                        <label for="course_name">Course</label>
+                        <select id="course_name" name="course_name" class="form-control"
+                                @error('course_total') is-invalid @enderror required>
+                            <option value="FirstAid">First Aid Course</option>
+                            <option value="FirstAidRefresh">First Aid Refresher</option>
+                        </select>
+                    </div>
 
-                    {{--<div class="col-md-12">
-                        <label for="coursedate" class="form-control-label">Select course
+                    <div class="col-md-12">
+                        <label for="course_date" class="form-control-label">Select course
                             date*</label>
-                        <select name="coursedate" id="coursedate" class="form-control"
+                        <select name="course_date" id="course_date"
+                                class="form-control @error('course_total') is-invalid @enderror"
                                 required>
                             <option value="date1">Thursday 7 October 2021</option>
                             <option value="date1">Thursday 14 October 2021</option>
-                            <option value="date1">Thursday 21 October 2021</option>
-                            <option value="date1">Thursday 28 October 2021</option>
-                            <option value="date1">Thursday 4 November 2021</option>
-                            <option value="date1">Thursday 11 November 2021</option>
                         </select>
-                    </div>--}}
-
-                    <div class="row">
-
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <label for="course_total">Course total *</label>
-                            <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                                   name="course_total" id="course_total" value="" required>
-                        </div>
                     </div>
 
-                    <h4>Attendee Details</h4>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <label for="course_total">Course Price</label>
+                        <input type="number" class="form-control @error('course_total') is-invalid @enderror"
+                               name="course_total" id="course_total" value="" required>
+                    </div>
+
+--}}
+
                     <div class="row">
+                        <h4>Attendee Details</h4>
 
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="first_name">First Name *</label>
@@ -136,11 +128,12 @@
                                    name="add_country" id="add_country" required>
                         </div>
 
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+{{--                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <input type="checkbox" id="terms" name="terms" value="">
-                            <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms">terms
-                                    and conditions</a></label><br>
-                        </div>
+                            <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms"
+                                                                                    target="_blank">terms and
+                                    conditions</a></label><br>
+                        </div>--}}
 
                         <div class="form-button mt-3">
                             @if (Auth::check())

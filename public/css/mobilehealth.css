@@ -72,6 +72,15 @@ a {
     text-decoration: underline;
 }
 
+/*T&C CONTRACT PAGE*/
+#contract h4 {
+    margin-top: 2rem;
+}
+
+#contract p {
+    padding-bottom: 1rem;
+}
+
 /* BUTTON STYLE */
 .btn-book-primary a {
     background-color: #8BC53E;
@@ -144,6 +153,13 @@ a {
 }
 
 .btn-info:hover {
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.btn-info:active {
     background-color: #8BC53E;
     border-color: #8BC53E;
     color: #FFFFFF;
@@ -412,7 +428,7 @@ a {
     font-size: .8em;
     line-height: 18px;
 }
-.footer a 
+.footer a {
     font-size: 1em;
 }
 

@@ -31,6 +31,11 @@
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" href="/css/mobilehealth.css">
 
+
+{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}
 </head>
 <body>
 <header>
@@ -53,7 +58,18 @@
                 {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
                     <span class="navbar-toggler-icon"></span>
                 </button>--}}
-                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+
+{{--                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>--}}
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+{{--                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">--}}
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
                         <li class="nav-item">
@@ -70,9 +86,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/home/contactus">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/payment">Payment</a>
                         </li>
                         <li>
                             <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
@@ -164,10 +177,7 @@
                                     class="fa fa-envelope"></i>
                                 firstaid@mobilehealth.co.nz</a>
                         </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="col">
+
                         <p>
                             <a href="https://engagesafety.co.nz/" target="_blank">
                                 <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
@@ -186,6 +196,30 @@
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col">
+
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                               target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
+                               target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <p>
+                            <a href="https://engagesafety.co.nz/" target="_blank">
+                                <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                     class="footer-media">&nbsp
+                                www.engagesafety.co.nz
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>

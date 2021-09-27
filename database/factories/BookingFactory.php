@@ -35,7 +35,9 @@ class BookingFactory extends Factory
             'add_city' => $this->faker->state,
             'add_postcode' => $this->faker->postcode,
             'add_country' => $this->faker->country,
-            'course_total' => $this->faker->numberBetween(100,400),
+/*            'course_name' => $this->faker->word(),
+            'course_date' => $this->faker->date(),
+            'course_total' => $this->faker->numberBetween(100,400),*/
 
             'created_at' => now(),
             'updated_at' => now(),

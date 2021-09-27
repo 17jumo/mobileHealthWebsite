@@ -53,7 +53,9 @@ class BookingController extends Controller
             'add_city' => '',
             'add_postcode' => '',
             'add_country' => '',
-            'course_total' => '',
+/*            'course_name' => '',
+            'course_date' => '',
+            'course_total' => '',*/
         ]);
 
         $booking = new booking();
@@ -70,7 +72,9 @@ class BookingController extends Controller
         $booking->add_city = request('add_city');
         $booking->add_postcode = request('add_postcode');
         $booking->add_country = request('add_country');
-        $booking->course_total = request('course_total');
+/*        $booking->course_name = request('course_name');
+        $booking->course_date = request('course_date');
+        $booking->course_total = request('course_total');*/
 
         $booking->save();
 
@@ -121,7 +125,9 @@ class BookingController extends Controller
             'add_city' => '',
             'add_postcode' => '',
             'add_country' => '',
-            'course_total' => '',
+/*            'course_name' => '',
+            'course_date' => '',
+            'course_total' => '',*/
         ]);
 
         $booking->update($request->all());
