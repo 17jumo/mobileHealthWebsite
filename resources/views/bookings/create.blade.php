@@ -6,12 +6,11 @@
         <div class="container">
             @endif
 
-            {{--        <div class="about-page">--}}
             <div class="row col-md-12 section-heading">
                 <h2>Create booking</h2>
                 <hr>
             </div>
-            {{--<div class="row form-body form-holder form-content form-items">--}}
+
             <div class="row col-md-12">
                 <p>Please complete the form below and make a payment to secure your place on a course.</p>
             </div>
@@ -139,7 +138,8 @@
 
                         <div class="col-md-6">
                             <input type="checkbox" id="terms" name="terms" value="">
-                            <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms">terms and conditions</a></label><br>
+                            <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms">terms
+                                    and conditions</a></label><br>
                         </div>
 
                         <div class="form-button mt-3">
@@ -155,9 +155,10 @@
                 </div>
             </form>
         </div>
-        </div>
 
 @endsection
+
+
 
 
 

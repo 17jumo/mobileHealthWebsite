@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
+    @if (Auth::check())
+    @else
+        <div class="container">
+        @endif
     <!-- Page Content -->
     <!-- About Page Starts Here -->
 
-    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">

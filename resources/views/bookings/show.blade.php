@@ -23,7 +23,7 @@
                         </tr>
                         <tr>
                             <th scope="col">Course Date</th>
-                            <td scope="row">Not implemented</td>
+                            <td scope="row">Not implemented->format('d-m-Y')</td>
                         </tr>
                         <tr>
                             <th scope="col">Course Total</th>
@@ -51,7 +51,7 @@
                         </tr>
                         <tr>
                             <th scope="col">Date of birth</th>
-                            <td scope="row">{{$booking->dob}}</td>
+                            <td scope="row">{{$booking->dob->format('d-m-Y')}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Gender</th>

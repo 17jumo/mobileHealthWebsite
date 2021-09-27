@@ -41,7 +41,7 @@
                             <td>{{$booking->first_name}} </td>
                             <td>{{$booking->last_name}}</td>
                             <td>{{$booking->email}}</td>
-                            <td>{{$booking->dob}}</td>
+                            <td>{{$booking->dob->format('d-m-Y')}}</td>
                             <td>{{$booking->gender}}</td>
                             <td>{{$booking->phone}}</td>
                             <td>{{$booking->company_name}}</td>
