@@ -5,8 +5,8 @@
     @else
         <div class="container">
         @endif
-    <!-- Page Content -->
-    <!-- About Page Starts Here -->
+
+    <!-- Page Starts Here -->
 
         <div class="row">
             <div class="col-md-12">

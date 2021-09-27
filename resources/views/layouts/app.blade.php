@@ -118,7 +118,6 @@
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
 
-
             @endauth
 
             <div>
