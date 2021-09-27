@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\Coursedate;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 

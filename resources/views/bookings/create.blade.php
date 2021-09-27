@@ -137,12 +137,17 @@
                                    name="add_country" id="add_country" required>
                         </div>
 
+                        <div class="col-md-6">
+                            <input type="checkbox" id="terms" name="terms" value="">
+                            <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms">terms and conditions</a></label><br>
+                        </div>
+
                         <div class="form-button mt-3">
                             @if (Auth::check())
                                 <input class="btn btn-primary" type="submit" value="Submit Booking">
                                 <a class="btn btn-outline-dark" href="/bookings">Cancel</a>
                             @else
-                                <a class="btn btn-info" href="/bookings/create">Submit Booking</a>
+                                <a class="btn btn-info" href="/bookings/create">Proceed to payment</a>
                                 <a class="btn btn-outline-dark" href="/">Cancel</a>
                             @endif
                         </div>

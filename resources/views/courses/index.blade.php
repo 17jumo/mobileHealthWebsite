@@ -35,8 +35,8 @@
                                 <td>{{$course->course_name}} </td>
                                 <td>{{$course->course_desc_short}}</td>
                                 <td>{{$course->course_desc_long}}</td>
-                                <td>{{$course->price}}</td>
-                                <td>{{$course->duration}}</td>
+                                <td>${{$course->price}}</td>
+                                <td>{{$course->duration}} day/s</td>
                                 <td>{{$course->start_time}}</td>
                                 <td>{{$course->end_time}}</td>
                                 <td>

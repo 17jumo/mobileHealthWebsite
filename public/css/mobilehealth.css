@@ -57,6 +57,14 @@ a {
     padding: 10px 10px;
 }
 
+/* CREATE BOOKING */
+
+#terms {
+    text-decoration: #0c46ab;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* BUTTON STYLE */
 .btn-book-primary a {
     background-color: #8BC53E;
