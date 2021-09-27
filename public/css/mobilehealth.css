@@ -13,9 +13,6 @@ p {
 
 p:last-of-type {
     margin-bottom: 20px;
-    font-size: 1rem;
-    color: #4a4a4a;
-    line-height: 24px;
 }
 
 hr {
@@ -53,7 +50,7 @@ a {
 }
 
 #references {
-    text-align: center;
+    text-align: left;
 }
 #referencelogo {
     margin: auto;
@@ -64,8 +61,11 @@ a {
     padding: 10px 10px;
 }
 
-/* CREATE BOOKING */
+#readmore {
+    text-decoration: underline;
+}
 
+/* CREATE BOOKING */
 #terms {
     text-decoration: #0c46ab;
     font-weight: bold;
@@ -91,14 +91,14 @@ a {
     opacity: 0.7;
 }
 
-.btn-book-secondary {
+/*.btn-book-secondary {
     margin-top: 10px;
     padding-bottom: 5px;
     display: inline;
-}
+}*/
 
-.btn-book-secondary a {
-    /*margin-top: 3px;*/
+/*.btn-book-secondary a {
+    !*margin-top: 3px;*!
     background-color: #8BC53E;
     border-radius: 5px;
     padding: 7px 15px;
@@ -111,12 +111,13 @@ a {
 }
 .btn-book-secondary a:hover {
     opacity: 0.7;
-}
+}*/
 
 .btn-other {
     margin-top: 10px;
     padding-top: 10px;
     display: inline;
+    background-color: #0c46ab;
 }
 
 .btn-other a {
@@ -132,16 +133,20 @@ a {
     transition: all 0.5s;
 }
 .btn-other a:hover {
+    background-color: #0c46ab;
     opacity: 0.7;
 }
 
 .btn-info {
     background-color: #8BC53E;
     border-color: #8BC53E;
+    color: #FFFFFF;
 }
 
-.btn-info a:hover {
+.btn-info:hover {
     background-color: #8BC53E;
+    border-color: #8BC53E;
+    color: #FFFFFF;
     opacity: 0.7;
 }
 
@@ -186,7 +191,6 @@ a {
 }
 
 /* SECTION HEADINGS */
-
 .section-heading {
     margin-top: 40px;
     margin-bottom: 20px;

@@ -55,12 +55,10 @@
                         <h6>Duration: {{$course->duration}} day/s</h6>
                         <h6>Cost: ${{$course->price}}</h6>
                         <p>{{$course->course_desc_short}}</p>
-                        <p ><a href="/courses/1"><span id="readmore" style="text-decoration: underline">Read more<span></a></p>
-                        <span>
-                                <div class="btn-book-secondary" style="float: right">
-                                        <a href="/bookings/create">Book now</a>
-                            </div>
-                            </span>
+                        <p ><a href="/courses/1"><span id="readmore">Read more<span></a></p>
+
+                        <a href="/bookings/create" class="btn btn-info">Book now</a>
+
                     </div>
                 </div>
             @endforeach

@@ -42,9 +42,9 @@
                         <input class="btn btn-primary" type="submit" value="Save">
                         <a class="btn btn-warning" href="/coursedates">Cancel</a>
                     </div>
-                </div>
+            </form>
+            </div>
         </div>
-        </form>
     </div>
     </div>
     </div>
