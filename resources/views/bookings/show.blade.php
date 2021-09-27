@@ -18,24 +18,20 @@
                         </thead>
                         <tbody>
                         <tr>
+                            <th scope="col">ID</th>
+                            <th scope="row">{{$booking->id}}</th>
+                        </tr>
+                        <tr>
                             <th scope="col">Course Booked</th>
-                            <td scope="row">Not implemented</td>
+                            <td scope="row">{{$booking->course_name}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Course Date</th>
-                            <td scope="row">Not implemented->format('d-m-Y')</td>
+                            <td scope="row">{{$booking->course_date}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Course Total</th>
                             <td scope="row">${{$booking->course_total}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Course Date</th>
-                            <td scope="row">Not implemented</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="row">{{$booking->id}}</th>
                         </tr>
                         <tr>
                             <th scope="col">Firstname</th>
@@ -51,14 +47,14 @@
                         </tr>
                         <tr>
                             <th scope="col">Date of birth</th>
-                            <td scope="row">{{$booking->dob->format('d-m-Y')}}</td>
+                            <td scope="row">{{$booking->dob}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Gender</th>
                             <td scope="row">{{$booking->gender}}</td>
                         </tr>
                         <tr>
-                            <th scope="col">Phone number</th>
+                            <th scope="col">Phone Number</th>
                             <td scope="row">{{$booking->phone}}</td>
                         </tr>
                         <tr>

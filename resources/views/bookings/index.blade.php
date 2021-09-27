@@ -21,8 +21,8 @@
                         <th scope="col">Firstname</th>
                         <th scope="col">Lastname</th>
                         <th scope="col">Email</th>
-                        <th scope="col">DOB</th>
-                        <th scope="col">Gender</th>
+{{--                        <th scope="col">DOB</th>
+                        <th scope="col">Gender</th>--}}
                         <th scope="col">Phone Number</th>
                         <th scope="col">Company Name</th>
 {{--                        <th scope="col">Street</th>
@@ -30,6 +30,8 @@
                         <th scope="col">City</th>
                         <th scope="col">Postcode</th>
                         <th scope="col">Country</th>--}}
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Course Date</th>
                         <th scope="col">Course Total</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -41,8 +43,8 @@
                             <td>{{$booking->first_name}} </td>
                             <td>{{$booking->last_name}}</td>
                             <td>{{$booking->email}}</td>
-                            <td>{{$booking->dob->format('d-m-Y')}}</td>
-                            <td>{{$booking->gender}}</td>
+{{--                            <td>{{$booking->dob}}</td>
+                            <td>{{$booking->gender}}</td>--}}
                             <td>{{$booking->phone}}</td>
                             <td>{{$booking->company_name}}</td>
     {{--                        <td>{{$booking->add_street}}</td>
@@ -50,6 +52,8 @@
                             <td>{{$booking->add_city}}</td>
                             <td>{{$booking->add_postcode}}</td>
                             <td>{{$booking->add_country}}</td>--}}
+                            <td>{{$booking->course_name}} </td>
+                            <td>{{$booking->course_date}} </td>
                             <td>${{$booking->course_total}} </td>
                             <td>
 {{--                                <form action="/bookings/{{$booking->id}}" method="POST">
