@@ -45,9 +45,10 @@
 
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="card card-body">
-                        <img src="/images/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Debbie Swain-Rewi</h5>
                             <h6>Director</h6>
@@ -66,9 +67,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="card card-body">
+                    <div class="card">
+                        <div class="card-header">
                         <img src="/images/MelWright.jpg" alt="Mel Wright"
                              class="card-img-top">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Mel Wright</h5>
                             <h6>Registered Nurse and Training Course Co-ordinator</h6>
@@ -81,9 +84,10 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="card card-body">
-                        <img src="/images/PamShaw.jpg" alt="Pam Shaw" class="card-img-top">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/PamShaw.jpg" alt="Pam Shaw" class="card-img-top">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Pam Shaw</h5>
                             <h6>Registered Nurse</h6>
@@ -99,9 +103,10 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="card card-body">
-                        <img src="/images/AmyMead.jpg" alt="Amy Mead" class="card-img-top">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/AmyMead.jpg" alt="Amy Mead" class="card-img-top">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Amy Mead</h5>
                             <h6></h6>
@@ -141,14 +146,16 @@
 
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="card card-body">
-                        <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
-                           target="_blank">
-                            <img src="/images/driveThruVaccinations.png"
-                                 alt="image of drive thru vaccination"
-                                 class="card-img-top">
-                            <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
+                               target="_blank">
+                                <img src="/images/driveThruVaccinations.png"
+                                     alt="image of drive thru vaccination"
+                                     class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body">
                                 <h5 class="card-title">Drive Thru Vaccination</h5>
                                 <p class="card-text">
                                 <p><small>6 September 2021</small></p>
@@ -166,13 +173,16 @@
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="card card-body">
-                        <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
-                           target="_blank">
-                            <img src="/images/smokingCessation.png"
-                                 alt="image of smoking cessation"
-                                 class="card-img-top">
-                            <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
+                               target="_blank">
+                                <img src="/images/smokingCessation.png"
+                                     alt="image of smoking cessation"
+                                     class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body">
                                 <h5 class="card-title">Smoking Cessation Services</h5>
                                 <p class="card-text">
                                 <p><small>02 September 2020</small></p>
@@ -191,13 +201,16 @@
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="card card-body">
-                        <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
-                           target="_blank">
-                            <img src="/images/karmaGlenorchy.JPG"
-                                 alt="image of smoking cessation"
-                                 class="card-img-top">
-                            <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
+                               target="_blank">
+                                <img src="/images/karmaGlenorchy.JPG"
+                                     alt="image of smoking cessation"
+                                     class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body">
                                 <h5 class="card-title">Karma giver’s time to receive</h5>
                                 <p class="card-text">
                                 <p><small>10 June 2019</small></p>

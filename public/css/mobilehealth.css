@@ -159,12 +159,12 @@ a {
     opacity: 0.7;
 }
 
-.btn-info:active {
+/*.btn-info:active {
     background-color: #8BC53E;
     border-color: #8BC53E;
     color: #FFFFFF;
     opacity: 0.7;
-}
+}*/
 
 /* CARDS */
 .card {
@@ -196,10 +196,11 @@ a {
     margin: auto;
 }
 
-/*.card-body-align {
-    text-align: center;
-    align-items: center;
-}*/
+.card-header {
+    padding: 0;
+
+}
+
 #map iframe {
     width: 100%;
     height: 400px;
@@ -604,7 +605,7 @@ a {
 /*!* ABOUT US STYLE *!
 .about-page {
     margin-bottom: 80px;
-}*/
+}
 .about-page .right-content h4 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -646,7 +647,7 @@ a {
     background-color: #0c46ab;
 }
 
-
+*/
 
 .about-container{
     display:flex;

@@ -764,7 +764,7 @@ a {
 
 /* Contact Page Style */
 
-.contact-page {
+/*.contact-page {
     margin-bottom: 50px;
 }
 .contact-page .right-content input,
@@ -829,18 +829,18 @@ a {
     transition: all 0.5s;
     box-shadow: none;
     border: none;
-}
-.contact-container {
+}*/
+/*.contact-container {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
     align-content: flex-start;
-}
+}*/
 
-.contact-container-box{
+/*.contact-container-box{
     flex: 2;
     margin-bottom: 80px;
-}
+}*/
 
 .contact-text {
     padding-bottom: 20px;

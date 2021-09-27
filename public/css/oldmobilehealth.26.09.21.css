@@ -577,7 +577,7 @@ a {
 
 
 /* Isotope Transitions
-------------------------------- */
+------------------------------- *//*
 .isotope,
 .isotope .item {
     -webkit-transition-duration: 0.8s;
@@ -601,7 +601,7 @@ a {
     -ms-transition-property:     -ms-transform, opacity;
     -o-transition-property:         top, left, opacity;
     transition-property:         transform, opacity;
-}
+}*/
 
 .page-navigation ul {
     text-align: left;
@@ -758,7 +758,7 @@ a {
 /*!* About Us Style *!
 .about-page {
     margin-bottom: 80px;
-}*/
+}*//*
 .about-page .right-content h4 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -800,11 +800,11 @@ a {
     background-color: #0c46ab;
 }
 
-
+*/
 
 
 /* Contact Page Style */
-
+/*
 .contact-page {
     margin-bottom: 50px;
 }
@@ -870,22 +870,24 @@ a {
     transition: all 0.5s;
     box-shadow: none;
     border: none;
-}
+}*/
+/*
 .contact-container {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
     align-content: flex-start;
 }
+*/
 
-.contact-container-box{
+/*.contact-container-box{
     flex: 2;
     margin-bottom: 80px;
 }
 
 .contact-text {
     padding-bottom: 20px;
-}
+}*/
 
 /* Responsive Style */
 @media (max-width: 991px) {
