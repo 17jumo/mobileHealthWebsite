@@ -16,6 +16,13 @@
 
                         <div class="row">
 
+                            <h4>Course Details</h4>
+                            <div class="col-md-6">
+                                <label for="invoice_total">Course total *</label>
+                                <input type="number" class="form-control @error('invoice_total') is-invalid @enderror"
+                                       name="invoice_total" id="invoice_total" value="" required>
+                            </div>
+                        </div>
                             <h4>Attendee Details</h4>
 
                             <div class="form-group col-12">

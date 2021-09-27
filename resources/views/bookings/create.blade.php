@@ -49,15 +49,25 @@
                         </select>
                     </div>--}}
 
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="invoice_total">Course total *</label>
+                            <input type="number" class="form-control @error('invoice_total') is-invalid @enderror"
+                                   name="invoice_total" id="invoice_total" value="" required>
+                        </div>
+                    </div>
+
                     <h4>Attendee Details</h4>
                     <div class="row">
+
                         <div class="col-md-6">
-                            <label for="first_name">First name*</label>
+                            <label for="first_name">First Name *</label>
                             <input type="text" class="form-control @error('first_name') is-invalid @enderror"
-                                   name="first_name" id="first_name" required>
+                                   name="first_name" id="first_name" value="" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="last_name">Last name*</label>
+                            <label for="last_name">Last Name *</label>
                             <input type="text" class="form-control @error('last_name') is-invalid @enderror"
                                    id="last_name" name="last_name" value="" required>
                         </div>

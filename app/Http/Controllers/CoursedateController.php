@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Course;
 use App\Models\Coursedate;
 use Illuminate\Http\Request;
 
@@ -15,6 +17,7 @@ class CoursedateController extends Controller
     public function index()
     {
         $coursedates = Coursedate::all();
+        $courses = Course::all();
         /*        dd($coursedates);*/
         return view('coursedates.index', ['coursedates' => $coursedates]);
     }
@@ -47,7 +50,7 @@ class CoursedateController extends Controller
         $coursedate->scheduled_date = request('scheduled_date');
         $coursedate->max_attendee = request('max_attendee');
         $coursedate->venue = request('venue');
-        $coursedate->course_id = Auth::course()->id;
+        $coursedate->course_id = request('course_id');
 
         $coursedate->save();
 

@@ -22,13 +22,13 @@ class CoursedateFactory extends Factory
     public function definition()
     {
         return [
+            'course_id' => $this->faker->randomDigit+1,
             'scheduled_date' => $this->faker-> date($format = 'Y-m-d', $min = 'now', $max = '2022-1-1'),
             'max_attendee' => $this->faker-> numberBetween($min = 1, $max = 15),
             'venue' => "18 Glenda Drive, Frankton, Queenstown",
 
             'created_at' => now(),
             'updated_at' => now(),
-            'course_id' => $this->faker->randomDigit+1,
         ];
 
     }

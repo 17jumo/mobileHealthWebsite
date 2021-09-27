@@ -31,7 +31,7 @@
                         <tr>
                             <th scope="row">{{$coursedate->id}}</th>
                             <th>{{$coursedate->course_id}}</th>
-                            <th>Yet to show</th>
+                            <th>TBA</th>
                             <td>{{$coursedate->scheduled_date->format('d-m-Y')}}</td>
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>

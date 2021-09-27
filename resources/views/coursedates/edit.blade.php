@@ -19,7 +19,6 @@
                                name="id" value="{{$coursedate->id}}" readonly>
                     </div>
 
-
                     <div class="col-md-6">
                         <label for="course_id">Course ID</label>
                         <input type="text" class="form-control @error('course_id') is-invalid @enderror" id="course_id"

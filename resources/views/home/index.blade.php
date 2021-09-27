@@ -28,7 +28,8 @@
 </div>
 
 <div id="notification">
-    <span>We can run courses at your workplace to meet your needs. Please call us for more information.</span>
+    <p>We can run courses at your workplace to meet your needs. </p>
+    <p>Please call us for more information.</p>
 </div>
 <!-- Banner Ends Here -->
 

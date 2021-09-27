@@ -38,6 +38,7 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         request()->validate([
+            /*'coursedate_id' = 'required';*/
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -50,11 +51,13 @@ class BookingController extends Controller
             'add_city' => '',
             'add_postcode' => '',
             'add_country' => '',
+            'invoice_total' => '',
         ]);
 
         $booking = new booking();
-        $booking->first_name = request('firstname');
-        $booking->last_name = request('lastname');
+        $booking->coursedate_id = 100;
+        $booking->first_name = request('first_name');
+        $booking->last_name = request('last_name');
         $booking->email = request('email');
         $booking->phone = request('phone');
         $booking->dob = request('dob');
@@ -65,7 +68,7 @@ class BookingController extends Controller
         $booking->add_city = request('add_city');
         $booking->add_postcode = request('add_postcode');
         $booking->add_country = request('add_country');
-/*        $booking->coursedate_id = Auth::courseDate()->id;*/
+        $booking->invoice_total = request('invoice_total');
 
         $booking->save();
 
@@ -116,6 +119,7 @@ class BookingController extends Controller
             'add_city' => '',
             'add_postcode' => '',
             'add_country' => '',
+            'invoice_total' => '',
         ]);
 
         $booking->update($request->all());

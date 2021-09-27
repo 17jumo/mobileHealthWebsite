@@ -22,6 +22,7 @@ class BookingFactory extends Factory
     public function definition()
     {
         return [
+            'coursedate_id' => $this->faker->randomDigit+1,
             'first_name' => $this->faker-> firstName,
             'last_name' => $this->faker->lastName,
             'phone' => $this->faker->phonenumber,
@@ -34,11 +35,10 @@ class BookingFactory extends Factory
             'add_city' => $this->faker->state,
             'add_postcode' => $this->faker->postcode,
             'add_country' => $this->faker->country,
+            'invoice_total' => $this->faker->numberBetween(100,400),
 
             'created_at' => now(),
             'updated_at' => now(),
-
-            'courseDate_id' => $this->faker->randomDigit+1,
         ];
 
     }
