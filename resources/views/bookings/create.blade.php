@@ -50,7 +50,7 @@
 
                     <div class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <label for="course_total">Course total *</label>
                             <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                    name="course_total" id="course_total" value="" required>
@@ -60,28 +60,28 @@
                     <h4>Attendee Details</h4>
                     <div class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="first_name">First Name *</label>
                             <input type="text" class="form-control @error('first_name') is-invalid @enderror"
                                    name="first_name" id="first_name" value="" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="last_name">Last Name *</label>
                             <input type="text" class="form-control @error('last_name') is-invalid @enderror"
                                    id="last_name" name="last_name" value="" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="email">Email*</label>
                             <input type="text" id="email" name="email" class="form-control"
                                    required/>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="phone">Phone number (mobile preferred)*</label>
                             <input class="form-control" type="text" name="phone">
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="actName" class="form-control-label">Date of birth*</label>
                             <input class="form-control"
                                    type="date" id="dob" name="dob"
@@ -90,7 +90,7 @@
                                    required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="gender" class="form-control-label">Gender*</label>
                             <select name="gender" id="gender" class="form-control"
                                     required>
@@ -100,43 +100,43 @@
                             </select>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="company_name">Company Name</label>
                             <input type="text" class="form-control @error('company_name') is-invalid @enderror"
                                    name="company_name" id="company_name">
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="add_street">Street*</label>
                             <input type="text" class="form-control @error('add_street') is-invalid @enderror"
                                    name="add_street" id="add_street" required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="add_suburb">Suburb*</label>
                             <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
                                    name="add_suburb" id="add_suburb" required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="add_city">City*</label>
                             <input type="text" class="form-control @error('add_city') is-invalid @enderror"
                                    name="add_city" id="add_city" required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-12">
                             <label for="add_postcode">Postcode*</label>
                             <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
                                    name="add_postcode" id="add_postcode" required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <label for="add_country">Country*</label>
                             <input type="text" class="form-control @error('add_country') is-invalid @enderror"
                                    name="add_country" id="add_country" required>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <input type="checkbox" id="terms" name="terms" value="">
                             <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms">terms
                                     and conditions</a></label><br>

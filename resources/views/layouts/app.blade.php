@@ -132,18 +132,27 @@
 
     <div class="footer footer-item">
         <div class="container">
+
             <div class="row">
-                <div class="footer-container">
-                    <div class="flex-column footer-flex1">
-                        <div class="footer-item">
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col">
+
+                        {{--                <div class="footer-container">
+                                            <div class="flex-column footer-flex1">
+                                                <div class="footer-item">--}}
                         <a href="/">
                             <img src="/images/MobileHealth1.png" alt="Company Logo"
-                                          title="Mobile Health Logo" id="logoimage"
-                                          class="logo">
+                                 title="Mobile Health Logo" id="logoimage"
+                                 class="footer-item-logo">
                         </a>
-                        </div>
                     </div>
-                    <div class="flex-column footer-flex2">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col">
+                        {{--
+                                            <div class="flex-column footer-flex2">
+                        --}}
                         <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
                         <p>PO Box 2036, Queenstown</p>
                         <p>
@@ -155,7 +164,10 @@
                                     class="fa fa-envelope"></i>
                                 firstaid@mobilehealth.co.nz</a>
                         </p>
-
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col">
                         <p>
                             <a href="https://engagesafety.co.nz/" target="_blank">
                                 <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
@@ -169,11 +181,11 @@
                                target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
+                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
+                               target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
