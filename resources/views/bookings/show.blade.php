@@ -18,6 +18,22 @@
                         </thead>
                         <tbody>
                         <tr>
+                            <th scope="col">Course Booked</th>
+                            <td scope="row">Not implemented</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Date</th>
+                            <td scope="row">Not implemented</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Total</th>
+                            <td scope="row">${{$booking->course_total}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Date</th>
+                            <td scope="row">Not implemented</td>
+                        </tr>
+                        <tr>
                             <th scope="col">ID</th>
                             <th scope="row">{{$booking->id}}</th>
                         </tr>
@@ -69,14 +85,7 @@
                             <th scope="col">Country</th>
                             <td scope="row">{{$booking->add_country}}</td>
                         </tr>
-                        <tr>
-                            <th scope="col">Course Booked</th>
-                            <td scope="row">Not implemented</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Course Date</th>
-                            <td scope="row">Not implemented</td>
-                        </tr>
+
                         </tbody>
                     </table>
                 </div>

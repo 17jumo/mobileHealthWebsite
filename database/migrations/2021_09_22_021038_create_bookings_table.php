@@ -29,7 +29,7 @@ class CreateBookingsTable extends Migration
             $table->string ('add_city') ->nullable();
             $table->string	('add_postcode') ->nullable();
             $table->string ('add_country') ->nullable();
-            $table->integer('invoice_total');
+            $table->integer('course_total');
 
             $table->foreignID ('coursedate_id')->contrained();
         });

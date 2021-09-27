@@ -30,6 +30,7 @@
                         <th scope="col">City</th>
                         <th scope="col">Postcode</th>
                         <th scope="col">Country</th>--}}
+                        <th scope="col">Course Total</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -49,6 +50,7 @@
                             <td>{{$booking->add_city}}</td>
                             <td>{{$booking->add_postcode}}</td>
                             <td>{{$booking->add_country}}</td>--}}
+                            <td>${{$booking->course_total}} </td>
                             <td>
 {{--                                <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')

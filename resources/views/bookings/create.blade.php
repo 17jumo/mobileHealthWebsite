@@ -52,9 +52,9 @@
                     <div class="row">
 
                         <div class="col-md-6">
-                            <label for="invoice_total">Course total *</label>
-                            <input type="number" class="form-control @error('invoice_total') is-invalid @enderror"
-                                   name="invoice_total" id="invoice_total" value="" required>
+                            <label for="course_total">Course total *</label>
+                            <input type="number" class="form-control @error('course_total') is-invalid @enderror"
+                                   name="course_total" id="course_total" value="" required>
                         </div>
                     </div>
 
