@@ -166,7 +166,7 @@
 
                                 </p>
                             <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
-                               target="_blank"><p id="readmore">Read more<p></a>
+                               target="_blank"><sub id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>
@@ -195,7 +195,7 @@
                                     from Queenstown.
                                 </p>
                             <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
-                                  target="_blank"><p id="readmore">Read more<p></a>
+                                  target="_blank"><sub id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>
@@ -222,7 +222,7 @@
                                     Queenstown nurse decided to dip into her own pocket to provide some support.
                                 </p>
                             <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
-                               target="_blank"><p id="readmore">Read more<p></a>
+                               target="_blank"><sub id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>

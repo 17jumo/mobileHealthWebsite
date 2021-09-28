@@ -48,7 +48,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
                     <div class="card card-body card-index">
-                        <img src="/images/icon6.jpg"
+                        <img src="/images/heart.png"
                              alt="picture of course being held">
                         <h5>{{$course->course_name}}</h5>
                         <h6>Duration: {{$course->duration}}
@@ -60,7 +60,7 @@
                         </h6>
                         <h6>Cost: ${{$course->price}}</h6>
                         <p>{{$course->course_desc_short}}</p>
-                        <p><a href="/courses/1"><span id="readmore">Read more</span></a></p>
+                        <p><a href="/courses/1"><sub id="readmore">Read more</sub></a></p>
 
                         <a href="/bookings/create" class="btn btn-info">Book now</a>
 
