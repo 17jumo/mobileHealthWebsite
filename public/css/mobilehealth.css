@@ -1,5 +1,13 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+}
+
+body {
+    /*font-family: 'Inter', sans-serif;*/
     transition: all 0.5s;
     background-color: #f9f9f9;
 }

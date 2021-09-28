@@ -132,7 +132,9 @@
                     <div class="col-md-12">
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
                         <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms"
-                                id="is_terms_agreed" target="_blank">terms and conditions</a></label><br>
+                                                                                          id="is_terms_agreed"
+                                                                                          target="_blank">terms and
+                                conditions</a></label><br>
                     </div>
 
 
@@ -146,9 +148,9 @@
                         @endif
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
-        </div>
+
 
 @endsection
 
