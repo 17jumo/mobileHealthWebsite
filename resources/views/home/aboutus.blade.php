@@ -156,7 +156,7 @@
                             </a>
                         </div>
                         <div class="card-body">
-                                <h5 class="card-title">Drive Thru Vaccination</h5>
+                                <h5 class="card-title">Drive Through Vaccination</h5>
                                 <p class="card-text">
                                 <p><small>6 September 2021</small></p>
 
