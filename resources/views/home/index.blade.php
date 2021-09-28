@@ -48,7 +48,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
                     <div class="card card-body card-index">
-                        <img src="/images/FA6.jpg"
+                        <img src="/images/icon6.jpg"
                              alt="picture of course being held">
                         <h5>{{$course->course_name}}</h5>
                         <h6>Duration: {{$course->duration}}
@@ -131,7 +131,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <img src="/images/stock1.jpg" alt="Students learning at the First Aid course"
+            <img src="/images/studentslearning.jpg" alt="Students learning at the First Aid course"
                  class="course-image">
         </div>
     </div>
