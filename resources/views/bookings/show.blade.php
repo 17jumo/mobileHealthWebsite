@@ -81,6 +81,16 @@
                             <th scope="col">Country</th>
                             <td scope="row">{{$booking->add_country}}</td>
                         </tr>
+                        <tr>
+                            <th scope="col">T&C Agreed</th>
+                            <td scope="row">
+                                @if($booking->is_terms_agreed <= 0)
+                                    Yes
+                                @else
+                                    No
+                                @endif
+                            </td>
+                        </tr>
 
                         </tbody>
                     </table>

@@ -36,8 +36,14 @@
                                 <td>{{$course->course_desc_short}}</td>
                                 <td>{{$course->course_desc_long}}</td>
                                 <td>${{$course->price}}</td>
-                                <td>{{$course->duration}} day/s</td>
-                                <td>{{$course->start_time}}</td>
+                                <td>{{$course->duration}}
+                                    @if($course->duration > 1)
+                                        days
+                                    @else
+                                        day
+                                        @endif
+                                </td>
+                                <td>{{$course->start_time/*->format("H:i")*/}}</td>
                                 <td>{{$course->end_time}}</td>
                                 <td>
                                     <form action="/courses/{{$course->id}}" method="POST">

@@ -10,7 +10,7 @@
 
                 @foreach($coursedates as $coursedate)
 
-                            <div class="card" style="width: 18rem">
+                            <div class="card" id="coursedate-card">
                                 <div class="card-body" >
                                     @method('PUT')
                                     @csrf

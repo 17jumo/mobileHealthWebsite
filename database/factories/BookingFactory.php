@@ -38,6 +38,7 @@ class BookingFactory extends Factory
             'course_name' => $this->faker->word(),
             'course_date' => $this->faker->date(),
             'course_total' => $this->faker->numberBetween(100,400),
+            'is_terms_agreed' => $this->faker->boolean,
 
             'created_at' => now(),
             'updated_at' => now(),

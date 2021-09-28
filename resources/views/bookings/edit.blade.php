@@ -127,6 +127,11 @@
                                    name="add_country" id="add_country" value="{{$booking->add_country}}" required>
                         </div>
 
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="{{$booking->is_terms_agreed}}" class="form-control @error('add_country') is-invalid @enderror">
+                            <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms" id="is_terms_agreed"
+                                   target="_blank">terms and conditions</a></label><br>
+                        </div>
 
                         <div class="form-button mt-3">
                             <input class="btn btn-primary" type="submit" value="Save">

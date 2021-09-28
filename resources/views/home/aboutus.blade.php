@@ -222,11 +222,9 @@
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Page Ends Here -->

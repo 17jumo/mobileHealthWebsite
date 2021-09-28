@@ -125,12 +125,12 @@
                                    name="add_country" id="add_country" required>
                         </div>
 
-                        {{--                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                                    <input type="checkbox" id="terms" name="terms" value="">
-                                                    <label for="terms">&nbspI have read and agree to the <a href="/home/terms" id="terms"
-                                                                                                            target="_blank">terms and
-                                                            conditions</a></label><br>
-                                                </div>--}}
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
+                            <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms" id="is_terms_agreed"
+                                    target="_blank">terms and conditions</a></label><br>
+                        </div>
+
 
                         <div class="form-button mt-3">
                             @if (Auth::check())

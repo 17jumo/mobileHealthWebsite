@@ -39,6 +39,8 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        /*dd($request);*/
+
         request()->validate([
             /*'coursedate_id' = 'required';*/
             'first_name' => 'required',
@@ -56,6 +58,7 @@ class BookingController extends Controller
             'course_name' => 'required',
             'course_date' => 'required',
             'course_total' => 'required',
+            'is_terms_agreed' => 'required',
         ]);
 
         $booking = new booking();
@@ -75,6 +78,7 @@ class BookingController extends Controller
         $booking->course_name = request('course_name');
         $booking->course_date = request('course_date');
         $booking->course_total = request('course_total');
+        $booking->is_terms_agreed = request('is_terms_agreed');
 
         $booking->save();
 
@@ -128,6 +132,7 @@ class BookingController extends Controller
             'course_name' => '',
             'course_date' => '',
             'course_total' => '',
+            'is_terms_agreed' => 'required',
         ]);
 
         $booking->update($request->all());

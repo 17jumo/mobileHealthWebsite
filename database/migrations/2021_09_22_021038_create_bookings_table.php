@@ -32,6 +32,7 @@ class CreateBookingsTable extends Migration
             $table->string ('course_name');
             $table->string ('course_date');
             $table->integer('course_total');
+            $table->boolean('is_terms_agreed');
 
             $table->foreignID ('coursedate_id')->contrained();
         });
