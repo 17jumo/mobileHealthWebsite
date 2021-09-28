@@ -85,7 +85,7 @@
 
                     {{-- <button type="submit" id="form-submit" class="button">Send Message
                                                   </button>--}}
-                    <div class="btn-other">
+                    <div class="btn btn-secondary">
                         <a href="/book">Send</a>
                     </div>
                 </form>

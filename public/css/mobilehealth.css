@@ -130,7 +130,7 @@ a {
 .btn-book-secondary a:hover {
     opacity: 0.7;
 }*/
-
+/*
 .btn-other {
     margin-top: 10px;
     padding-top: 10px;
@@ -153,6 +153,22 @@ a {
 .btn-other a:hover {
     background-color: #0c46ab;
     opacity: 0.7;
+}*/
+
+.btn-secondary {
+    background-color: #0c46ab;
+    border-color: #0c46ab;
+}
+
+.btn-secondary a {
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #0c46ab;
+    border-color: #0c46ab;
+    color: #FFFFFF;
+    opacity: 0.7;
 }
 
 .btn-info {
@@ -160,6 +176,10 @@ a {
     border-color: #8BC53E;
     color: #FFFFFF;
 }
+
+/*.btn-info a {
+    color: #FFFFFF;
+}*/
 
 .btn-info:hover {
     background-color: #8BC53E;
@@ -347,7 +367,7 @@ font-family: 'FontAwesome';
     padding: 20px 30px;
     max-width: 450px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 .banner .caption h2 {
     margin-top: 0;
