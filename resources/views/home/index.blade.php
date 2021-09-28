@@ -88,9 +88,9 @@
                 <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
                 <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
                 <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
-                <img src="/images/rps-logo.jpg" alt="Remarkables Primary School Logo">
+                <img src="/images/rpslogo.jpg" alt="Remarkables Primary School Logo">
                 <img src="/images/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
-                <img src="/images/bluekanulogo.jpg" alt="Blue Kanu Queenstown Logo">
+                <img src="/images/bluekanu_logo.jpg" alt="Blue Kanu Queenstown Logo">
             </div>
         </div>
     </div>
