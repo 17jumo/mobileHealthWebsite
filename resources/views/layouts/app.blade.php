@@ -13,10 +13,7 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    {{--font-family: 'Petit Formal Script', cursive;--}}
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-    {{--font-family: 'Rouge Script', cursive;--}}
+
 
 
     {{--Browser Icon--}}
@@ -166,7 +163,8 @@
                         {{--
                                             <div class="flex-column footer-flex2">
                         --}}
-                        <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
+                        <p>18 Glenda Drive, Frankton, Queenstown</p>
+                        <p>Central&nbspOtago, 9300</p>
                         <p>PO Box 2036, Queenstown</p>
                         <p>
                             <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
@@ -178,15 +176,15 @@
                                 firstaid@mobilehealth.co.nz</a>
                         </p>
 
-                        <p>
+{{--                        <p>
                             <a href="https://engagesafety.co.nz/" target="_blank">
                                 <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
                                      class="footer-media">&nbsp
                                 www.engagesafety.co.nz
                             </a>
-                        </p>
+                        </p>--}}
 
-                        <div class="social-icons">
+{{--                        <div class="social-icons">
                             <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
                                target="_blank">
                                 <i class="fa fa-facebook"></i>
@@ -195,7 +193,7 @@
                                target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
-                        </div>
+                        </div>--}}
 
                     </div>
                 </div>

@@ -163,8 +163,10 @@
                                 <p>Vaccinating the unvaccinated in big numbers and safely was the aim of
                                     three
                                     separate pop-up Covid-19 vaccination clinics in Wanaka over the weekend.
+
                                 </p>
-                                <p>Read more</p>
+                            <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
+                               target="_blank"><p id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>
@@ -192,7 +194,8 @@
                                     community, a small settlement at the northern end of Lake Wakatipu, 45km
                                     from Queenstown.
                                 </p>
-                                <p>Read more</p>
+                            <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
+                                  target="_blank"><p id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>
@@ -218,7 +221,8 @@
                                 <p>When a Glenorchy resident was diagnosed with terminal cancer in early 2015, a
                                     Queenstown nurse decided to dip into her own pocket to provide some support.
                                 </p>
-                                <p>Read more</p>
+                            <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
+                               target="_blank"><p id="readmore">Read more<p></a>
                             </div>
                         </a>
                     </div>

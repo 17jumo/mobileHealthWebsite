@@ -17,31 +17,34 @@
                             @method('PUT')
                             @csrf
                             <h5 class="card-title" style="text-align: left">{{$courses->course_name}}</h5>
-                            <p class="card-text">{{$courses->id}}</p>
-                            <p class="card-text">{{$courses->course_name}}</p>
-                            <p class="card-text">{{$courses->course_desc_short}}</p>
+                            <h6 class="card-text">Course Description</h6>
                             <p class="card-text">{{$courses->course_desc_long}}</p>
+                            <h6 class="card-text">Price</h6>
                             <p class="card-text">{{$courses->price}}</p>
-                            <p class="card-text">{{$courses->duration}}</p>
+                            <h6 class="card-text">Duration</h6>
+                            <p class="card-text">{{$courses->duration}}
+                                @if($courses->duration > 1)
+                                    days
+                                @else
+                                    day
+                                @endif
+                            </p>
+                            <h6 class="card-text">Start Time</h6>
                             <p class="card-text">{{$courses->start_time}}</p>
+                            <h6 class="card-text">End time</h6>
                             <p class="card-text">{{$courses->end_time}}</p>
-
 
                         </div>
                     </div>
+
+
 
                     @if (Auth::check())
                         <a class="btn btn-primary" href="/courses/{{$courses->id}}/edit">Edit</a>
                         <a class="btn btn-warning mx-1" href="/courses/">Cancel</a>
                     @else
-                         <span>
-                            <div class="btn-book-secondary">
-                                <a href="/bookings/create">Book now</a>
-                            </div>
-                            <div class="btn-other">
-                                <a href="/">Cancel</a>
-                            </div>
-                        </span>
+                        <a class="btn btn-info" href="/bookings/create">Book now</a>
+                        <a class="btn btn-outline-dark" href="/">Cancel</a>
                     @endif
 
                     {{--<div class="table-responsive">

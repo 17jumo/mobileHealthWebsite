@@ -56,11 +56,11 @@
                                 days
                             @else
                                 day
-                                @endif
+                            @endif
                         </h6>
                         <h6>Cost: ${{$course->price}}</h6>
                         <p>{{$course->course_desc_short}}</p>
-                        <p><a href="/courses/1"><span id="readmore">Read more<span></a></p>
+                        <p><a href="/courses/1"><span id="readmore">Read more</span></a></p>
 
                         <a href="/bookings/create" class="btn btn-info">Book now</a>
 
@@ -72,68 +72,71 @@
 
     {{--Reviews start here--}}
 
+    {{--    <div class="row">--}}
+
     <div class="row">
+        <div class="col-md-12">
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col">
-                    <div class="section-heading">
-                        <h4>
-                            We are trusted by many companies in the Queenstown Lakes and Central Otago region,
-                            including:
-                        </h4>
-                        <hr>
-                    </div>
-                    <div id="referencelogo">
-                        <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
-                        <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
-                        <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
-                        <img src="/images/rps-logo.jpg" alt="Remarkables Primary School Logo">
-                        <img src="/images/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
-                        <img src="/images/bluekanulogo.jpg" alt="Blue Kanu Queenstown Logo">
-                    </div>
-                </div>
+            <div class="section-heading">
+                <h4>
+                    We are trusted by many companies in the Queenstown Lakes and Central Otago region,
+                    including:
+                </h4>
+                <hr>
             </div>
-
-            <div class="col-md-6">
-                <div class="col">
-                    <div class="section-heading">
-                        <h4>
-                            What our learners like most about the courses:
-                        </h4>
-                        <hr>
-                    </div>
-                    <div id="references">
-                        <blockquote>
-                            <p>CPR, burns, choking, heart attack. Enjoyed all the training.</p>
-                            <p class="referee">- Nathanial</p>
-                        </blockquote>
-                        <blockquote>
-                            <p>How interactive and easy going it was.</p>
-                            <p class="referee">- Karli</p>
-                        </blockquote>
-                        <blockquote>
-                            <p>The delivery and content was very relevant to me.</p>
-                            <p class="referee">- Amber</p>
-                        </blockquote>
-                        <blockquote>
-                            <p>Examples were fun.</p>
-                            <p class="referee">- Angela</p>
-                        </blockquote>
-                        <blockquote>
-                            <p>I enjoyed the course today. I learned a lot. Actually to do CPR.</p>
-                            <p class="referee">- Ervin</p>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="col">
-                    <img src="/images/item_02a (4).jpg" alt="Repairing an arm during the First Aid course" style="width: auto">
-                </div>
+            <div id="referencelogo">
+                <img src="/images/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
+                <img src="/images/site-queenstown.jpg" alt="Site Trampaline Logo">
+                <img src="/images/mitre10.svg" alt="Mitre 10 Logo">
+                <img src="/images/rps-logo.jpg" alt="Remarkables Primary School Logo">
+                <img src="/images/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
+                <img src="/images/bluekanulogo.jpg" alt="Blue Kanu Queenstown Logo">
             </div>
         </div>
     </div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="section-heading">
+            <h4>
+                What our learners like most about the courses:
+            </h4>
+            <hr>
+        </div>
+    </div>
+        <div class="col-md-6 col-sm-12">
+            <div id="references">
+                <blockquote>
+                    <p>CPR, burns, choking, heart attack. Enjoyed all the training.</p>
+                    <p class="referee">- Nathanial</p>
+                </blockquote>
+                <blockquote>
+                    <p>How interactive and easy going it was.</p>
+                    <p class="referee">- Karli</p>
+                </blockquote>
+                <blockquote>
+                    <p>The delivery and content was very relevant to me.</p>
+                    <p class="referee">- Amber</p>
+                </blockquote>
+                <blockquote>
+                    <p>Examples were fun.</p>
+                    <p class="referee">- Angela</p>
+                </blockquote>
+                <blockquote>
+                    <p>I enjoyed the course today. I learned a lot. Actually to do CPR.</p>
+                    <p class="referee">- Ervin</p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <img src="/images/stock1.jpg" alt="Students learning at the First Aid course"
+                 class="course-image">
+        </div>
+    </div>
+</div>
+</div>
 
 {{--Reviews end here--}}
 

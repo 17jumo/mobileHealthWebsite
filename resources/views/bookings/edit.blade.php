@@ -29,14 +29,19 @@
                             </select>
                         </div>
 
-                        {{--                            <div class="col-md-6">
-                                                        <label for="course_total">Course Date</label>
-                                                        <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                                                               name="course_total" id="course_total" value="{{$booking->course_total}}" required>
-                                                    </div>--}}
-
                         <div class="col-md-6">
-                            <label for="course_total">Course total</label>
+                            <label for="course_date" class="form-control-label">Select course date*</label>
+                            <select name="course_date" id="course_date"
+                                    class="form-control @error('course_total') is-invalid @enderror"
+                                    required>
+                                <option value="2022-02-05">Thursday 05 Feb 2022</option>
+                                <option value="2022-02-17">Thursday 17 Feb 2022</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="course_total">Course Total</label>
                             <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                    name="course_total" id="course_total" value="{{$booking->course_total}}" required>
                         </div>
@@ -98,39 +103,41 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_street">Street Address *</label>
+                            <label for="add_street">Street Address</label>
                             <input type="text" class="form-control @error('add_street') is-invalid @enderror"
                                    name="add_street" id="add_street" value="{{$booking->add_street}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_suburb">Suburb *</label>
+                            <label for="add_suburb">Suburb</label>
                             <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
                                    name="add_suburb" id="add_suburb" value="{{$booking->add_suburb}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_city">City*</label>
+                            <label for="add_city">City</label>
                             <input type="text" class="form-control @error('add_city') is-invalid @enderror"
                                    name="add_city" id="add_city" value="{{$booking->add_city}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_postcode">Postcode *</label>
+                            <label for="add_postcode">Postcode</label>
                             <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
                                    name="add_postcode" id="add_postcode" value="{{$booking->add_postcode}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_country">Country *</label>
+                            <label for="add_country">Country</label>
                             <input type="text" class="form-control @error('add_country') is-invalid @enderror"
                                    name="add_country" id="add_country" value="{{$booking->add_country}}" required>
                         </div>
 
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="{{$booking->is_terms_agreed}}" class="form-control @error('add_country') is-invalid @enderror">
-                            <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms" id="is_terms_agreed"
-                                   target="_blank">terms and conditions</a></label><br>
+                        <div class="col-md-12">
+                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
+                            <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms"
+                                                                                              id="is_terms_agreed"
+                                                                                              target="_blank">terms and
+                                    conditions</a></label><br>
                         </div>
 
                         <div class="form-button mt-3">

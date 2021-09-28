@@ -23,19 +23,15 @@
 
                             <div class="col-md-12">
                                 <label for="course_desc_short">Course Short Description</label>
-                                {{--<textarea rows="4" cols="50" class="form-control @error('course_desc_short') is-invalid @enderror" id="course_desc_short" name="course_desc_short" value="{{$courses->course_desc_short}}">
-
-                                    </textarea>--}}
-
-                                <input type="textarea" class="form-control @error('course_desc_short') is-invalid @enderror" id="course_desc_short" name="course_desc_short" value="{{$courses->course_desc_short}}">
-
+                                <textarea class="form-control @error('course_desc_short') is-invalid @enderror" id="course_desc_short" name="course_desc_short" rows="4" required>{!! $courses->course_desc_short !!}</textarea>
                             </div>
 
                             <div class="col-md-12">
                                 <label for="course_desc_long">Course Long Description</label>
-                                <textarea rows="4" cols="50" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long">
+                                <textarea class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" rows="4" required>{!! $courses->course_desc_long !!}</textarea>
+                                {{--<textarea rows="4" cols="50" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long">
                                     </textarea>
-                                <input type="text" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" value="{{$courses->course_desc_long}}">
+                                <input type="text" class="form-control @error('course_desc_long') is-invalid @enderror" id="course_desc_long" name="course_desc_long" value="{{$courses->course_desc_long}}">--}}
                             </div>
                             <div class="col-md-6">
                                 <label for="price">Price</label>

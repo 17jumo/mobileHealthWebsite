@@ -19,15 +19,16 @@
                     </div>
                     <div class="col-md-12">
                         <label for="course_desc_short">Description - Short</label>
-                        <input type="text"
-                               class="form-control @error('course_desc_short') is-invalid @enderror"
-                               id="course_desc_short" name="course_desc_short" value="" required>
+                        <textarea class="form-control @error('course_desc_short') is-invalid @enderror"
+                                  id="course_desc_short" name="course_desc_short" rows="4"
+                                  required></textarea>
+
                     </div>
                     <div class="col-md-12">
                         <label for="course_desc_long">Description - Long</label>
-                        <input type="text"
-                               class="form-control @error('course_desc_long') is-invalid @enderror"
-                               id="course_desc_long" name="course_desc_long" value="" required>
+                        <textarea class="form-control @error('course_desc_long') is-invalid @enderror"
+                                  id="course_desc_long" name="course_desc_long" rows="4"
+                                  required></textarea>
                     </div>
                     <div class="col-md-6">
                         <label for="price">Price</label>
