@@ -208,7 +208,7 @@
                         <div class="card-header">
                             <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
                                target="_blank">
-                                <img src="/images/karmaGlenorchy.JPG"
+                                <img src="/images/karmaglenorchy.jpg"
                                      alt="image of smoking cessation"
                                      class="card-img-top">
                             </a>
