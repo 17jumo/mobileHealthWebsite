@@ -27,8 +27,8 @@ class CourseFactory extends Factory
             'course_desc_short' => $this->faker->paragraph(2),
             'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 100, $max = 200),
             'duration' => $this->faker->numberBetween(1,3),
-            'start_time' => "9:00",
-            'end_time' => "4:00",
+            'start_time' => $this->faker->time,
+            'end_time' => $this->faker->time,
             /*'course_image' => $this->faker->image('public/storage/images',400,300, null, false),*/
 
             'created_at' => now(),

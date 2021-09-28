@@ -43,7 +43,8 @@
                                     day
                                 @endif
                             </td>
-                            <td>{{$course->start_time/*->format("H:i")*/}}</td>
+{{--                            <td>@php echo ($course->start_time)->format('H:i') @endphp</td>--}}
+                            <td>{{$course->start_time}}</td>
                             <td>{{$course->end_time}}</td>
                             <td>
                                 <form action="/courses/{{$course->id}}" method="POST">

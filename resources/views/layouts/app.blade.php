@@ -11,11 +11,11 @@
     {{--    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
-{{--    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">--}}
+    {{--    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">--}}
 
-{{--    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">--}}
+    {{--    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">--}}
 
 
 
@@ -32,10 +32,10 @@
     <link rel="stylesheet" href="/css/mobilehealth.css">
 
 
-{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}
+    {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}
 </head>
 <body>
 <header>
@@ -54,22 +54,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
-                {{--            </a>--}}
-                {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
-                    <span class="navbar-toggler-icon"></span>
-                </button>--}}
+            {{--            </a>--}}
+            {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>--}}
 
-{{--                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>--}}
+            {{--                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>--}}
 
-                <!-- Toggler/collapsibe Button -->
+            <!-- Toggler/collapse Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-{{--                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">--}}
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                {{--                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">--}}
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
                         <li class="nav-item">
@@ -149,141 +149,53 @@
             <div class="row">
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="col">
 
-                        {{--                <div class="footer-container">
-                                            <div class="flex-column footer-flex1">
-                                                <div class="footer-item">--}}
-                        <a href="/">
-                            <img src="/images/MobileHealth1.png" alt="Company Logo"
-                                 title="Mobile Health Logo" id="logoimage"
-                                 class="footer-item-logo">
+                    <a href="/">
+                        <img src="/images/MobileHealth1.png" alt="Company Logo"
+                             title="Mobile Health Logo" id="logoimage"
+                             class="footer-item-logo">
+                    </a>
+
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+
+                    <p>18 Glenda Drive, Frankton, Queenstown</p>
+                    <p>Central&nbspOtago, 9300</p>
+                    <p>PO Box 2036, Queenstown</p>
+                    <p>
+                        <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
+                        <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
+                    </p>
+                    <p>
+                        <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
+                                class="fa fa-envelope"></i>
+                            firstaid@mobilehealth.co.nz</a>
+                    </p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
+                           target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
+                           target="_blank">
+                            <i class="fa fa-linkedin"></i>
                         </a>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="col">
-                        {{--
-                                            <div class="flex-column footer-flex2">
-                        --}}
-                        <p>18 Glenda Drive, Frankton, Queenstown</p>
-                        <p>Central&nbspOtago, 9300</p>
-                        <p>PO Box 2036, Queenstown</p>
-                        <p>
-                            <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
-                            <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
-                        </p>
-                        <p>
-                            <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
-                                    class="fa fa-envelope"></i>
-                                firstaid@mobilehealth.co.nz</a>
-                        </p>
 
-{{--                        <p>
-                            <a href="https://engagesafety.co.nz/" target="_blank">
-                                <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                     class="footer-media">&nbsp
-                                www.engagesafety.co.nz
-                            </a>
-                        </p>--}}
-
-{{--                        <div class="social-icons">
-                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
-                               target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
-                               target="_blank">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>--}}
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="col">
-
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
-                               target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
-                               target="_blank">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <p>
-                            <a href="https://engagesafety.co.nz/" target="_blank">
-                                <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                     class="footer-media">&nbsp
-                                www.engagesafety.co.nz
-                            </a>
-                        </p>
-                    </div>
+                    <p>
+                        <a href="https://engagesafety.co.nz/" target="_blank">
+                            <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                 class="footer-media">&nbsp
+                            www.engagesafety.co.nz
+                        </a>
+                    </p>
                 </div>
             </div>
-        {{--<div class="course-container-box">
-            <div class="footer-item">
 
-                <p>18 Glenda Drive, Frankton, Queenstown, Central&nbspOtago, 9300</p>
-                <p>PO Box 2036, Queenstown</p>
-                <p>
-                    <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
-                    <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
-                </p>
-                <p>
-                    <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
-                            class="fa fa-envelope"></i>
-                        firstaid@mobilehealth.co.nz</a>
-                </p>
-            </div>
-            <div>
-                <p>
-                    <a href="https://engagesafety.co.nz/" target="_blank">
-                        <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                             class="footer-media">&nbsp
-                        www.engagesafety.co.nz
-                    </a>
-                </p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
-                   target="_blank">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-        --}}{{--<div class="course-container-box">
-            <div>
-                <p>
-                    <a href="https://engagesafety.co.nz/" target="_blank">
-                        <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                             class="footer-media">&nbsp
-                        www.engagesafety.co.nz
-                    </a>
-                </p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
-                   target="_blank">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </div>
-        </div>--}}{{--
-    </div>
-</div>--}}
-
-        <!-- Footer Ends Here -->
-
-            <!-- Sub Footer Starts Here -->
+    <!-- Footer Ends Here -->
+    <!-- Sub Footer Starts Here -->
             <div class="sub-footer">
                 <div class="row col-md-12">
                     <div class="copyright-text">
@@ -296,31 +208,6 @@
     </div>
     <!-- Sub Footer Ends Here -->
 
-    {{--    <div class="container">
-        <span style="float: right">
-
-            @if (Auth::check())
-                <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">Logout</a>
-                --}}{{--
-                            @if (Auth::check(isAdmin))
-                --}}{{--
-                <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
-                --}}{{--
-                            @endif
-                --}}{{--
-            @else
-                @if (Route::has('register'))
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new Administrator</a>
-                @endif
-            @endif
-                <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-
-        </span>
-        </div>--}}
 </footer>
 
 <!-- Bootstrap core JavaScript -->
