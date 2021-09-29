@@ -21,7 +21,7 @@
                 <br>Attend a course with us to get your First Aid qualifications.
             </p>
             <div class="btn-book-primary">
-                <a href="/book">Book your First Aid Course now!</a>
+                <a href="/bookings/create">Book your First Aid Course now!</a>
             </div>
         </div>
     </div>
@@ -96,15 +96,15 @@
     </div>
 
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="section-heading">
-            <h4>
-                What our learners like most about the courses:
-            </h4>
-            <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <h4>
+                    What our learners like most about the courses:
+                </h4>
+                <hr>
+            </div>
         </div>
-    </div>
         <div class="col-md-6 col-sm-12">
             <div id="references">
                 <blockquote>
@@ -132,11 +132,9 @@
 
         <div class="col-md-6 col-sm-12">
             <img src="/images/studentslearning.jpg" alt="Students learning at the First Aid course"
-                 class="course-image">
+                 class="course-image image-greyscale">
         </div>
     </div>
-</div>
-</div>
 
 {{--Reviews end here--}}
 

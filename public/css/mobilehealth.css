@@ -19,9 +19,9 @@ p:last-of-type {
     margin-bottom: 20px;
 }
 
-h1, h2, h4 {
+h1, h2, h3 {
     /*padding-top: 3rem;*/
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 hr {
@@ -44,6 +44,10 @@ a {
     text-transform: uppercase;
 }
 
+.image-greyscale {
+    filter: grayscale(60%);
+}
+
 /* FORM STYLE */
 .form-control {
     margin: 0 0 .5rem 0;
@@ -63,6 +67,8 @@ a {
 }
 #referencelogo {
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #referencelogo img {
@@ -228,7 +234,10 @@ a {
 
 .card-header {
     padding: 0;
+}
 
+.show-cards {
+    padding-bottom: 1.5rem;
 }
 
 div.card li {
@@ -398,7 +407,7 @@ font-family: 'FontAwesome';
 .index-items, .course-items {
     margin-bottom: 70px;
 }
-.course-item {
+/*.course-item {
     border-radius: 0;
     border: 1px solid rgba(0,0,0,.17);
     padding: 20px;
@@ -412,8 +421,8 @@ font-family: 'FontAwesome';
 .course-item img {
     width: 100%;
     padding-bottom: 5px;
-}
-.course-item h4 {
+}*/
+/*.course-item h4 {
     font-size: 1.4rem;
     font-weight: 600;
     color: #1e1e1e;
@@ -450,21 +459,21 @@ font-family: 'FontAwesome';
     display: inline-block;
     margin: 0 5px;
     outline: none;
-}
-.course-container{
+}*/
+/*.course-container{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
     align-items: stretch;
-}
+}*/
 
-.course-container div{
+/*.course-container div{
     margin: 10px 5px;
-    /*    margin-right: 5px;
+    !*    margin-right: 5px;
         margin-bottom: 10px;
-        margin-top: 10px;*/
+        margin-top: 10px;*!
     text-align: left;
-}
+}*/
 
 /*.course-container-box{
     flex: 1;
@@ -862,7 +871,7 @@ about-cards p{
 
 
 /* OTHER */
-
+/*
 .book-items {
     margin-bottom: 70px;
 }
@@ -913,7 +922,7 @@ about-cards p{
     display: inline-block;
     margin: 0 5px;
     outline: none;
-}
+}*/
 
 /* RESPONSIVE MEDIA STYLE */
 @media (max-width: 991px) {
@@ -1003,3 +1012,17 @@ about-cards p{
 
 
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}

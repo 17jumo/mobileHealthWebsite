@@ -16,8 +16,11 @@ class BookingController extends Controller
      */
     public function index()
     {
+        /*        dd($bookings);*/
         $bookings = Booking::all();
-/*        dd($bookings);*/
+        $coursedates = Coursedate::all();
+        $courses = Course::all();
+
         return view('bookings.index', ['bookings' => $bookings]);
     }
 

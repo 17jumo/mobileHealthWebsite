@@ -13,4 +13,12 @@ class Coursedate extends Model
     protected $casts = [
         'scheduled_date' => 'datetime'
     ];
+
+    public function booking() {
+        return $this->hasMany(Booking::class);
+    }
+
+    public function course() {
+        return $this->belongsTo(Course::class);
+    }
 }

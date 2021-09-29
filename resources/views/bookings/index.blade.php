@@ -21,18 +21,12 @@
                         <th scope="col" onclick="sortTable(1)">Firstname</th>
                         <th scope="col">Lastname</th>
                         <th scope="col">Email</th>
-{{--                        <th scope="col">DOB</th>
-                        <th scope="col">Gender</th>--}}
                         <th scope="col">Phone Number</th>
                         <th scope="col">Company Name</th>
-{{--                        <th scope="col">Street</th>
-                        <th scope="col">Suburb</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Postcode</th>
-                        <th scope="col">Country</th>--}}
                         <th scope="col">Course Name</th>
                         <th scope="col">Course Date</th>
                         <th scope="col">Course Total</th>
+                        <th scope="col">coursedate id - tempfield</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -43,30 +37,13 @@
                             <td>{{$booking->first_name}} </td>
                             <td>{{$booking->last_name}}</td>
                             <td>{{$booking->email}}</td>
-{{--                            <td>{{$booking->dob}}</td>
-                            <td>{{$booking->gender}}</td>--}}
                             <td>{{$booking->phone}}</td>
                             <td>{{$booking->company_name}}</td>
-    {{--                        <td>{{$booking->add_street}}</td>
-                            <td>{{$booking->add_suburb}}</td>
-                            <td>{{$booking->add_city}}</td>
-                            <td>{{$booking->add_postcode}}</td>
-                            <td>{{$booking->add_country}}</td>--}}
                             <td>{{$booking->course_name}} </td>
-                            <td>{{$booking->course_date}} </td>
+                            <td>@php echo ($booking->coursedate->scheduled_date)->format('d-m-Y') @endphp</td>
                             <td>${{$booking->course_total}} </td>
+                            <td>{{$booking->coursedate->id}}</td>
                             <td>
-{{--                                <form action="/bookings/{{$booking->id}}" method="POST">
-                                    @method('DELETE')
-                                    @csrf
-                                    @auth
-                                        <a class="btn btn-primary mx-1"
-                                           href="/bookings/{{$booking->id}}">Show More</a>
-                                        <a class="btn btn-success mx-1" href="/bookings/{{$booking->id}}/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
-                                    @endauth
-                                </form>--}}
-
                                 <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf

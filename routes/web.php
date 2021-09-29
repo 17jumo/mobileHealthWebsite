@@ -52,6 +52,7 @@ Route::get('/home/aboutus', function () {return view('home.aboutus');});
 Route::get('/home/contactus', function () {return view('home.contactus');});
 Route::get('/home/terms', function () {return view('home.terms');});
 Route::get('/home/show', function () {return view('home.show');});
+Route::get('/home/confirm', function () {return view('home.confirm');});
 
 
 /*Route::get('/dashboard', function () {

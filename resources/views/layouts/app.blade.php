@@ -87,6 +87,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/home/contactus">Contact Us</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/confirm">CourseConfirmation</a>
+                        </li>
                         <li>
                             <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
                             </div>
@@ -145,20 +149,15 @@
 
     <div class="footer footer-item">
         <div class="container">
-
             <div class="row">
-
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-
                     <a href="/">
                         <img src="/images/MobileHealth1.png" alt="Company Logo"
                              title="Mobile Health Logo" id="logoimage"
                              class="footer-item-logo">
                     </a>
-
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-
                     <p>18 Glenda Drive, Frankton, Queenstown</p>
                     <p>Central&nbspOtago, 9300</p>
                     <p>PO Box 2036, Queenstown</p>

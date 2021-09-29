@@ -47,7 +47,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top">
+                            <img src="/images/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Debbie Swain-Rewi</h5>
@@ -70,7 +70,7 @@
                     <div class="card">
                         <div class="card-header">
                         <img src="/images/MelWright.jpg" alt="Mel Wright"
-                             class="card-img-top">
+                             class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Mel Wright</h5>
@@ -86,7 +86,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/PamShaw.jpg" alt="Pam Shaw" class="card-img-top">
+                            <img src="/images/PamShaw.jpg" alt="Pam Shaw" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Pam Shaw</h5>
@@ -105,7 +105,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/AmyMead.jpg" alt="Amy Mead" class="card-img-top">
+                            <img src="/images/AmyMead.jpg" alt="Amy Mead" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Amy Mead</h5>
@@ -152,36 +152,33 @@
                                target="_blank">
                                 <img src="/images/driveThruVaccinations.png"
                                      alt="image of drive thru vaccination"
-                                     class="card-img-top">
+                                     class="card-img-top image-greyscale">
                             </a>
                         </div>
                         <div class="card-body">
                                 <h5 class="card-title">Drive Through Vaccination</h5>
                                 <p class="card-text">
                                 <p><small>6 September 2021</small></p>
-
-                                <p>Vaccinating the unvaccinated in big numbers and safely was the aim of
-                                    three
+                                <p>Vaccinating the unvaccinated in big numbers and safely was the aim of three
                                     separate pop-up Covid-19 vaccination clinics in Wanaka over the weekend.
-
                                 </p>
                             <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
-                               target="_blank"><sub id="readmore">Read more<p></a>
+                               target="_blank"><sub id="readmore">Read more</sub></a>
                             </div>
                         </a>
                     </div>
-
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
+
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
                             <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
                                target="_blank">
                                 <img src="/images/smokingCessation.png"
                                      alt="image of smoking cessation"
-                                     class="card-img-top">
+                                     class="card-img-top image-greyscale">
                             </a>
                         </div>
                         <div class="card-body">
@@ -195,11 +192,34 @@
                                     from Queenstown.
                                 </p>
                             <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
-                                  target="_blank"><sub id="readmore">Read more<p></a>
+                                  target="_blank"><sub id="readmore">Read more</sub></a>
                             </div>
                         </a>
                     </div>
+                </div>
 
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="https://theflyer.co.nz/2019/12/delivering-medical-missions-to-glenorchy/"
+                               target="_blank">
+                                <img src="/images/news_glenorchy_debbie.jpg"
+                                     alt="image of glenorchy medical support"
+                                     class="card-img-top image-greyscale">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Delivering Medical Missions to Glenorchy</h5>
+                            <p class="card-text">
+                            <p><small>2021</small></p>
+                            <p>She’s been an angel of light to the Glenorchy community for five years now and Queenstown
+                                nurse Debbie Swain-Rewi is showing no signs of leaving her post.
+                            </p>
+                            <a href="https://theflyer.co.nz/2019/12/delivering-medical-missions-to-glenorchy/"
+                               target="_blank"><sub id="readmore">Read more</sub></a>
+                        </div>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
@@ -210,7 +230,7 @@
                                target="_blank">
                                 <img src="/images/karmaglenorchy.jpg"
                                      alt="image of smoking cessation"
-                                     class="card-img-top">
+                                     class="card-img-top image-greyscale">
                             </a>
                         </div>
                         <div class="card-body">
@@ -222,7 +242,7 @@
                                     Queenstown nurse decided to dip into her own pocket to provide some support.
                                 </p>
                             <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
-                               target="_blank"><sub id="readmore">Read more<p></a>
+                               target="_blank"><sub id="readmore">Read more</sub></a>
                             </div>
                         </a>
                     </div>

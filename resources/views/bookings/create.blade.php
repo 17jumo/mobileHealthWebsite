@@ -35,13 +35,15 @@
                         <select name="course_date" id="course_date"
                                 class="form-control @error('course_total') is-invalid @enderror"
                                 required>
-                            <option value="2022-02-05">Thursday 05 Feb 2022</option>
+{{--                            @foreach ($coursedates as $coursedate)
+                                <option value="{{$coursedates->id}}">{{$coursedates->id}} </option>
+                            @endforeach--}}
+                                <option value="2022-02-05">Thursday 05 Feb 2022</option>
                             <option value="2022-02-17">Thursday 17 Feb 2022</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
-
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
