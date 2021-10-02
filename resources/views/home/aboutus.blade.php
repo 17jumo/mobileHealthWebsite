@@ -47,7 +47,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top image-greyscale">
+                            <img src="/images/aboutus/DebbieSwainRewi.jpg" alt="Debbie Swain-Rewi" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Debbie Swain-Rewi</h5>
@@ -69,7 +69,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                        <img src="/images/MelWright.jpg" alt="Mel Wright"
+                        <img src="/images/aboutus/MelWright.jpg" alt="Mel Wright"
                              class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
@@ -86,7 +86,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/PamShaw.jpg" alt="Pam Shaw" class="card-img-top image-greyscale">
+                            <img src="/images/aboutus/PamShaw.jpg" alt="Pam Shaw" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Pam Shaw</h5>
@@ -105,7 +105,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <img src="/images/AmyMead.jpg" alt="Amy Mead" class="card-img-top image-greyscale">
+                            <img src="/images/aboutus/AmyMead.jpg" alt="Amy Mead" class="card-img-top image-greyscale">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Amy Mead</h5>
@@ -150,7 +150,7 @@
                         <div class="card-header">
                             <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
                                target="_blank">
-                                <img src="/images/driveThruVaccinations.png"
+                                <img src="/images/aboutus/driveThruVaccinations.png"
                                      alt="image of drive thru vaccination"
                                      class="card-img-top image-greyscale">
                             </a>
@@ -176,7 +176,7 @@
                         <div class="card-header">
                             <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
                                target="_blank">
-                                <img src="/images/smokingCessation.png"
+                                <img src="/images/aboutus/smokingCessation.png"
                                      alt="image of smoking cessation"
                                      class="card-img-top image-greyscale">
                             </a>
@@ -203,7 +203,7 @@
                         <div class="card-header">
                             <a href="https://theflyer.co.nz/2019/12/delivering-medical-missions-to-glenorchy/"
                                target="_blank">
-                                <img src="/images/news_glenorchy_debbie.jpg"
+                                <img src="/images/aboutus/news_glenorchy_debbie.jpg"
                                      alt="image of glenorchy medical support"
                                      class="card-img-top image-greyscale">
                             </a>
@@ -228,7 +228,7 @@
                         <div class="card-header">
                             <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
                                target="_blank">
-                                <img src="/images/karmaglenorchy.jpg"
+                                <img src="/images/aboutus/karmaglenorchy.jpg"
                                      alt="image of smoking cessation"
                                      class="card-img-top image-greyscale">
                             </a>
