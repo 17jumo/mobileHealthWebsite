@@ -91,6 +91,9 @@ class CoursedateController extends Controller
      */
     public function update(Request $request, Coursedate $coursedate)
     {
+        if(! Gate::allows('admin')) {
+            abort(403);
+        }
 
         request()->validate([
             'scheduled_date' => 'required',
@@ -111,6 +114,9 @@ class CoursedateController extends Controller
      */
     public function destroy(Coursedate $coursedate)
     {
+        if(! Gate::allows('admin')) {
+            abort(403);
+        }
         $coursedate->delete();
         return redirect('coursedates');
     }
