@@ -162,8 +162,8 @@
                                 <p>Vaccinating the unvaccinated in big numbers and safely was the aim of three
                                     separate pop-up Covid-19 vaccination clinics in Wanaka over the weekend.
                                 </p>
-                            <a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
-                               target="_blank"><sub id="readmore">Read more</sub></a>
+                            <p id="readmore"><a href="https://www.odt.co.nz/regions/wanaka/%E2%80%98happy%E2%80%99-receive-covid-jabs"
+                               target="_blank">Read more</a></p>
                             </div>
                         </a>
                     </div>
@@ -191,8 +191,8 @@
                                     community, a small settlement at the northern end of Lake Wakatipu, 45km
                                     from Queenstown.
                                 </p>
-                            <a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
-                                  target="_blank"><sub id="readmore">Read more</sub></a>
+                            <p id="readmore"><a href="http://www.kaitahu.maori.nz/southern-stop-smoking-inspirational-stories/glenorchy-debbie-swain-rewi"
+                                  target="_blank">Read more</a></p>
                             </div>
                         </a>
                     </div>
@@ -215,8 +215,8 @@
                             <p>She’s been an angel of light to the Glenorchy community for five years now and Queenstown
                                 nurse Debbie Swain-Rewi is showing no signs of leaving her post.
                             </p>
-                            <a href="https://theflyer.co.nz/2019/12/delivering-medical-missions-to-glenorchy/"
-                               target="_blank"><sub id="readmore">Read more</sub></a>
+                            <p id="readmore"><a href="https://theflyer.co.nz/2019/12/delivering-medical-missions-to-glenorchy/"
+                               target="_blank">Read more</a></p>
                         </div>
                         </a>
                     </div>
@@ -241,8 +241,8 @@
                                 <p>When a Glenorchy resident was diagnosed with terminal cancer in early 2015, a
                                     Queenstown nurse decided to dip into her own pocket to provide some support.
                                 </p>
-                            <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
-                               target="_blank"><sub id="readmore">Read more</sub></a>
+                            <p id="readmore"><a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
+                               target="_blank">Read more</a></p>
                             </div>
                         </a>
                     </div>
