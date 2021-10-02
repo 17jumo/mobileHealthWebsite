@@ -17,7 +17,12 @@
     {{--    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">--}}
 
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     {{--Browser Icon--}}
     <link rel="icon" href="/images/MobileHealthTabLogo.png" type="/image/MobileHealthTabLogo.png">
@@ -40,35 +45,18 @@
 <body>
 <header>
 
-    {{--new navbar--}}
-
     <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div class="container">
 
             <a class="navbar-brand d-flex w-25 me-auto nav-img" id="logoimage" href="/"><img
                     src="/images/MobileHealth1.png"
                     alt="Mobile Health Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent-333"
-                    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent-333">
-            {{--            </a>--}}
-            {{--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
-                <span class="navbar-toggler-icon"></span>
-            </button>--}}
-
-            {{--                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>--}}
 
             <!-- Toggler/collapse Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                {{--                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">--}}
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
@@ -101,12 +89,14 @@
             </div>
         </div>
     </nav>
+
+
 </header>
 
 <main>
     @auth
         <div class="container">
-            <h4>Mobile Health Administration</h4>
+            <h3>Mobile Health Administration</h3>
             <div style="float: right">
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -147,32 +137,25 @@
 <!-- Footer Starts Here -->
 <footer>
 
-    <div class="footer footer-item">
+    <div class="footer footer-menu footer-item">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="/">
-                        <img src="/images/MobileHealth1.png" alt="Company Logo"
-                             title="Mobile Health Logo" id="logoimage"
-                             class="footer-item-logo">
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <p>18 Glenda Drive, Frankton, Queenstown</p>
-                    <p>Central&nbspOtago, 9300</p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h5>Location</h5>
+                    <p>18 Glenda Drive </p>
+                    <p>Frankton</p>
+                    <p>Queenstown</p>
                     <p>PO Box 2036, Queenstown</p>
-                    <p>
-                        <a href="#"><i class="fa fa-phone-square"></i>&nbsp03&nbsp111&nbsp2222</a> &nbsp;
-                        <a href="#"><i class="fa fa-phone-square"></i>&nbsp0274&nbsp423&nbsp624</a>
-                    </p>
-                    <p>
-                        <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank"><i
-                                class="fa fa-envelope"></i>
-                            firstaid@mobilehealth.co.nz</a>
-                    </p>
+                    <p>Central&nbspOtago, 9300</p>
+
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="social-icons">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h5>Contact</h5>
+                    <p>03&nbsp111&nbsp2222</p>
+                    <p>0274&nbsp423&nbsp624</p>
+                    <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank">
+                            firstaid@mobilehealth.co.nz</a>
+                    <p class="social-icons">
                         <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
                            target="_blank">
                             <i class="fa fa-facebook"></i>
@@ -180,26 +163,43 @@
                         <a href="https://www.linkedin.com/company/mobilehealthqueenstown/about/"
                            target="_blank">
                             <i class="fa fa-linkedin"></i>
-                        </a>
-                    </div>
+                        </a></p>
+                </div>
 
-                    <p>
-                        <a href="https://engagesafety.co.nz/" target="_blank">
-                            <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                 class="footer-media">&nbsp
-                            www.engagesafety.co.nz
-                        </a>
-                    </p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h5>Other</h5>
+                    <ul>
+                        <li><a href="https://www.termsfeed.com/live/01b54658-9762-4347-8c16-3fd90e4ec5a3"
+                               id="is_terms_agreed"
+                               target="_blank">Privacy Policy</a></li>
+                        <li><a href="/home/terms" id="is_terms_agreed" target="_blank">Terms and Conditions</a></li>
+                        <li>
+                            <a href="https://engagesafety.co.nz/" target="_blank">
+                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                         class="footer-media">&nbspwww.engagesafety.co.nz
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h5>Site Map</h5>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/home/show">Courses</a></li>
+                        <li><a href="/bookings/create">Book</a></li>
+                        <li><a href="/home/aboutus">About Us</a></li>
+                        <li><a href="/home/contactus">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
 
-    <!-- Footer Ends Here -->
-    <!-- Sub Footer Starts Here -->
+            <!-- Footer Ends Here -->
+            <!-- Sub Footer Starts Here -->
             <div class="sub-footer">
                 <div class="row col-md-12">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2021 Mobile Health | <a href="/courses">Design by:
-                                SIT-SS-DESIGN</a></p>
+
+                        <a href="/courses">Copyright &copy; 2021 Mobile Health | Design by: SIT-SS-DESIGN</a>
                     </div>
                 </div>
             </div>
