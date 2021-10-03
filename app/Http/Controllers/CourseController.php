@@ -47,11 +47,12 @@ class CourseController extends Controller
             'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
-            'course_image' => 'nullable|image|mimes:jpeg,jpg,png',
+/*            'image' => 'nullable|image|mimes:jpeg,jpg,png',
+            'image_path' => '',*/
         ]);
 
-        $imageName = time() . '.' . $request->image->extension();
-        $request->image->move(public_path('images'), $imageName);
+/*        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images'), $imageName);*/
 
         $course = new course();
         $course->course_name = request('course_name');
@@ -61,8 +62,8 @@ class CourseController extends Controller
         $course->start_time = request('start_time');
         $course->end_time = request('end_time');
         $course->price = request('price');
-        $course->image =  request('image');
-        $course->image_path =  "/images/course" . $imageName;
+/*        $course->image =  request('image');
+        $course->image_path =  "/images/index" . $imageName;*/
         $course->save();
 
         return redirect('courses');
@@ -110,14 +111,16 @@ class CourseController extends Controller
             'start_time' => 'required',
             'end_time' => 'required',
             'price' => 'required',
+/*            'image' => 'nullable|image|mimes:jpeg,jpg,png',
+            'image_path' => '',*/
         ]);
 
-        if(isset($request->image)) {
+/*        if(isset($request->image)) {
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $imageName);
             $course->image =  request('image');
             $course->image_path =  "/images/course" . $imageName;
-        }
+        }*/
 
         $course->update($request->all());
 
@@ -132,11 +135,19 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        if(! Gate::allows('admin')) {
+/*        if(! Gate::allows('isAdmin')) {
             abort(403);
         }
-        $course->delete();
+        $course->delete();*/
+        if (Gate::allows('isAdmin')) {
 
+            dd('Admin allowed');
+
+        } else {
+
+            dd('You are not Admin');
+
+        }
 
         return redirect('courses');
     }
