@@ -30,8 +30,8 @@ class CourseFactory extends Factory
             'start_time' => $this->faker->time,
             'end_time' => $this->faker->time,
 
-            'image' => 'heart.jpg',
-            'image_path' => '/images/course' . $this->faker->numberBetween(1, 4) . ".jpg",
+/*            'image' => '1.jpg',*/
+/*            'image_path' => '/images/index' . $this->faker->numberBetween(1, 4) . ".jpg",*/
 
             'created_at' => now(),
             'updated_at' => now(),
