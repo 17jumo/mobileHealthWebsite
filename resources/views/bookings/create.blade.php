@@ -33,7 +33,7 @@
                         <label for="course_date" class="form-control-label">Select course
                             date*</label>
                         <select name="course_date" id="course_date"
-                                class="form-control @error('course_total') is-invalid @enderror"
+                                class="form-control @error('course_date') is-invalid @enderror"
                                 required>
 {{--                            @foreach ($coursedates as $coursedate)
                                 <option value="{{$coursedates->id}}">{{$coursedates->id}} </option>
@@ -47,7 +47,12 @@
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                               name="course_total" id="course_total" value="149" readonly>
+                               name="course_total" id="course_total" value="150" readonly>
+                               {{--                            @if()--}}
+                               {{--                            @foreach ($courses as $course)
+                                                           <option value="{{$course->course_total}}">{{$course->course_total}}</option>
+                                                       @endforeach--}}
+
                     </div>
                 </div>
 
@@ -57,30 +62,31 @@
                     <div class="col-md-6 col-sm-12">
                         <label for="first_name">First Name *</label>
                         <input type="text" class="form-control @error('first_name') is-invalid @enderror"
-                               name="first_name" id="first_name" value="" required>
+                               name="first_name" id="first_name" value="{{ @old('first_name') }}" required>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <label for="last_name">Last Name *</label>
                         <input type="text" class="form-control @error('last_name') is-invalid @enderror"
-                               id="last_name" name="last_name" value="" required>
+                               id="last_name" name="last_name" value="{{ @old('last_name') }}" required>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <label for="email">Email*</label>
-                        <input type="text" id="email" name="email" class="form-control"
+                        <input type="text" id="email" name="email" class="form-control" value="{{ @old('email') }}"
                                required/>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="phone">Phone number (mobile preferred)*</label>
-                        <input class="form-control" type="text" name="phone">
+                        <input class="form-control" type="text" name="phone" value="{{ @old('phone') }}" >
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="actName" class="form-control-label">Date of birth*</label>
+                        <label for="dob" class="form-control-label">Date of birth*</label>
                         <input class="form-control"
                                type="date" id="dob" name="dob"
                                min="1920-01-01" max="2021-01-01"
                                pattern="\d{4}-\d{2}-\d{2}"
+                               value="{{ @old('dob') }}"
                                required>
                     </div>
 
@@ -98,45 +104,45 @@
                     <div class="col-md-6 col-sm-12">
                         <label for="company_name">Company Name</label>
                         <input type="text" class="form-control @error('company_name') is-invalid @enderror"
-                               name="company_name" id="company_name">
+                               name="company_name" id="company_name" value="{{ @old('company_name') }}" >
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="add_street">Street*</label>
                         <input type="text" class="form-control @error('add_street') is-invalid @enderror"
-                               name="add_street" id="add_street" required>
+                               name="add_street" id="add_street" value="{{ @old('add_street') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="add_suburb">Suburb*</label>
                         <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
-                               name="add_suburb" id="add_suburb" required>
+                               name="add_suburb" id="add_suburb" value="{{ @old('add_suburb') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="add_city">City*</label>
                         <input type="text" class="form-control @error('add_city') is-invalid @enderror"
-                               name="add_city" id="add_city" required>
+                               name="add_city" id="add_city" value="{{ @old('add_city') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="add_postcode">Postcode*</label>
                         <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
-                               name="add_postcode" id="add_postcode" required>
+                               name="add_postcode" id="add_postcode" value="{{ @old('add_postcode') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <label for="add_country">Country*</label>
                         <input type="text" class="form-control @error('add_country') is-invalid @enderror"
-                               name="add_country" id="add_country" required>
+                               name="add_country" id="add_country" value="{{ @old('add_country') }}" required>
                     </div>
 
                     <div class="col-md-12">
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
-                        <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms"
-                                                                                          id="is_terms_agreed"
-                                                                                          target="_blank">terms and
-                                conditions</a></label><br>
+                        <label for="is_terms_agreed">&nbspI have read and agree to the
+                            <a href="/home/terms"
+                               id="is_terms_agreed"
+                               target="_blank" value="{{ @old('is_terms_agreed') }}" >Terms and Conditions</a></label><br>
                     </div>
 
 
