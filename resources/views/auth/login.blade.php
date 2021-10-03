@@ -1,3 +1,7 @@
+
+
+
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -13,23 +17,24 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <form method="POST" action="{{ route('login') }}">
-            @csrf
+        @csrf
 
-            <!-- Email Address -->
+        <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" {{--class="block mt-1 w-full"--}} class="form-control w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                <x-input id="password" {{--class="block mt-1 w-full"--}}
+                class="form-control w-full"
+                         type="password"
+                         name="password"
+                         required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -50,6 +55,13 @@
                 <x-button class="ml-3">
 
                     {{ __('Log in') }}
+                </x-button>
+
+                <x-button class="ml-3">
+                    <a href="/">
+                        {{ __('Cancel') }}
+                    </a>
+
                 </x-button>
             </div>
         </form>
