@@ -47,8 +47,11 @@ class CourseController extends Controller
             'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
-            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'course_image' => 'nullable|image|mimes:jpeg,jpg,png',
         ]);
+
+        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
 
         $course = new course();
         $course->course_name = request('course_name');
@@ -58,7 +61,8 @@ class CourseController extends Controller
         $course->start_time = request('start_time');
         $course->end_time = request('end_time');
         $course->price = request('price');
-        /*$course->course_image = request('course_image');*/
+        $course->image =  request('image');
+        $course->image_path =  "/images/course" . $imageName;
         $course->save();
 
         return redirect('courses');
@@ -95,16 +99,25 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
+/*        if(! Gate::allows('admin')) {
+            abort(403);
+        }*/
         request()->validate([
             'course_name' => 'required',
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
-            /*'course_image' => 'nullable|image|mimes:jpeg,jpg,png',*/
             'duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
             'price' => 'required',
         ]);
+
+        if(isset($request->image)) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $course->image =  request('image');
+            $course->image_path =  "/images/course" . $imageName;
+        }
 
         $course->update($request->all());
 
@@ -119,7 +132,12 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
+        if(! Gate::allows('admin')) {
+            abort(403);
+        }
         $course->delete();
+
+
         return redirect('courses');
     }
 }
