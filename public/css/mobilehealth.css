@@ -555,7 +555,7 @@ div.card {
 }
 
 .footer h5 {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 0.8em;
@@ -674,6 +674,7 @@ div.card {
 }
 
 .sub-footer a {
+    font-size: .6em;
     color: #212529;
     text-decoration: none;
 }

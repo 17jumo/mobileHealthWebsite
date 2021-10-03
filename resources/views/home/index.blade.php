@@ -127,7 +127,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <img src="/images/studentslearning.jpg" alt="Students learning at the First Aid course"
+            <img src="/images/index/studentslearning.jpg" alt="Students learning at the First Aid course"
                  class="course-image image-greyscale">
         </div>
     </div>
