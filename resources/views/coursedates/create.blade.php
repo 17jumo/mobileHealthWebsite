@@ -9,8 +9,8 @@
             </div>
 
             <div class="form-content">
-            <form method="POST" action="/coursedates">
-                @csrf
+                <form method="POST" action="/coursedates">
+                    @csrf
 
                     <div class="col-md-6">
                         <label for="course_id">Choose a course:</label>
@@ -25,31 +25,27 @@
                     <div class="col-md-6">
                         <label for="scheduled_date">Scheduled Date</label>
                         <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
-                               id="scheduled_date" name="scheduled_date" value="" required>
+                               id="scheduled_date" name="scheduled_date" value="{{ @old('scheduled_date') }}" required>
                     </div>
                     <div class="col-md-6">
                         <label for="max_attendee">Maximum Attendees</label>
                         <input type="text" class="form-control @error('max_attendee') is-invalid @enderror"
-                               id="max_attendee" name="max_attendee" value="" required>
+                               id="max_attendee" name="max_attendee" value="{{ @old('max_attendee') }}" required>
                     </div>
                     <div class="col-md-12">
                         <label for="venue">Venue</label>
                         <input type="text" class="form-control @error('venue') is-invalid @enderror"
-                               id="venue" name="venue" value="18 Glenda Drive, Frankton, Queenstown" required>
+                               id="venue" name="venue" value="{{ @old('venue') }}" required>
                     </div>
 
                     <div class="form-button mt-3">
                         <input class="btn btn-primary" type="submit" value="Save">
                         <a class="btn btn-warning" href="/coursedates">Cancel</a>
                     </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-
-
 
 @endsection
 
