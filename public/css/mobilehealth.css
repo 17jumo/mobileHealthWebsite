@@ -254,6 +254,16 @@ a {
     margin: auto;
 }
 
+.card-login {
+    margin: auto;
+}
+
+.card-login img {
+    height: 60px;
+    width: 60px;
+/*    margin: auto;*/
+}
+
 .card-header {
     padding: 0;
 }

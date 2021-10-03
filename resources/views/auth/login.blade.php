@@ -1,69 +1,54 @@
+@extends('layouts.app')
+@section('content')
 
+    <div class="container">
+        <div class="card card-body card-login w-50">
+            <img src="/images/MobileHealthTabLogo.png"
+                 alt="Mobile Health Logo">
 
+            <h5>Administrator Login</h5>
 
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+                <div class="row">
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+                    <!-- Email Address -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input name="email" type="text" class="form-control" placeholder="Email *" value=""/>
+                        </div>
+                    </div>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                    <!-- Password -->
+                    <div class="col-md-12">
+                        <div class="form-group content-start">
+                            <label for="password">Password*</label>
+                            <input name="password" type="password" class="form-control" placeholder="Password"
+                                   value=""/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Submit">
+                <a href="/"></a>
+                <a class="btn btn-outline-dark" href="/">{{ __('Cancel') }}</a>
+                <a class="btn btn-outline-dark" href="{{ route('password.request') }}">Reset Password </a>
+            </form>
 
-        <form method="POST" action="{{ route('login') }}">
-        @csrf
+            <!-- Validation Errors -->
+            @if ($errors->any())
+                <div class="alert alert-danger mt-2">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+    </div>
 
-        <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+@endsection
 
-                <x-input id="email" {{--class="block mt-1 w-full"--}} class="form-control w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" {{--class="block mt-1 w-full"--}}
-                class="form-control w-full"
-                         type="password"
-                         name="password"
-                         required autocomplete="current-password" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-
-                    {{ __('Log in') }}
-                </x-button>
-
-                <x-button class="ml-3">
-                    <a href="/">
-                        {{ __('Cancel') }}
-                    </a>
-
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
