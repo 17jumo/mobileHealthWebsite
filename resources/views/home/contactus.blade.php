@@ -72,16 +72,16 @@
                 <form class="contact__form" method="post" action="http://webdevbasics.net/scripts/demo.php">
 
                     <input name="name" type="text" class="form-control" id="name"
-                           placeholder="Your name..." required="">
+                           placeholder="Your name..." value="{{ @old('name') }}" required="">
 
                     <input name="email" type="text" class="form-control" id="email"
-                           placeholder="Your email..." required="">
+                           placeholder="Your email..." value="{{ @old('email') }}" required="">
 
                     <input name="subject" type="text" class="form-control" id="subject"
-                           placeholder="Subject..." required="">
+                           placeholder="Subject..." value="{{ @old('subject') }}" required="">
 
                     <textarea name="message" rows="4" class="form-control" id="message"
-                              placeholder="Your message..." required=""></textarea>
+                              placeholder="Your message..." value="{{ @old('message') }}" required=""></textarea>
 
                     {{-- <button type="submit" id="form-submit" class="button">Send Message
                                                   </button>--}}
