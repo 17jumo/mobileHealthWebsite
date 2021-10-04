@@ -22,7 +22,7 @@ class BookingController extends Controller
         $courses = Course::all();
 
 
-        return view('bookings.index', ['bookings' => $bookings], ['courses' => $courses], ['coursedates' => $coursedates]);
+        return view('bookings.index', ['bookings' => $bookings, 'courses' => $courses,'coursedates' => $coursedates]);
     }
 
     /**
