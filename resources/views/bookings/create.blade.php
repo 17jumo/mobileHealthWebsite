@@ -26,7 +26,7 @@
                         <select id="course_id" name="course_id" class="form-control"
                                 @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
                             @foreach ($courses as $course)
-                                <option value="{{$course->id}}">{{$course->course_name}}</option>
+                                <option {{ $course->id == $old_id ? 'selected' : '' }}  value="{{$course->id}}" >{{$course->course_name}} {{$course->price}}  </option>
                             @endforeach
                         </select>
                     </div>
@@ -36,11 +36,11 @@
                         <select name="coursedate_id" id="coursedate_id"
                                 class="form-control @error('coursedate_id') is-invalid @enderror"
                                 required>
-                            {{--                            @if(course_name =)--}}
+                            <!-- {{--                            @if(course_name =)--}} -->
                             @foreach ($coursedates as $coursedate)
-                                {{--                                @if()--}}
+                                <!-- {{--                                @if()--}} -->
                                 <option value="{{$coursedate->id}}">
-                                    {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}}
+                                    <!-- {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}} -->
                                     {{$coursedate->scheduled_date}}</option>
                             @endforeach
                         </select>
@@ -50,11 +50,7 @@
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                               name="course_total" id="course_total" value="150" readonly>
-                        {{--                            @if()--}}
-                        {{--                            @foreach ($courses as $course)
-                                                    <option value="{{$course->course_total}}">{{$course->course_total}}</option>
-                                                @endforeach--}}
+                               name="course_total" id="course_total" value="1111" readonly>
 
                     </div>
                 </div>
