@@ -69,7 +69,7 @@
             <div class="col-md-6">
 
                 <h5>Send us a message</h5>
-                <form class="contact__form" method="post" action="http://webdevbasics.net/scripts/demo.php">
+                <form class="contact__form" method="get" action="/contactusmail">
 
                     <input name="name" type="text" class="form-control" id="name"
                            placeholder="Your name..." value="{{ @old('name') }}" required="">
@@ -83,14 +83,36 @@
                     <textarea name="message" rows="4" class="form-control" id="message"
                               placeholder="Your message..." value="{{ @old('message') }}" required=""></textarea>
 
-                    {{-- <button type="submit" id="form-submit" class="button">Send Message
-                                                  </button>--}}
-                    <div class="btn btn-secondary">
-                        <a href="/book">Send</a>
+                     <button type="submit" id="form-submit" class="btn btn-secondary">Send Message
+                                                  </button>
+{{--                    <div class="btn btn-secondary">--}}
+{{--                        <a href="/contactusmail">Send</a>--}}
                     </div>
                 </form>
             </div>
         </div>
+
+
+
+
+{{--        <script>--}}
+{{--            loadOrder();--}}
+{{--            function loadOrder(){--}}
+{{--                var params = new URLSearchParams(document.location.search.substring(1));--}}
+{{--                var Name = params.get("Name");--}}
+{{--                var Email = params.get("Email");--}}
+{{--                var Subject = params.get("Subject");--}}
+{{--                var Message = params.get("Subject");--}}
+
+{{--                document.getElementById('Name').value = Name ;--}}
+{{--                document.getElementById('Email').value = Email ;--}}
+{{--                document.getElementById('Subject').value = Subject ;--}}
+{{--                document.getElementById('Message').value = Message ;--}}
+{{--            }--}}
+{{--        </script>--}}
+
+
+
 
         <div class="row">
             <div class="col-md-12">
