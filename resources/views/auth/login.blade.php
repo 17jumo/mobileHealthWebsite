@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        <div class="card card-body card-login w-50">
+        <div class="card card-body card-login w-50 align-items-center">
             <img src="/images/MobileHealthTabLogo.png"
                  alt="Mobile Health Logo">
 
@@ -35,6 +35,7 @@
                 <a href="/"></a>
                 <a class="btn btn-outline-dark" href="/">{{ __('Cancel') }}</a>
                 <a class="btn btn-outline-dark" href="{{ route('password.request') }}">Reset Password </a>
+                <p href="{{ route('password.request') }}">Reset Password </p>
             </form>
 
             <!-- Validation Errors -->
