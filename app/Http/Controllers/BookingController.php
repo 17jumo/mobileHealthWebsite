@@ -98,10 +98,8 @@ class BookingController extends Controller
         $booking->city = request('city');
         $booking->postcode = request('postcode');
         $booking->country = request('country');
-
         $booking->is_terms_agreed = request('is_terms_agreed');
 
-        $booking->save();
 
         $stripe = new \Stripe\StripeClient(
       'sk_test_51JawcXEdQN6YZjuxiZyeug0fYd4GWKpmexqQ3Uw9BvL460IK5ktKUOtgpKeQF6elpZ1O1R998GAGjjH2djNep0cT00pG27q9iP'
@@ -111,6 +109,7 @@ class BookingController extends Controller
           'currency' => 'nzd',
           'source' => 'tok_amex',
         ]);
+        $booking->save();
 
          return view('home.confirm');
 

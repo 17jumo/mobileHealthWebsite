@@ -49,6 +49,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
+                        
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                name="course_total" id="course_total" value="1111" readonly>
 
