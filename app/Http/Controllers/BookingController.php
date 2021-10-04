@@ -21,7 +21,7 @@ class BookingController extends Controller
         $coursedates = Coursedate::all();
         $courses = Course::all();
 
-        return view('bookings.index', ['bookings' => $bookings]);
+        return view('bookings.index', ['bookings' => $bookings], ['courses' => $courses], ['coursedates' => $coursedates]);
     }
 
     /**
@@ -29,9 +29,13 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('bookings.create');
+        /*dd($request);*/
+        $coursedates = Coursedate::where("course_id","=",1)->get();
+
+        $courses = Course::all();
+        return view('bookings.create', ['courses' => $courses], ['coursedates' => $coursedates]);
     }
 
     /**
@@ -42,10 +46,20 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-/*        dd($request);*/
+       $courses = Course::all();
+//        $coursedates = Coursedate::all();
+
+        //IF CHECKING IF THEY ONLY CHANGE THE COURSE
+        if ($request->first_name == null) {
+            $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
+            return view('bookings.create', ['courses' => $courses], ['coursedates' => $coursedates]);
+        }
 
         request()->validate([
-            /*'coursedate_id' = 'required';*/
+            'course_id' => 'required',
+            'coursedate_id' => 'required',
+            'course_total' => 'required',
+
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -53,19 +67,20 @@ class BookingController extends Controller
             'dob' => 'required',
             'gender' => 'required',
             'company_name' => '',
-            'add_street' => '',
-            'add_suburb' => '',
-            'add_city' => '',
-            'add_postcode' => '',
-            'add_country' => '',
-            'course_name' => 'required',
-            'course_date' => 'required',
-            'course_total' => 'required',
+            'street' => '',
+            'suburb' => '',
+            'city' => '',
+            'postcode' => '',
+            'country' => '',
+
             'is_terms_agreed' => 'required',
         ]);
 
         $booking = new booking();
-        $booking->coursedate_id = 100;
+        $booking->course_id = request('course_id');
+        $booking->coursedate_id = request('coursedate_id');
+        $booking->course_total = request('course_total');
+
         $booking->first_name = request('first_name');
         $booking->last_name = request('last_name');
         $booking->email = request('email');
@@ -73,19 +88,16 @@ class BookingController extends Controller
         $booking->dob = request('dob');
         $booking->gender = request('gender');
         $booking->company_name = request('company_name');
-        $booking->add_street = request('add_street');
-        $booking->add_suburb = request('add_suburb');
-        $booking->add_city = request('add_city');
-        $booking->add_postcode = request('add_postcode');
-        $booking->add_country = request('add_country');
-        $booking->course_name = request('course_name');
-        $booking->course_date = request('course_date');
-        $booking->course_total = request('course_total');
+        $booking->street = request('street');
+        $booking->suburb = request('suburb');
+        $booking->city = request('city');
+        $booking->postcode = request('postcode');
+        $booking->country = request('country');
+
         $booking->is_terms_agreed = request('is_terms_agreed');
 
         $booking->save();
-
-        return redirect('bookings');
+        return redirect('/');
     }
 
     /**
@@ -119,7 +131,14 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
+/*        if(! Gate::allows('admin')) {
+            abort(403);
+        }*/
         request()->validate([
+            'course_id' => '',
+            'coursedate_id' => '',
+            'course_total' => '',
+
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -127,14 +146,12 @@ class BookingController extends Controller
             'gender' => 'required',
             'phone' => 'required',
             'company_name' => '',
-            'add_street' => '',
-            'add_suburb' => '',
-            'add_city' => '',
-            'add_postcode' => '',
-            'add_country' => '',
-            'course_name' => '',
-            'course_date' => '',
-            'course_total' => '',
+            'street' => '',
+            'suburb' => '',
+            'city' => '',
+            'postcode' => '',
+            'country' => '',
+
             'is_terms_agreed' => 'required',
         ]);
 
@@ -147,9 +164,13 @@ class BookingController extends Controller
      *
      * @param \App\Models\Booking $booking
      * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function destroy(Booking $booking)
     {
+        /*        if(! Gate::allows('admin')) {
+      /*            abort(403);
+                }*/
         $booking->delete();
         return redirect('bookings');
     }

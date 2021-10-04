@@ -15,7 +15,13 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
+            $table->foreignID ('course_id')->contrained();
+            $table->foreignID ('coursedate_id')->contrained();
+
+/*            $table->string ('course_name');
+            $table->string ('course_date');*/
+            $table->integer('course_total');
 
             $table->string	('first_name');
             $table->string ('last_name');
@@ -24,17 +30,14 @@ class CreateBookingsTable extends Migration
             $table->date ('dob');
             $table->string ('gender');
             $table->string	('company_name') ->nullable();
-            $table->string ('add_street') ->nullable();
-            $table->string ('add_suburb') ->nullable();
-            $table->string ('add_city') ->nullable();
-            $table->string	('add_postcode') ->nullable();
-            $table->string ('add_country') ->nullable();
-            $table->string ('course_name');
-            $table->string ('course_date');
-            $table->integer('course_total');
+            $table->string ('street') ->nullable();
+            $table->string ('suburb') ->nullable();
+            $table->string ('city') ->nullable();
+            $table->string	('postcode') ->nullable();
+            $table->string ('country') ->nullable();
             $table->boolean('is_terms_agreed');
 
-            $table->foreignID ('coursedate_id')->contrained();
+            $table->timestamps();
         });
     }
 

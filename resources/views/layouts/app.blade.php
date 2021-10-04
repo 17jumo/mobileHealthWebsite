@@ -53,40 +53,40 @@
                     alt="Mobile Health Logo"></a>
 
             <!-- Toggler/collapse Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/show">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/bookings/create">Bookings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/aboutus">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/contactus">Contact Us</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/show">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bookings/create">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/contactus">Contact Us</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/confirm">CourseConfirmation</a>
-                        </li>
-                        <li>
-                            <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
-                            </div>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/confirm">CourseConfirmation</a>
+                    </li>
+                    <li>
+                        <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
+                        </div>
+                    </li>
 
-                    </ul>
-                </div>
+                </ul>
             </div>
+        </div>
         </div>
     </nav>
 
@@ -97,6 +97,15 @@
     @auth
         <div class="container">
             <h3>Mobile Health Administration</h3>
+            <p>Your authorisation level is:&nbsp
+                @can('isAdmin')
+                    Admin access
+                @elsecan('isManager')
+                    Manager access
+                @else
+                    User access
+                @endcan
+            </p>
             <div style="float: right">
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -104,17 +113,21 @@
                     {{--
                                 @if (Auth::check(isAdmin))
                     --}}
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                        Administrator</a>
+                    @can('isAdmin')
+                        <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
+                            Administrator</a>
+                    @endcan
                     {{--
                                 @endif
                     --}}
                 @else
-                    @if (Route::has('register'))
-                        <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                            Administrator</a>
-                    @endif
+                    @can('isAdmin')
+                        @if (Route::has('register'))
+                            <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
+                                Administrator</a>
+                        @endif
+                    @endcan
                 @endif
                 <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -124,6 +137,9 @@
             <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
+            @can('isAdmin')
+                <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
+            @endcan
 
             @endauth
 
@@ -154,7 +170,7 @@
                     <p>03&nbsp111&nbsp2222</p>
                     <p>0274&nbsp423&nbsp624</p>
                     <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank">
-                            firstaid@mobilehealth.co.nz</a>
+                        firstaid@mobilehealth.co.nz</a>
                     <p class="social-icons">
                         <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
                            target="_blank">
@@ -175,9 +191,9 @@
                         <li><a href="/home/terms" id="is_terms_agreed" target="_blank">Terms and Conditions</a></li>
                         <li>
                             <a href="https://engagesafety.co.nz/" target="_blank">
-                                    <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
-                                         class="footer-media">&nbspwww.engagesafety.co.nz
-                                </a>
+                                <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
+                                     class="footer-media">&nbspwww.engagesafety.co.nz
+                            </a>
                         </li>
                     </ul>
                 </div>

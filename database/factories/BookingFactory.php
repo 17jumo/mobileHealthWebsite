@@ -22,6 +22,7 @@ class BookingFactory extends Factory
     public function definition()
     {
         return [
+            'course_id' => $this->faker->numberBetween(1,4),
             'coursedate_id' => $this->faker->numberBetween(1,4),
             'first_name' => $this->faker-> firstName,
             'last_name' => $this->faker->lastName,
@@ -30,13 +31,13 @@ class BookingFactory extends Factory
             'dob' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'gender' => "female",
             'company_name' => $this->faker->word(1),
-            'add_street' => $this->faker->streetAddress,
-            'add_suburb' => $this->faker->state,
-            'add_city' => $this->faker->state,
-            'add_postcode' => $this->faker->postcode,
-            'add_country' => $this->faker->country,
-            'course_name' => $this->faker->word(),
-            'course_date' => $this->faker->date(),
+            'street' => $this->faker->streetAddress,
+            'suburb' => $this->faker->state,
+            'city' => $this->faker->state,
+            'postcode' => $this->faker->postcode,
+            'country' => $this->faker->country,
+            /*'course_name' => $this->faker->word(),
+            'course_date' => $this->faker->date(),*/
             'course_total' => $this->faker->numberBetween(100,400),
             'is_terms_agreed' => $this->faker->boolean,
 

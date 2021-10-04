@@ -21,25 +21,27 @@
                     <h4>Course Details</h4>
 
                     <div class="col-md-12">
-                        <label for="course_name">Course</label>
-                        <select id="course_name" name="course_name" class="form-control"
-                                @error('course_total') is-invalid @enderror required>
-                            <option value="FirstAid">First Aid Course</option>
-                            <option value="FirstAidRefresh">First Aid Refresher</option>
+                        <label for="course_id">Course</label>
+                        <select id="course_id" name="course_id" class="form-control"
+                                @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
+                            @foreach ($courses as $course)
+                                <option value="{{$course->id}}">{{$course->course_name}}</option>
+                            @endforeach
                         </select>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="course_date" class="form-control-label">Select course
-                            date*</label>
-                        <select name="course_date" id="course_date"
-                                class="form-control @error('course_date') is-invalid @enderror"
+                        <label for="coursedate_id" class="form-control-label">Select course date*</label>
+                        <select name="coursedate_id" id="coursedate_id"
+                                class="form-control @error('coursedate_id') is-invalid @enderror"
                                 required>
-{{--                            @foreach ($coursedates as $coursedate)
-                                <option value="{{$coursedates->id}}">{{$coursedates->id}} </option>
-                            @endforeach--}}
-                                <option value="2022-02-05">Thursday 05 Feb 2022</option>
-                            <option value="2022-02-17">Thursday 17 Feb 2022</option>
+                            {{--                            @if(course_name =)--}}
+                            @foreach ($coursedates as $coursedate)
+                                {{--                                @if()--}}
+                                <option value="{{$coursedate->id}}">
+                                    {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}}
+                                    {{$coursedate->scheduled_date}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -48,10 +50,10 @@
                         <label for="course_total">Course Total</label>
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                name="course_total" id="course_total" value="150" readonly>
-                               {{--                            @if()--}}
-                               {{--                            @foreach ($courses as $course)
-                                                           <option value="{{$course->course_total}}">{{$course->course_total}}</option>
-                                                       @endforeach--}}
+                        {{--                            @if()--}}
+                        {{--                            @foreach ($courses as $course)
+                                                    <option value="{{$course->course_total}}">{{$course->course_total}}</option>
+                                                @endforeach--}}
 
                     </div>
                 </div>
@@ -108,33 +110,33 @@
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="add_street">Street*</label>
-                        <input type="text" class="form-control @error('add_street') is-invalid @enderror"
-                               name="add_street" id="add_street" value="{{ @old('add_street') }}" required>
+                        <label for="street">Street*</label>
+                        <input type="text" class="form-control @error('street') is-invalid @enderror"
+                               name="street" id="street" value="{{ @old('street') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="add_suburb">Suburb*</label>
-                        <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
-                               name="add_suburb" id="add_suburb" value="{{ @old('add_suburb') }}" required>
+                        <label for="suburb">Suburb*</label>
+                        <input type="text" class="form-control @error('suburb') is-invalid @enderror"
+                               name="suburb" id="suburb" value="{{ @old('suburb') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="add_city">City*</label>
-                        <input type="text" class="form-control @error('add_city') is-invalid @enderror"
-                               name="add_city" id="add_city" value="{{ @old('add_city') }}" required>
+                        <label for="city">City*</label>
+                        <input type="text" class="form-control @error('city') is-invalid @enderror"
+                               name="city" id="city" value="{{ @old('city') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="add_postcode">Postcode*</label>
-                        <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
-                               name="add_postcode" id="add_postcode" value="{{ @old('add_postcode') }}" required>
+                        <label for="postcode">Postcode*</label>
+                        <input type="text" class="form-control @error('postcode') is-invalid @enderror"
+                               name="postcode" id="postcode" value="{{ @old('postcode') }}" required>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <label for="add_country">Country*</label>
-                        <input type="text" class="form-control @error('add_country') is-invalid @enderror"
-                               name="add_country" id="add_country" value="{{ @old('add_country') }}" required>
+                        <label for="country">Country*</label>
+                        <input type="text" class="form-control @error('country') is-invalid @enderror"
+                               name="country" id="country" value="{{ @old('country') }}" required>
                     </div>
 
                     <div class="col-md-12">
@@ -151,7 +153,7 @@
                             <input class="btn btn-primary" type="submit" value="Submit Booking">
                             <a class="btn btn-outline-dark" href="/bookings">Cancel</a>
                         @else
-                            <a class="btn btn-info" href="/bookings/create">Proceed to payment</a>
+                            <input class="btn btn-info" type="submit" value="Proceed to payment">
                             <a class="btn btn-outline-dark" href="/">Cancel</a>
                         @endif
                     </div>
