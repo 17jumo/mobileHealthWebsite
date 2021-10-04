@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>About Debbie and the team at Mobile Health</h2>
+                    <h1>About Debbie and the team at Mobile Health</h1>
                     <hr>
                 </div>
 
@@ -223,7 +223,6 @@
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-
                     <div class="card">
                         <div class="card-header">
                             <a href="https://www.odt.co.nz/regions/queenstown/karma-giver%E2%80%99s-time-receive"
