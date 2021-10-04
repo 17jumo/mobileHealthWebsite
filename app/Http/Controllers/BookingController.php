@@ -48,10 +48,10 @@ class BookingController extends Controller
     {
        $courses = Course::all();
 //        $coursedates = Coursedate::all();
-
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
         if ($request->first_name == null) {
             $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
+            dd($request);
             return view('bookings.create', ['courses' => $courses], ['coursedates' => $coursedates]);
         }
 
@@ -97,7 +97,18 @@ class BookingController extends Controller
         $booking->is_terms_agreed = request('is_terms_agreed');
 
         $booking->save();
-        return redirect('/');
+
+        $stripe = new \Stripe\StripeClient(
+      'sk_test_51JawcXEdQN6YZjuxiZyeug0fYd4GWKpmexqQ3Uw9BvL460IK5ktKUOtgpKeQF6elpZ1O1R998GAGjjH2djNep0cT00pG27q9iP'
+    );
+        $stripe->charges->create([
+          'amount' => $request->input('course_total')*100,
+          'currency' => 'nzd',
+          'source' => 'tok_amex',
+        ]);
+
+         return view('home.confirm');
+
     }
 
     /**
