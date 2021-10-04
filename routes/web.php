@@ -1,7 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Mail\ContactUsMail;
+use App\Mail\WelcomeMail;
+//use http\Env\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
+
+//Mail server route/controller (david wants to change the location of this)
+Route::get('/contactusmail', function (Request $request) {
+    //dd($request);
+    Mail::to('contact@contact.com', ['request' => $request ])->send(new ContactUsMail());
+    return new ContactUsMail();
+});
 
 
 /*Route::get('/courses/index', [CourseController::class, 'index']);*/
@@ -21,6 +34,7 @@ Route::resource('coursedates', CoursedateController::class)->only(['index','crea
 Route::resource('bookings', BookingController::class)->only(['create','store',]);
 Route::resource('bookings', BookingController::class)->only(['index','edit','update','show','destroy'])->middleware('auth');
 
+Route::resource('users', UserController::class)->only(['index','create','store','edit','update','show','destroy'])->middleware('auth');
 
 /*
 Route::get('/', function () {
@@ -68,6 +82,7 @@ Route::get('/thankyou', 'App\Http\Controllers\PaymentController@paymentAction')-
 //    return view('dashboard');
     return redirect('/courses');
 })->middleware(['auth'])->name('/');*/
+
 
 
 

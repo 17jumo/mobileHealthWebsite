@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Contact Us</h2>
+                    <h1>Contact Us</h1>
                     <hr>
                 </div>
                 <div class="contact-text">
@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-6">
 
-                <h5>Mobile Health</h5>
+                <h3>Contact Details</h3>
 
                 <p>18 Glenda Drive, Frankton, Queenstown, 9300, Central Otago</p>
                 <p>PO Box 2036, Queenstown</p>
@@ -68,8 +68,8 @@
 
             <div class="col-md-6">
 
-                <h5>Send us a message</h5>
-                <form class="contact__form" method="post" action="http://webdevbasics.net/scripts/demo.php">
+                <h3>Send us a message</h3>
+                <form class="contact__form" method="get" action="/contactusmail">
 
                     <input name="name" type="text" class="form-control" id="name"
                            placeholder="Your name..." value="{{ @old('name') }}" required="">
@@ -83,24 +83,38 @@
                     <textarea name="message" rows="4" class="form-control" id="message"
                               placeholder="Your message..." value="{{ @old('message') }}" required=""></textarea>
 
-                    {{-- <button type="submit" id="form-submit" class="button">Send Message
-                                                  </button>--}}
-                    <div class="btn btn-secondary">
-                        <a href="/book">Send</a>
-                    </div>
+                    <button type="submit" id="form-submit" class="btn btn-secondary">Send Message
+                    </button>
+                    {{--                    <div class="btn btn-secondary">--}}
+                    {{--                        <a href="/contactusmail">Send</a>--}}
                 </form>
             </div>
         </div>
 
+        {{--        <script>--}}
+        {{--            loadOrder();--}}
+        {{--            function loadOrder(){--}}
+        {{--                var params = new URLSearchParams(document.location.search.substring(1));--}}
+        {{--                var Name = params.get("Name");--}}
+        {{--                var Email = params.get("Email");--}}
+        {{--                var Subject = params.get("Subject");--}}
+        {{--                var Message = params.get("Subject");--}}
+
+        {{--                document.getElementById('Name').value = Name ;--}}
+        {{--                document.getElementById('Email').value = Email ;--}}
+        {{--                document.getElementById('Subject').value = Subject ;--}}
+        {{--                document.getElementById('Message').value = Message ;--}}
+        {{--            }--}}
+        {{--        </script>--}}
+
+
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h4>Location</h4>
+                    <h2>Location</h2>
                     <div id="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.762020721694!2d168.74658921583796!3d-45.00945437909809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51e577f73d201%3A0xa02bb19b521b5b0f!2s18%20Glenda%20Drive%2C%20Frankton%2C%20Queenstown%209300!5e0!3m2!1sen!2snz!4v1632125351681!5m2!1sen!2snz"
-                            {{--                    width="100%"
-                                                height="400px"--}}
                             allowfullscreen=""
                             loading="lazy">
                         </iframe>

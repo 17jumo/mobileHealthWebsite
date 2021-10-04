@@ -96,7 +96,7 @@
 <main>
     @auth
         <div class="container">
-            <h3>Mobile Health Administration</h3>
+            <h1>Mobile Health Administration</h1>
             <p>Your authorisation level is:&nbsp
                 @can('isAdmin')
                     Admin access
@@ -113,10 +113,7 @@
                     {{--
                                 @if (Auth::check(isAdmin))
                     --}}
-                    @can('isAdmin')
-                        <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                            Administrator</a>
-                    @endcan
+
                     {{--
                                 @endif
                     --}}
@@ -137,6 +134,7 @@
             <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
+            <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @can('isAdmin')
                 <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @endcan
