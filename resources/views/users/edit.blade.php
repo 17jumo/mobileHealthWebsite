@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="isAdmin">Administrator</label>
+                        <label for="isAdmin">Administrator (0=No, 1=Yes)</label>
                         <input type="text" class="form-control @error('isAdmin') is-invalid @enderror"
                                id="isAdmin" name="isAdmin" value="{{$users->isAdmin}}">
                     </div>

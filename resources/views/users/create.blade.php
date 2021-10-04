@@ -22,25 +22,25 @@
                     <div class="col-md-6">
                         <label for="name">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                               name="name" value="">
+                               name="name" value="{{ @old('name') }}" required>
                     </div>
 
                     <div class="col-md-6">
                         <label for="email">Email</label>
                         <input type="text" class="form-control @error('email') is-invalid @enderror"
-                               id="email" name="email" value="">
+                               id="email" name="email" value="{{ @old('email') }}" required>
                     </div>
 
                     <div class="col-md-6">
                         <label for="password">Password</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror"
-                               id="password" name="password" value="">
+                               id="password" name="password" value="" >
                     </div>
 
                     <div class="col-md-6">
-                        <label for="isAdmin">Administrator</label>
+                        <label for="isAdmin">Administrator (0=No, 1=Yes)</label>
                         <input type="text" class="form-control @error('isAdmin') is-invalid @enderror"
-                               id="isAdmin" name="isAdmin" value="">
+                               id="isAdmin" name="isAdmin" value="{{ @old('isAdmin') }}" >
                     </div>
 
                     <input class="btn btn-primary" type="submit" value="Save">

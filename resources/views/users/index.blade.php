@@ -9,14 +9,10 @@
             </div>
 
             <p>
-                <a class="btn btn-outline-primary mx-1 "
-                   href="/users/create">Register new Administrator</a>
-
-                {{--@can('isAdmin')--}}
-
-{{--                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                        Administrator</a>--}}
-                {{--@endcan--}}
+                @can('isAdmin')
+                    <a class="btn btn-outline-primary mx-1 "
+                       href="/users/create">Register new Administrator</a>
+                @endcan
             </p>
 
             <div class="table-responsive">
@@ -50,11 +46,11 @@
                                     @auth
                                         <a class="btn btn-outline-success mx-1"
                                            href="/users/{{$user->id}}/edit">Edit</a>
-                                        {{--@can('isAdmin')--}}
+                                        @can('isAdmin')
                                             <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
                                                 Delete
                                             </button>
-                                        {{--@endcan--}}
+                                        @endcan
                                     @endauth
                                 </form>
                             </td>
