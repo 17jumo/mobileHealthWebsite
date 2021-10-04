@@ -565,8 +565,7 @@ div.card {
 }
 
 .sub-footer p {
-    font-size: .6em;
-/*    padding: 20px 0 0 0;*/
+    font-size: 0.8em;
     color: #212529;
     margin: 2em 0;
 }

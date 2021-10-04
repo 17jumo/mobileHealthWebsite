@@ -34,6 +34,7 @@ Route::resource('coursedates', CoursedateController::class)->only(['index','crea
 Route::resource('bookings', BookingController::class)->only(['create','store',]);
 Route::resource('bookings', BookingController::class)->only(['index','edit','update','show','destroy'])->middleware('auth');
 
+Route::resource('users', UserController::class)->only(['index','create','store','edit','update','show','destroy'])->middleware('auth');
 
 /*
 Route::get('/', function () {
