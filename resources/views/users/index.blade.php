@@ -9,12 +9,13 @@
             </div>
 
             <p>
-                {{--<a class="btn btn-outline-primary mx-1 "
-                   href="/users/create">Register new Administrator</a>--}}
+                <a class="btn btn-outline-primary mx-1 "
+                   href="/users/create">Register new Administrator</a>
 
                 {{--@can('isAdmin')--}}
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                        Administrator</a>
+
+{{--                    <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
+                        Administrator</a>--}}
                 {{--@endcan--}}
             </p>
 
@@ -47,8 +48,6 @@
                                     @method('DELETE')
                                     @csrf
                                     @auth
-{{--                                        <a class="btn btn-outline-primary mx-1 "
-                                           href="/users/{{$user->id}}">Show</a>--}}
                                         <a class="btn btn-outline-success mx-1"
                                            href="/users/{{$user->id}}/edit">Edit</a>
                                         {{--@can('isAdmin')--}}

@@ -34,12 +34,14 @@ class UserController extends Controller
         request()->validate([
             'name' => 'required',
             'email' => 'required',
+            'password' => 'required',
             'isAdmin' => 'required',
         ]);
 
         $user = new user();
         $user->name = request('name');
         $user->email = request('email');
+        $user->password = request('password');
         $user->isAdmin = request('isAdmin');
 
         $user->save();
