@@ -69,6 +69,9 @@ Route::get('/home/show', function () {return view('home.show');});
 Route::get('/home/confirm', function () {return view('home.confirm');});
 
 
+Route::get('/payment', 'App\Http\Controllers\PaymentController@show')->name('payment');
+Route::get('/thankyou', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_success');
+ Route::post('/process', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_process');
 /*Route::get('/dashboard', function () {
     return view('index');
 })->middleware(['auth'])->name('dashboard');*/

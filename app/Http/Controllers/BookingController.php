@@ -21,7 +21,8 @@ class BookingController extends Controller
         $coursedates = Coursedate::all();
         $courses = Course::all();
 
-        return view('bookings.index', ['bookings' => $bookings], ['courses' => $courses], ['coursedates' => $coursedates]);
+
+        return view('bookings.index', ['bookings' => $bookings, 'courses' => $courses,'coursedates' => $coursedates]);
     }
 
     /**
@@ -32,10 +33,12 @@ class BookingController extends Controller
     public function create(Request $request)
     {
         /*dd($request);*/
-        $coursedates = Coursedate::where("course_id","=",1)->get();
-
         $courses = Course::all();
-        return view('bookings.create', ['courses' => $courses], ['coursedates' => $coursedates]);
+        $coursedates = Coursedate::where("course_id","=",1)->get();
+        $courseprice=Course::where("id","=",1)->get();
+        $old_id = 1;
+        //
+        return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id ]);
     }
 
     /**
@@ -47,12 +50,14 @@ class BookingController extends Controller
     public function store(Request $request)
     {
        $courses = Course::all();
+           $courseprice=Course::where("id","=",$request->course_id)->get();
 //        $coursedates = Coursedate::all();
-
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
         if ($request->first_name == null) {
             $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
-            return view('bookings.create', ['courses' => $courses], ['coursedates' => $coursedates]);
+            // dd($request);
+            $old_id = $request->get('course_id');
+            return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id ]);
         }
 
         request()->validate([
@@ -93,11 +98,21 @@ class BookingController extends Controller
         $booking->city = request('city');
         $booking->postcode = request('postcode');
         $booking->country = request('country');
-
         $booking->is_terms_agreed = request('is_terms_agreed');
 
+
+        $stripe = new \Stripe\StripeClient(
+      'sk_test_51JawcXEdQN6YZjuxiZyeug0fYd4GWKpmexqQ3Uw9BvL460IK5ktKUOtgpKeQF6elpZ1O1R998GAGjjH2djNep0cT00pG27q9iP'
+    );
+        $stripe->charges->create([
+          'amount' => $request->input('course_total')*100,
+          'currency' => 'nzd',
+          'source' => 'tok_amex',
+        ]);
         $booking->save();
-        return redirect('/');
+
+         return view('home.confirm');
+
     }
 
     /**

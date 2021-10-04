@@ -3,6 +3,7 @@
 
     @if (Auth::check())
     @else
+    <link rel="stylesheet" href="css/global.css">
         <div class="container">
             @endif
 
@@ -25,7 +26,7 @@
                         <select id="course_id" name="course_id" class="form-control"
                                 @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
                             @foreach ($courses as $course)
-                                <option value="{{$course->id}}">{{$course->course_name}}</option>
+                                <option {{ $course->id == $old_id ? 'selected' : '' }}  value="{{$course->id}}" >{{$course->course_name}} {{$course->price}}  </option>
                             @endforeach
                         </select>
                     </div>
@@ -35,11 +36,11 @@
                         <select name="coursedate_id" id="coursedate_id"
                                 class="form-control @error('coursedate_id') is-invalid @enderror"
                                 required>
-                            {{--                            @if(course_name =)--}}
+                            <!-- {{--                            @if(course_name =)--}} -->
                             @foreach ($coursedates as $coursedate)
-                                {{--                                @if()--}}
+                                <!-- {{--                                @if()--}} -->
                                 <option value="{{$coursedate->id}}">
-                                    {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}}
+                                    <!-- {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}} -->
                                     {{$coursedate->scheduled_date}}</option>
                             @endforeach
                         </select>
@@ -48,12 +49,9 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
+                        
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                               name="course_total" id="course_total" value="150" readonly>
-                        {{--                            @if()--}}
-                        {{--                            @foreach ($courses as $course)
-                                                    <option value="{{$course->course_total}}">{{$course->course_total}}</option>
-                                                @endforeach--}}
+                               name="course_total" id="course_total" value="1111" readonly>
 
                     </div>
                 </div>
@@ -138,6 +136,13 @@
                         <input type="text" class="form-control @error('country') is-invalid @enderror"
                                name="country" id="country" value="{{ @old('country') }}" required>
                     </div>
+                    <div class="col-md-12 col-sm-12">
+                      <input id="card-holder-name" type="text">
+
+
+                          <div class="w-1/ form-row"id="card-element"></div>
+
+                    </div>
 
                     <div class="col-md-12">
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
@@ -161,10 +166,34 @@
             </form>
         </div>
 
+        <script src="https://js.stripe.com/v3/"></script>
 
+        <script>
+
+
+        const stripe = Stripe('{{ env("STRIPE_KEY") }}');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+        const cardHolderName = document.getElementById('card-holder-name');
+        const form = document.getElementById('stripe');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const { paymentMethod, error } = await stripe.createPaymentMethod(
+                'card', cardElement, {
+                    billing_details: { name: cardHolderName.value }
+                }
+            );
+            if (error) {
+                // Display "error.message" to the user...
+            } else {
+                console.log('Card verified successfully');
+                console.log(paymentMethod.id);
+                document.getElementById('pmethod').setAttribute('value', paymentMethod.id);
+                form.submit();
+            }
+        });
+
+
+        </script>
 @endsection
-
-
-
-
-
