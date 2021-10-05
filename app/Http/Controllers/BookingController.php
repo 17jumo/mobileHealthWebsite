@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Coursedate;
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use session;
 
 class BookingController extends Controller
 {
@@ -48,9 +49,8 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-
-
        $courses = Course::all();
+       $coursedates = Coursedate::all();
        $courseprice = Course::select('price')->where("id","=",$request->course_id)->get();
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
         if ($request->first_name == null) {
@@ -114,7 +114,11 @@ class BookingController extends Controller
         ]);
         $booking->save();
 
-         return view('home.confirm');
+        return redirect('/home/confirm');
+         return redirect()->route('/home.confirm',['courses' => $courses,
+         'coursedates' => $coursedates,
+        'booking' => $booking]);
+
 
     }
 
