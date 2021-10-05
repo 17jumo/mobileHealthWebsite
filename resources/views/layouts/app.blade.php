@@ -68,7 +68,7 @@
                         <a class="nav-link" href="/home/contactus">Contact Us</a>
                     </li>
                     <li>
-                        <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
+                        <div class="btn btn-book-primary"><a href="/bookings/create">Book Now</a>
                         </div>
                     </li>
 
