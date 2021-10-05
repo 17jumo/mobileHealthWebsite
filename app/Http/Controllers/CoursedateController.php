@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Booking;
 use App\Models\Course;
 use App\Models\Coursedate;
 use Illuminate\Http\Request;
@@ -19,8 +20,8 @@ class CoursedateController extends Controller
     {
         $coursedates = Coursedate::all();
         $courses = Course::all();
-        /*        dd($coursedates);*/
-        return view('coursedates.index', ['coursedates' => $coursedates]);
+
+        return view('coursedates.index', ['courses' => $courses,'coursedates' => $coursedates]);
     }
 
     /**
