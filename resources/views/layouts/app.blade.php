@@ -166,7 +166,7 @@
                     <a href="#"><i class="fa fa-phone-square"></i> 03 111 2222</a>
                     <a href="#"><i class="fa fa-phone-square"></i> 0274 423 624</a>
                     <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank">
-                        firstaid@mobilehealth.co.nz</a>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>&nbspfirstaid@mobilehealth.co.nz</a>
                     <p class="social-icons">
                         <a href="https://www.facebook.com/Mobile-Industrial-Health-Services-Engage-Safety-1562735880645278/"
                            target="_blank">
