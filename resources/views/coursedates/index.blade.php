@@ -18,7 +18,6 @@
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Course ID</th>
                         <th scope="col">Course Name</th>
                         <th scope="col">Scheduled Date</th>
                         <th scope="col">Attendee Max</th>
@@ -30,8 +29,7 @@
                     @foreach($coursedates as $coursedate)
                         <tr>
                             <th scope="row">{{$coursedate->id}}</th>
-                            <th>{{$coursedate->course_id}}</th>
-                            <th>{{$coursedate->courses->course_name}}</th>
+                            <th>{{$coursedate->course->course_name}}</th>
                             <td>{{$coursedate->scheduled_date->format('d-m-Y')}}</td>
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>
