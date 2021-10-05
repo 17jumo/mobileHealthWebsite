@@ -6,8 +6,8 @@ use App\Models\Course;
 use App\Models\Coursedate;
 use App\Models\Booking;
 use Illuminate\Http\Request;
-use session;
-
+use Stripe;
+use Session;
 class BookingController extends Controller
 {
     /**
@@ -113,13 +113,8 @@ class BookingController extends Controller
           'source' => 'tok_amex',
         ]);
         $booking->save();
-
-        return redirect('/home/confirm');
-         return redirect()->route('/home.confirm',['courses' => $courses,
-         'coursedates' => $coursedates,
-        'booking' => $booking]);
-
-
+        Session::flash('success', 'Booking Confirm! Thank-you');
+        return back();
     }
 
     /**
