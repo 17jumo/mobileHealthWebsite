@@ -15,15 +15,33 @@
         <h4>Thank you for booking with Mobile Health.</h4>
         <div class="row">
             <div class="col-md-12">
-                <p>You have booked for:</p>
+                <p>Course Booked: {{$booking->coursedate->course->course_name}}</p>
             </div>
             <div class="col-md-4 col-sm-12">
-                <p>Name</p>
+                <p>Name: {{$booking->first_name}} {{$booking->last_name}}</p>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <p>Email: {{$booking->email}}</p>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <p>Phone: {{$booking->phone}}</p>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <p>Date Of Birth: {{$booking->dob}}</p>
             </div>
             <div class="col-md-8 col-sm-12">
                 <p>xxxxxxxxxxxxxx</p>
             </div>
         </div>
+
+
+        <td>{{$booking->first_name}} </td>
+        <td>{{$booking->last_name}}</td>
+        <td>{{$booking->email}}</td>
+        <td>{{$booking->phone}}</td>
+        <td>{{$booking->company_name}}</td>
+        <td>{{$booking->course_name}} </td>
+
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 <p>Course</p>

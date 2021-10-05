@@ -28,20 +28,11 @@
     <link rel="icon" href="/images/MobileHealthTabLogo.png" type="/image/MobileHealthTabLogo.png">
 
     <title>Mobile Health</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" href="/css/mobilehealth.css">
-
-
-    {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 <header>
@@ -232,7 +223,34 @@
 {{--<script src="js/owl.js"></script>
 <script src="js/isotope.js"></script>--}}
 {{--<script src="js/flex-slider.js"></script>--}}
+<script src="https://js.stripe.com/v3/"></script>
 
+        <script>
+        const stripe = Stripe('{{ env("STRIPE_KEY") }}');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+        const cardHolderName = document.getElementById('card-holder-name');
+        const form = document.getElementById('stripe');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const { paymentMethod, error } = await stripe.createPaymentMethod(
+                'card', cardElement, {
+                    billing_details: { name: cardHolderName.value }
+                }
+            );
+            if (error) {
+                // Display "error.message" to the user...
+            } else {
+                console.log('Card verified successfully');
+                console.log(paymentMethod.id);
+                document.getElementById('pmethod').setAttribute('value', paymentMethod.id);
+                form.submit();
+            }
+        });
+
+
+        </script>
 
 </body>
 </html>
