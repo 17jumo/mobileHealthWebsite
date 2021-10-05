@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CourseController extends Controller
 {
@@ -123,7 +124,6 @@ class CourseController extends Controller
         }*/
 
         $course->update($request->all());
-
         return redirect('courses');
     }
 
@@ -135,20 +135,10 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-/*        if(! Gate::allows('isAdmin')) {
+        if (! Gate::allows('isAdmin', $course)) {
             abort(403);
         }
-        $course->delete();*/
-        if (Gate::allows('isAdmin')) {
-
-            dd('Admin allowed');
-
-        } else {
-
-            dd('You are not Admin');
-
-        }
-
+        $course->delete();
         return redirect('courses');
     }
 }

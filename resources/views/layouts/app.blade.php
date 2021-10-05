@@ -75,10 +75,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/home/contactus">Contact Us</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home/confirm">CourseConfirmation</a>
-                    </li>
                     <li>
                         <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
                         </div>
@@ -110,19 +106,11 @@
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
-                    {{--
-                                @if (Auth::check(isAdmin))
-                    --}}
 
-                    {{--
-                                @endif
-                    --}}
                 @else
                     @can('isAdmin')
                         @if (Route::has('register'))
                             <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                            <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                                Administrator</a>
                         @endif
                     @endcan
                 @endif
@@ -134,11 +122,20 @@
             <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
-            <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @can('isAdmin')
                 <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @endcan
 
+{{--            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/courses">View Courses</a></li>
+                <li><a href="/coursedates">View Course Dates</a></li>
+                <li><a href="/bookings">View Bookings</a></li>
+                @can('isAdmin')
+                    <li><a href="/users">User Admin</a></li>
+                @endcan
+                <li><a href="{{ route('logout') }}">Logout</a></li>
+            </ul>--}}
             @endauth
 
             <div>
