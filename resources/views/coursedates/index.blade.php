@@ -31,7 +31,7 @@
                         <tr>
                             <th scope="row">{{$coursedate->id}}</th>
                             <th>{{$coursedate->course_id}}</th>
-                            <th>{{$coursedate->course->course_name}}</th>
+                            <th>{{$coursedate->courses->course_name}}</th>
                             <td>{{$coursedate->scheduled_date->format('d-m-Y')}}</td>
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>
@@ -54,9 +54,11 @@
                                         <a class="btn btn-outline-primary mx-1 " href="/coursedates/{{$coursedate->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                            Delete
-                                        </button>
+                                        @can('isAdmin')
+                                            <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
+                                                Delete
+                                            </button>
+                                        @endcan
                                     @endauth
                                 </form>
                             </td>

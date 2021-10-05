@@ -48,6 +48,7 @@
                                <label for="course_total">Course Total</label>
                                <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                name="course_total" id="course_total" value="{{$courseprices->price}}" readonly>
+
                     </div>
                     @endforeach
                 </div>
@@ -144,9 +145,10 @@
 
                     </div>
 
-                    <div class="col-md-12 col-sm-12">
-                        <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
-                        <label for="is_terms_agreed">I have read and agree to the
+                    <div class="col-md-12">
+                        <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
+                        <label for="is_terms_agreed">&nbspI have read and agree to the
+
                             <a href="/home/terms"
                                id="is_terms_agreed"
                                target="_blank" value="{{ @old('is_terms_agreed') }}" >Terms and Conditions</a></label><br>

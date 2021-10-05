@@ -51,7 +51,10 @@
                             </div>
                         </div>
 
-                        <input class="btn btn-primary" type="submit" value="Submit">
+                        @can('isAdmin')
+                            <input class="btn btn-primary" type="submit" value="Save">
+                        @endcan
+
                         <a class="btn btn-warning mx-1" href="/courses">Cancel</a>
                     </form>
                 </div>

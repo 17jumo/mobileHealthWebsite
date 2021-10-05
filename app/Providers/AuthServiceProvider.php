@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use App\Models\Booking;
+use App\Models\Coursedate;
+use App\Models\Course;
+
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -25,24 +30,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        /* define a admin user role */
-        Gate::define('isAdmin', function($user) {
-            return $user->role == 'admin';
+        /* Define if user has an isAdmin role */
+        Gate::define('isAdmin', function(User $user) {
+            return $user->isAdmin;
         });
-
-        /* define a manager user role */
-        Gate::define('isManager', function($user) {
-            return $user->role == 'manager';
-        });
-
-/*        define a user role
-        Gate::define('isUser', function($user) {
-            return $user->role == 'user';
-        });*/
-
-/*        Gate::define('update-course’ , function (User $user, Course $course) {
-            return $course->user->is($user);
-        });*/
-
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
@@ -98,8 +99,10 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        if (! Gate::allows('isAdmin', $user)) {
+            abort(403);
+        }
         $user->delete();
-
         return redirect('users');
     }
 }

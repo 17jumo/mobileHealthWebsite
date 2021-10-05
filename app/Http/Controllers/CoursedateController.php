@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Booking;
 use App\Models\Course;
 use App\Models\Coursedate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CoursedateController extends Controller
 {
@@ -18,8 +20,8 @@ class CoursedateController extends Controller
     {
         $coursedates = Coursedate::all();
         $courses = Course::all();
-        /*        dd($coursedates);*/
-        return view('coursedates.index', ['coursedates' => $coursedates]);
+
+        return view('coursedates.index', ['courses' => $courses,'coursedates' => $coursedates]);
     }
 
     /**
@@ -91,10 +93,9 @@ class CoursedateController extends Controller
      */
     public function update(Request $request, Coursedate $coursedate)
     {
-        if(! Gate::allows('admin')) {
+/*        if(! Gate::allows('admin')) {
             abort(403);
-        }
-
+        }*/
         request()->validate([
             'scheduled_date' => 'required',
             'max_attendee' => '',
@@ -114,7 +115,7 @@ class CoursedateController extends Controller
      */
     public function destroy(Coursedate $coursedate)
     {
-        if(! Gate::allows('admin')) {
+        if (! Gate::allows('isAdmin', $coursedate)) {
             abort(403);
         }
         $coursedate->delete();

@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Coursedate;
 use Illuminate\Http\Request;
 
+
 class HomeController extends Controller
 {
     public function index()
@@ -16,8 +17,9 @@ class HomeController extends Controller
         return view('home.index', ['courses' => $courses]);
     }
 
-    public function show(Home $home)
+    public function show()
     {
-        return view('home.show', ['home' => $home]);
+        $courses = Course::all();
+        return view('home.show', ['courses' => $courses]);
     }
 }

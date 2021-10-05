@@ -22,20 +22,8 @@
                             <th scope="row">{{$booking->id}}</th>
                         </tr>
                         <tr>
-                            <th scope="col">Course Booked</th>
-                            <td scope="row">{{$booking->course_name}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Course Date</th>
-                            <td scope="row">{{$booking->course_date}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Course Total</th>
-                            <td scope="row">${{$booking->course_total}}</td>
-                        </tr>
-                        <tr>
                             <th scope="col">Firstname</th>
-                            <th scope="row">{{$booking->first_name}}</th>
+                            <td scope="row">{{$booking->first_name}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Lastname</th>
@@ -63,23 +51,23 @@
                         </tr>
                         <tr>
                             <th scope="col">Street</th>
-                            <td scope="row">{{$booking->add_street}}</td>
+                            <td scope="row">{{$booking->street}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Suburb</th>
-                            <td scope="row">{{$booking->add_suburb}}</td>
+                            <td scope="row">{{$booking->suburb}}</td>
                         </tr>
                         <tr>
                             <th scope="col">City</th>
-                            <td scope="row">{{$booking->add_city}}</td>
+                            <td scope="row">{{$booking->city}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Postcode</th>
-                            <td scope="row">{{$booking->add_postcode}}</td>
+                            <td scope="row">{{$booking->postcode}}</td>
                         </tr>
                         <tr>
                             <th scope="col">Country</th>
-                            <td scope="row">{{$booking->add_country}}</td>
+                            <td scope="row">{{$booking->country}}</td>
                         </tr>
                         <tr>
                             <th scope="col">T&C Agreed</th>
@@ -90,6 +78,18 @@
                                     No
                                 @endif
                             </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Name</th>
+                            <td scope="row">{{$booking->coursedate->course->course_name}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Date</th>
+                            <td scope="row">@php echo ($booking->coursedate->scheduled_date)->format('d-m-Y') @endphp</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Course Total</th>
+                            <td scope="row">${{$booking->course_total}}</td>
                         </tr>
 
                         </tbody>

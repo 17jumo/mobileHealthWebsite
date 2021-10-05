@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Mail\ContactUsMail;
+use App\Mail\ResetPasswordMail;
 use App\Mail\WelcomeMail;
 //use http\Env\Request;
 use Illuminate\Support\Facades\Mail;
@@ -16,20 +17,18 @@ Route::get('/contactusmail', function (Request $request) {
     return new ContactUsMail();
 });
 
+Route::get('/resetpasswordmail', function (Request $request) {
+    //dd($request);
+    Mail::to($request->email, ['request' => $request ])->send(new ResetPasswordMail());
+    return new ResetPasswordMail();
+});
 
-/*Route::get('/courses/index', [CourseController::class, 'index']);*/
-
-/*Route::resource('courses', CourseController::class);*/
 
 Route::resource('courses', CourseController::class)->only(['show','create',]);
 Route::resource('courses', CourseController::class)->only(['index','create','store','edit','update','destroy'])->middleware('auth');
 
-/*Route::resource('coursedates', CoursedateController::class);*/
-
-/*Route::resource('coursedates', CoursedateController::class)->only([]);*/
 Route::resource('coursedates', CoursedateController::class)->only(['index','create','store','edit','update','show','destroy'])->middleware('auth');
 
-/*Route::resource('bookings', BookingController::class);*/
 
 Route::resource('bookings', BookingController::class)->only(['create','store',]);
 Route::resource('bookings', BookingController::class)->only(['index','edit','update','show','destroy'])->middleware('auth');
@@ -43,23 +42,6 @@ Route::get('/', function () {
 Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
 Route::get('/', [HomeController::class, 'index']);
 
-/*Route::get('/', [CourseController::class, 'index']);*/
-/*Route::get('/', 'App\Http\Controllers\HomeController@index');*/
-
-/*JUST COMMENTING THIS
-Route::get('/courses/index', [CourseController::class, 'index']);
-Route::get('/courses/show/{{id}}', [CourseController::class, 'show']);
-Route::get('/courses/create', [CourseController::class, 'create']);
-Route::get('/courses/edit', [CourseController::class, 'edit']);
-Route::get('/coursedates/index', [CoursedateController::class, 'index']);
-Route::get('/coursedates/show', [CoursedateController::class, 'show']);
-Route::get('/coursedates/create', [CoursedateController::class, 'create']);
-Route::get('/coursedates/edit', [CoursedateController::class, 'edit']);
-Route::get('/bookings/index', [BookingController::class, 'index']);
-Route::get('/bookings/show/{{id}}', [BookingController::class, 'show']);
-Route::get('/bookings/create', [BookingController::class, 'create']);
-Route::get('/bookings/{{id}}/edit', [BookingController::class, 'edit']);
-JUST COMMENTING THIS*/
 
 
 Route::get('/home/aboutus', function () {return view('home.aboutus');});
@@ -71,19 +53,6 @@ Route::get('/home/confirm', function () {return view('home.confirm');});
 
 Route::get('/payment', 'App\Http\Controllers\PaymentController@show')->name('payment');
 Route::get('/thankyou', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_success');
- Route::post('/process', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_process');
-/*Route::get('/dashboard', function () {
-    return view('index');
-})->middleware(['auth'])->name('dashboard');*/
-
-
-//both of below functions work for Dashboard
-/*Route::get('/', function () {
-//    return view('dashboard');
-    return redirect('/courses');
-})->middleware(['auth'])->name('/');*/
-
-
-
+Route::post('/process', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_process');
 
 require __DIR__.'/auth.php';

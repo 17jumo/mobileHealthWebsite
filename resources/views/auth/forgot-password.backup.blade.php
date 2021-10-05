@@ -1,44 +1,3 @@
-@extends('layouts.app')
-@section('content')
-
-    <div class="container">
-        <div class="card card-body card-login w-50 align-items-left">
-{{--            <img src="/images/MobileHealthTabLogo.png"
-                 alt="Mobile Health Logo">--}}
-            <h4>Reset Password</h4>
-
-
-                <form class="contact__form" method="get" action="/resetpasswordmail">
-                    @csrf
-
-
-                    <input name="email" type="text" class="form-control" id="email"
-                           placeholder="Your email..." value="{{ @old('email') }}" required="">
-
-
-                    <button type="submit" id="form-submit" class="btn btn-secondary">Request New Password
-                    </button>
-                </form>
-
-            <!-- Validation Errors -->
-            @if ($errors->any())
-                <div class="alert alert-danger mt-2">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-        </div>
-    </div>
-
-@endsection
-
-
-{{--
-
-
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -75,4 +34,3 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
---}}

@@ -30,7 +30,8 @@
     <title>Mobile Health</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/css/fontawesome.css">
@@ -75,10 +76,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/home/contactus">Contact Us</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home/confirm">CourseConfirmation</a>
-                    </li>
                     <li>
                         <div class="btn-book-primary"><a href="/bookings/create">Book Now</a>
                         </div>
@@ -110,19 +107,11 @@
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
-                    {{--
-                                @if (Auth::check(isAdmin))
-                    --}}
 
-                    {{--
-                                @endif
-                    --}}
                 @else
                     @can('isAdmin')
                         @if (Route::has('register'))
                             <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                            <a class="btn btn-outline-secondary mx-1" href="{{ route('register') }}">Register new
-                                Administrator</a>
                         @endif
                     @endcan
                 @endif
@@ -134,11 +123,20 @@
             <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
             <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
             <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
-            <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @can('isAdmin')
                 <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
             @endcan
 
+{{--            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/courses">View Courses</a></li>
+                <li><a href="/coursedates">View Course Dates</a></li>
+                <li><a href="/bookings">View Bookings</a></li>
+                @can('isAdmin')
+                    <li><a href="/users">User Admin</a></li>
+                @endcan
+                <li><a href="{{ route('logout') }}">Logout</a></li>
+            </ul>--}}
             @endauth
 
             <div>
@@ -165,8 +163,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <h5>Contact</h5>
-                    <p>03&nbsp111&nbsp2222</p>
-                    <p>0274&nbsp423&nbsp624</p>
+                    <a href="#"><i class="fa fa-phone-square"></i> 03 111 2222</a>
+                    <a href="#"><i class="fa fa-phone-square"></i> 0274 423 624</a>
                     <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank">
                         firstaid@mobilehealth.co.nz</a>
                     <p class="social-icons">
@@ -224,8 +222,9 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 <!-- Additional Scripts -->
@@ -237,5 +236,3 @@
 
 </body>
 </html>
-
-

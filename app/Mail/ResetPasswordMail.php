@@ -6,7 +6,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Http\Request;
 
-class ContactUsMail extends Mailable
+class ResetPasswordMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -27,10 +27,7 @@ class ContactUsMail extends Mailable
      */
     public function build(Request $request)
     {
-        return $this->markdown('emails.contactusmail',
-            ['name' => $request->get("name"),
-            'email' => $request->get("email"),
-            'subject' => $request->get("subject"),
-            'message' => $request->get("message")]);
+        return $this->markdown('emails.resetpasswordmail',
+            ['email' => $request->get("email")]);
     }
 }
