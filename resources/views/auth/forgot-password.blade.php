@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        <div class="card card-body card-login w-75 align-items-left">
+        <div class="card card-body card-login w-50 align-items-left">
 {{--            <img src="/images/MobileHealthTabLogo.png"
                  alt="Mobile Health Logo">--}}
             <h4>Reset Password</h4>
