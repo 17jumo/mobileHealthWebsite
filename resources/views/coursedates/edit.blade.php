@@ -50,14 +50,11 @@
                         <input type="text" class="form-control @error('venue') is-invalid @enderror" id="venue"
                                name="venue" value="{{$coursedate->venue}}">
                     </div>
+                    <input class="btn btn-primary" type="submit" value="Save">
+                    <a class="btn btn-warning mx-1" href="/coursedates">Cancel</a>
+                </form>
             </div>
-
-            <input class="btn btn-primary" type="submit" value="Save">
-            <a class="btn btn-warning mx-1" href="/coursedates">Cancel</a>
-            </form>
         </div>
-    </div>
-    </div>
     </div>
 
 @endsection
