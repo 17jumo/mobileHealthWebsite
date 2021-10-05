@@ -35,9 +35,8 @@ class BookingController extends Controller
         /*dd($request);*/
         $courses = Course::all();
         $coursedates = Coursedate::where("course_id","=",1)->get();
-        $courseprice=Course::where("id","=",1)->get();
+        $courseprice = Course::select('price')->where("id","=",1)->get();
         $old_id = 1;
-        //
         return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id ]);
     }
 
@@ -52,14 +51,16 @@ class BookingController extends Controller
 
 
        $courses = Course::all();
-           $courseprice=Course::where("id","=",$request->course_id)->get();
-//        $coursedates = Coursedate::all();
+       $courseprice = Course::select('price')->where("id","=",$request->course_id)->get();
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
         if ($request->first_name == null) {
             $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
-            // dd($request);
             $old_id = $request->get('course_id');
-            return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id ]);
+            return view('bookings.create',
+             ['courses' => $courses,
+             'coursedates' => $coursedates,
+            'courseprice' => $courseprice,
+            'old_id' => $old_id ]);
         }
 
         request()->validate([
@@ -185,9 +186,9 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        /*        if(! Gate::allows('admin')) {
-      /*            abort(403);
-                }*/
+      if (! Gate::allows('isAdmin', $booking)) {
+            abort(403);
+        }
         $booking->delete();
         return redirect('bookings');
     }
