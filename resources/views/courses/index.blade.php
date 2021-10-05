@@ -55,9 +55,11 @@
                                            href="/courses/{{$course->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/courses/{{$course->id}}/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                            Delete
-                                        </button>
+                                        @can('isAdmin')
+                                            <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
+                                                Delete
+                                            </button>
+                                        @endcan
                                     @endauth
                                 </form>
                             </td>

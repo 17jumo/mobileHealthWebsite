@@ -6,7 +6,7 @@
             <img src="/images/MobileHealthTabLogo.png"
                  alt="Mobile Health Logo">
 
-            <h5>Administrator Login</h5>
+            <h4>Administrator Login</h4>
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -31,11 +31,9 @@
                     </div>
                 </div>
                 <br>
-                <input class="btn btn-primary" type="submit" value="Submit">
-                <a href="/"></a>
+                <input class="btn btn-primary" type="submit" value="Login">
                 <a class="btn btn-outline-dark" href="/">{{ __('Cancel') }}</a>
                 <a class="btn btn-outline-dark" href="{{ route('password.request') }}">Reset Password </a>
-                <p href="{{ route('password.request') }}">Reset Password </p>
             </form>
 
             <!-- Validation Errors -->
