@@ -86,8 +86,13 @@ class UserController extends Controller
             'isAdmin' => 'required',
         ]);
 
-        $user->update($request->all());
+        /*$user->update($request->all());*/
 
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->isAdmin = request('isAdmin');
+
+        $user->save();
         return redirect('users');
     }
 
