@@ -473,6 +473,7 @@ div.card {
 
 .footer a {
     font-size: 0.8em;
+    display: block;
 }
 
 .footer ul {
