@@ -32,7 +32,7 @@
                     @foreach($courses as $course)
                         <tr>
                             <th scope="row">{{$course->id}}</th>
-                            <td>{{$course->course_name}} </td>
+                            <th>{{$course->course_name}}</th>
                             <td>{{$course->course_desc_short}}</td>
                             <td>{{$course->course_desc_long}}</td>
                             <td>${{$course->price}}</td>
@@ -43,9 +43,8 @@
                                     day
                                 @endif
                             </td>
-{{--                            <td>@php echo ($course->start_time)->format('H:i') @endphp</td>--}}
-                            <td>{{$course->start_time}}</td>
-                            <td>{{$course->end_time}}</td>
+                            <td>{{ date('G:i', strtotime($course->start_time)) }}</td>
+                            <td>{{ date('G:i', strtotime($course->end_time)) }}</td>
                             <td>
                                 <form action="/courses/{{$course->id}}" method="POST">
                                     @method('DELETE')
