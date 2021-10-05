@@ -32,7 +32,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" href="/css/mobilehealth.css">
-    <link rel="stylesheet" href="css/global.css">
+
 </head>
 <body>
 <header>
