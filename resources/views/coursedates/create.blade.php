@@ -12,6 +12,16 @@
                 <form method="POST" action="/coursedates">
                     @csrf
 
+{{--                    <div class="col-md-12">
+                        <label for="course_id">Course</label>
+                        <select id="course_id" name="course_id" class="form-control"
+                                @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
+                            @foreach ($courses as $course)
+                                <option value="{{$courses->course_id}}">{{$courses->course_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>--}}
+
                     <div class="col-md-6">
                         <label for="course_id">Choose a course:</label>
                         <select name="course_id" id="course_id" class="form-control @error('id') is-invalid @enderror">
