@@ -7,37 +7,18 @@
                  alt="Mobile Health Logo">--}}
             <h4>Reset Password</h4>
 
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
 
-                <div class="row">
-                    <p>Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</p>
+                <form class="contact__form" method="get" action="/resetpasswordmail">
+                    @csrf
 
-                    <!-- Email Address -->
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="email">Email*</label>
-                            <input name="email" type="text" class="form-control" {{--placeholder="Email *" --}}value="{{ __('Email') }}" autofocus />
-                        </div>
-                    </div>
-{{--
-                    <!-- Password -->
-                    <div class="col-md-12">
-                        <div class="form-group content-start">
-                            <label for="password">Password*</label>
-                            <input name="password" type="password" class="form-control" placeholder="Password"
-                                   value=""/>
-                        </div>
-                    </div>--}}
-                </div>
-                <br>
-{{--                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>--}}
-{{--                <input class="btn btn-primary" type="submit" value="Login">--}}
-                <a class="btn btn-primary" href="/">{{ __('Email Password Reset Link') }}</a>
-{{--                <a class="btn btn-outline-dark" href="{{ route('password.request') }}">Reset Password </a>--}}
-            </form>
+
+                    <input name="email" type="text" class="form-control" id="email"
+                           placeholder="Your email..." value="{{ @old('email') }}" required="">
+
+
+                    <button type="submit" id="form-submit" class="btn btn-secondary">Request New Password
+                    </button>
+                </form>
 
             <!-- Validation Errors -->
             @if ($errors->any())
