@@ -49,6 +49,8 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+
+
        $courses = Course::all();
            $courseprice=Course::where("id","=",$request->course_id)->get();
 //        $coursedates = Coursedate::all();

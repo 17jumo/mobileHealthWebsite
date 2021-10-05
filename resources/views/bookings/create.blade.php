@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <label for="course_total">Course Total</label>
-                        
+
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                                name="course_total" id="course_total" value="1111" readonly>
 
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="col-md-12">
-                        <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
+                        <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
                         <label for="is_terms_agreed">&nbspI have read and agree to the
                             <a href="/home/terms"
                                id="is_terms_agreed"
