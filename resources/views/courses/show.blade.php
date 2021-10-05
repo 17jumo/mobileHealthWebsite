@@ -25,11 +25,11 @@
                                         day
                                 @endif</p>
                             <p class="card-text text-muted">
-                                Starts at: &nbsp{{$courses->start_time}}
+                                Starts at: &nbsp{{ date('G:i', strtotime($courses->start_time)) }}
                                 &nbsp&nbsp&nbsp&nbsp
                                 </p>
                                 <p class="card-text text-muted">
-                                Ends at: &nbsp{{$courses->end_time}}
+                                Ends at: &nbsp{{ date('G:i', strtotime($courses->end_time)) }}
                             </p>
 
 
