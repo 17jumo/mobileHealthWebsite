@@ -48,6 +48,8 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+
+
        $courses = Course::all();
        $courseprice = Course::select('price')->where("id","=",$request->course_id)->get();
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
