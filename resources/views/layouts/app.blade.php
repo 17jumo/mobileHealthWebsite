@@ -162,8 +162,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <h5>Contact</h5>
-                    <p>03&nbsp111&nbsp2222</p>
-                    <p>0274&nbsp423&nbsp624</p>
+                    <p><a href="#"><i class="fa fa-phone-square"></i> 03 111 2222</a></p>
+                    <p><a href="#"><i class="fa fa-phone-square"></i> 0274 423 624</a></p>
                     <a href="mailto:firstaid@mobilehealth.co.nz" target="_blank">
                         firstaid@mobilehealth.co.nz</a>
                     <p class="social-icons">
