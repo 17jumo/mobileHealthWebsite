@@ -26,35 +26,32 @@
                         <select id="course_id" name="course_id" class="form-control"
                                 @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
                             @foreach ($courses as $course)
-                                <option {{ $course->id == $old_id ? 'selected' : '' }}  value="{{$course->id}}" >{{$course->course_name}} {{$course->price}}  </option>
+                                <option {{ $course->id == $old_id ? 'selected' : '' }}  value="{{$course->id}}" >{{$course->course_name}}</option>
                             @endforeach
                         </select>
                     </div>
 
+                    <div class="row">
                     <div class="col-md-6">
                         <label for="coursedate_id" class="form-control-label">Select course date*</label>
                         <select name="coursedate_id" id="coursedate_id"
                                 class="form-control @error('coursedate_id') is-invalid @enderror"
                                 required>
-                            <!-- {{--                            @if(course_name =)--}} -->
                             @foreach ($coursedates as $coursedate)
-                                <!-- {{--                                @if()--}} -->
                                 <option value="{{$coursedate->id}}">
-                                    <!-- {{--@php echo ({{$coursedate->scheduled_date}})->format('d-mmm-Y') @endphp--}} -->
                                     {{$coursedate->scheduled_date}}</option>
                             @endforeach
                         </select>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <label for="course_total">Course Total</label>
-                        
-                        <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                               name="course_total" id="course_total" value="1111" readonly>
-
+                      @foreach ($courseprice as $courseprices)
+                               <label for="course_total">Course Total</label>
+                               <input type="number" class="form-control @error('course_total') is-invalid @enderror"
+                               name="course_total" id="course_total" value="{{$courseprices->price}}" readonly>
                     </div>
+                    @endforeach
                 </div>
+              </div>
 
                 <div class="row">
                     <h4>Attendee Details</h4>
@@ -137,16 +134,19 @@
                                name="country" id="country" value="{{ @old('country') }}" required>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                      <input id="card-holder-name" type="text">
+                      <h4>Payment Details</h4>
+                      <label for="country">Name On Card</label>
+                      <input  id="card-holder-name" type="text" class="form-control @error('country') is-invalid @enderror"
+                             name="country" id="country" value="" placeholder="Cardholder name"  required>
 
 
                           <div class="w-1/ form-row"id="card-element"></div>
 
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-sm-12">
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="0">
-                        <label for="is_terms_agreed">&nbspI have read and agree to the
+                        <label for="is_terms_agreed">I have read and agree to the
                             <a href="/home/terms"
                                id="is_terms_agreed"
                                target="_blank" value="{{ @old('is_terms_agreed') }}" >Terms and Conditions</a></label><br>
