@@ -9,7 +9,7 @@
             <div class="card card-body card-login w-75">
                 <div class="row no-gutters">
                     <div class="col-md-2 text-center">
-                        <img src="/images/course/heart.png" class="card-img" alt="Course Icon">
+                        <img src="/images/index/heart.png" class="card-img" alt="Course Icon">
                     </div>
                     <div class="col-md-10">
                         <div class="card-body">

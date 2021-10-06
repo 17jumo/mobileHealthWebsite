@@ -143,7 +143,7 @@
                       <label for="country">Name On Card</label>
                       <input  id="card-holder-name" type="text" class="form-control @error('country') is-invalid @enderror"
                              name="country" id="country" value="" placeholder="Cardholder name"  required>
-                                 <div class="w-1/ form-row"id="card-element"></div>
+                                 <div class="w-1/ form-row"id="card-element" required></div>
 
                     </div>
 
