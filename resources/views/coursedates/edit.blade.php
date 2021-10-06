@@ -25,12 +25,12 @@
                                name="course_id" value="{{$coursedate->course_id}}">
                     </div>
 
-                    <div class="col-md-6">
+{{--                    <div class="col-md-6">
                         <label for="course_name">Course Name</label>
                         <input type="text" class="form-control @error('course_name') is-invalid @enderror"
                                id="course_name"
                                name="course_name" value="Name not setup yet">
-                    </div>
+                    </div>--}}
 
                     <div class="col-md-6">
                         <label for="scheduled_date">Course Date</label>
