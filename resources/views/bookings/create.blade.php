@@ -151,7 +151,7 @@
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
                         <label for="is_terms_agreed">&nbspI have read and agree to the
 
-                            <a href="/home/terms"
+                            <a href="/terms"
                                id="is_terms_agreed"
                                target="_blank" value="{{ @old('is_terms_agreed') }}" >Terms and Conditions</a></label><br>
                     </div>
