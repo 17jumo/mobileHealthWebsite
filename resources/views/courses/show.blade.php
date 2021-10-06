@@ -6,10 +6,10 @@
         <div class="container">
             @endif
 
-            <div class="card card-body {{--card-login--}} w-75 card-show">
+            <div class="card card-body card-login w-75 mt-2">
                 <div class="row no-gutters">
                     <div class="col-md-4 text-center">
-                        <img src="/images/index/heart.png" {{--class="card-show"--}} alt="Course Icon">
+                        <img src="/images/index/heart.png" alt="Course Icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -37,7 +37,7 @@
                                 <a class="btn btn-primary" href="/courses/{{$courses->id}}/edit">Edit</a>
                                 <a class="btn btn-warning mx-1" href="/courses/">Cancel</a>
                             @else
-                                <a class="btn btn-info" href="/bookings/create">Book now</a>
+                                <a class="btn btn-book" href="/bookings/create">Book now</a>
                                 <a class="btn btn-outline-dark" href="/">Cancel</a>
                             @endif
                         </div>
