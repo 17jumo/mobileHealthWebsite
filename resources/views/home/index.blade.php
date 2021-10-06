@@ -62,7 +62,7 @@
                         <p>{{$course->course_desc_short}}</p>
                         <p><a href="/courses/{{$course->id}}"><p id="readmore">Read more</p></a></p>
 
-                        <a href="/bookings/create" class="btn btn-info">Book now</a>
+                        <button href="/bookings/create" class="btn btn-info">Book now</button>
 
                     </div>
                 </div>

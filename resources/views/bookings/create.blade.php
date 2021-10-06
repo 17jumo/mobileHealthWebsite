@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('content')
-
+    <link rel="stylesheet" href="css/global.css">
+@if (Session::has('success'))
+<div class="alert alert-success text-center">
+    <p>{{ Session::get('success') }} </p><a href="#" class="close" data-dismiss="alert" aria-label="close">Close</a>
+</div>
+@endif
     @if (Auth::check())
     @else
         <div class="container">
@@ -146,7 +151,7 @@
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
                         <label for="is_terms_agreed">&nbspI have read and agree to the
 
-                            <a href="/home/terms"
+                            <a href="/terms"
                                id="is_terms_agreed"
                                target="_blank" value="{{ @old('is_terms_agreed') }}" >Terms and Conditions</a></label><br>
                     </div>
@@ -164,35 +169,4 @@
                 </div>
             </form>
         </div>
-
-                <script src="https://js.stripe.com/v3/"></script>
-
-                <script>
-
-
-                const stripe = Stripe('{{ env("STRIPE_KEY") }}');
-                const elements = stripe.elements();
-                const cardElement = elements.create('card');
-                cardElement.mount('#card-element');
-                const cardHolderName = document.getElementById('card-holder-name');
-                const form = document.getElementById('stripe');
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    const { paymentMethod, error } = await stripe.createPaymentMethod(
-                        'card', cardElement, {
-                            billing_details: { name: cardHolderName.value }
-                        }
-                    );
-                    if (error) {
-                        // Display "error.message" to the user...
-                    } else {
-                        console.log('Card verified successfully');
-                        console.log(paymentMethod.id);
-                        document.getElementById('pmethod').setAttribute('value', paymentMethod.id);
-                        form.submit();
-                    }
-                });
-
-
-                </script>
 @endsection

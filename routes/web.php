@@ -44,15 +44,15 @@ Route::get('/', [HomeController::class, 'index']);
 
 
 
-Route::get('/home/aboutus', function () {return view('home.aboutus');});
-Route::get('/home/contactus', function () {return view('home.contactus');});
-Route::get('/home/terms', function () {return view('home.terms');});
-Route::get('/home/show', function () {return view('home.show');});
+Route::get('/aboutus', function () {return view('home.aboutus');});
+Route::get('/contactus', function () {return view('home.contactus');});
+Route::get('/terms', function () {return view('home.terms');});
+Route::get('/courses', function () {return view('home.show');});
 Route::get('/home/confirm', function () {return view('home.confirm');});
 
-
+/*
 Route::get('/payment', 'App\Http\Controllers\PaymentController@show')->name('payment');
 Route::get('/thankyou', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_success');
-Route::post('/process', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_process');
+Route::post('/process', 'App\Http\Controllers\PaymentController@paymentAction')->name('payment_process');*/
 
 require __DIR__.'/auth.php';
