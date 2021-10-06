@@ -14,23 +14,27 @@ p:last-of-type {
     margin-bottom: 1.5rem;
 }
 
-h1, h2, h3 {
-    margin-top: 1.5rem;
-}
-
 h1 {
     font-family: 'Lora', serif;
-    font-size: 2.25rem;
+    font-size: 2rem;
+    padding-top: 1.5rem;
 }
 
 h2 {
     font-family: 'Lora', serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    padding-top: 1.5rem;
 }
 
-h3, h4 {
+h3 {
     font-family: 'Lora', serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
 }
 
 
@@ -39,7 +43,7 @@ hr {
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
     color: #212529;
     font-size: 1rem;
 }
@@ -59,47 +63,59 @@ a {
     filter: grayscale(30%);
 }
 
-/* FORM STYLE */
+/*!* FORM STYLE *!
 .form-control {
     margin: 0 0 1rem 0;
-}
+}*/
 
 /* INDEX PAGE STYLE */
 
 .referee {
     /*    font-family: 'MonteCarlo', cursive;*/
     /*    font-size: 1.25rem;*/
-    padding-left: 2rem;
+    /*padding-left: 2rem;*/
     font-style: italic;
+    font-size: small;
+    padding-bottom: 1rem;
 }
 
 #references {
-    text-align: left;
+    text-align: center;
 }
 
-#referencelogo {
+.referencelogo {
     margin: auto;
-    display: flex;
-    justify-content: center;
-    width: 70%;
+/*    display: flex;*/
+    display: inline-block;
+/*    width: 80%;*/
 }
 
-#referencelogo img {
-    height: 90px;
+.referencelogo img {
+    height: 5rem;
     padding: 10px 10px;
 }
 
-#readmore {
+.readmore {
     text-decoration: underline;
     margin-bottom: 0;
     font-size: 0.8rem;
 }
 
 /* CREATE BOOKING */
-#terms {
+.
+is_terms_agreed {
     text-decoration: #0c46ab;
     font-weight: bold;
     text-decoration: underline;
+}
+
+terms {
+    padding: 2rem 0;
+}
+
+label {
+    font-size: 0.8rem;
+
 }
 
 /*T&C CONTRACT PAGE*/
@@ -112,7 +128,6 @@ a {
 }
 
 /* BUTTON STYLE */
-
 .btn-book-primary a {
     background-color: #8BC53E;
     border-radius: 5px;
@@ -147,12 +162,11 @@ a {
     opacity: 0.7;
 }
 
-.btn-info {
+/*.btn-info {
     background-color: #8BC53E;
     border-color: #8BC53E;
     color: #FFFFFF;
 }
-
 
 .btn-info:hover {
     background-color: #8BC53E;
@@ -186,6 +200,47 @@ a {
 
 .btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show > .btn-info.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(139,197,62,.5)
+}*/
+
+
+.btn-book {
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+    color: #FFFFFF;
+}
+
+.btn-book:hover {
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.btn-book:active {
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.btn-book.focus, .btn-book:focus {
+    box-shadow: 0 0 0 .2rem rgba(139,197,62,.5)
+}
+
+.btn-book.disabled, .btn-book:disabled {
+    color: #fff;
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+}
+
+.btn-book:not(:disabled):not(.disabled).active, .btn-book:not(:disabled):not(.disabled):active, .show > .btn-book.dropdown-toggle {
+    color: #fff;
+    background-color: #8BC53E;
+    border-color: #8BC53E;
+}
+
+.btn-book:not(:disabled):not(.disabled).active:focus, .btn-book:not(:disabled):not(.disabled):active:focus, .show > .btn-book.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(139,197,62,.5)
 }
 
 /* CARDS */
@@ -209,9 +264,9 @@ a {
     font-size: 1rem;
 }
 
-.card a {
-    font-size: 0.8rem;
-}
+/*.card a {
+    font-size: 1rem;
+}*/
 
 .card-index {
     text-align: center;
@@ -225,23 +280,24 @@ a {
 
 .card-login {
     margin: auto;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
 }
 
-.card-login img {
+/*.card-login img {
     height: 60px;
     width: 60px;
-/*    margin: auto;*/
-}
+    margin: auto;
+}*/
 
 .card-show {
-    margin: auto;
-    margin-bottom: 1rem;
+    /*margin: 2rem 0 1rem 0;*/
+/*    margin-top: 2rem;
+    margin-bottom: 1rem;*/
 }
 
 .card-show img {
-    height: 120px;
-    width: 120px;
+    height: 10rem;
+    width: 10rem;
     /*    margin: auto;*/
 }
 
@@ -270,7 +326,7 @@ div.card li {
 }
 
 
-/* SECTION HEADINGS */
+/*!* SECTION HEADINGS *!
 .section-heading {
     margin-top: 2rem;
     margin-bottom: 20px;
@@ -282,7 +338,7 @@ div.card li {
 
 .section-heading dl dd {
     font-size: smaller;
-}
+}*/
 
 /* NOTIFICATION STYLES */
 #notification {
@@ -311,6 +367,7 @@ div.card li {
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+
 }
 
 .navbar img {
@@ -346,7 +403,7 @@ div.card li {
 
 /* BANNER STYLE */
 .banner {
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     background-image: url(../images/banner-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;

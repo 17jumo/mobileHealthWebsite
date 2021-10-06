@@ -11,7 +11,7 @@
             <p>
                 @can('isAdmin')
                     <a class="btn btn-outline-primary mx-1 "
-                       href="/users/create">Register new Administrator</a>
+                       href="/users/create">Register new user</a>
                 @endcan
             </p>
 
@@ -31,7 +31,7 @@
                         <tr>
                             <th scope="row">{{$user->id}}</th>
                             <th>{{$user->name}}</th>
-                            <th>{{$user->email}}</th>
+                            <td>{{$user->email}}</td>
                             <td>
                                 @if($user->isAdmin == 1)
                                     Yes

@@ -8,7 +8,7 @@
 
 <!-- Page Content -->
 <!-- Banner Starts Here -->
-<div class="banner" alt="First Aid Course Image">
+<div class="banner mt-2" alt="First Aid Course Image">
     <div class="container">
         <div class="caption">
             <h4>Mobile Health and Safety</h4>
@@ -34,14 +34,11 @@
 
 <!-- Featured Starts Here -->
 <div class="container">
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-md-12">
-            <div class="section-heading">
-                <h2>First Aid Courses Available</h2>
-                <hr>
-            </div>
+            <h2>First Aid Courses Available</h2>
+            <hr>
         </div>
-
 
         <div class="row">
             @foreach($courses as $course)
@@ -60,11 +57,9 @@
                         </h6>
                         <h6>Cost: ${{$course->price}} inc GST</h6>
                         <p>{{$course->course_desc_short}}</p>
-                        <p><a href="/courses/{{$course->id}}"><p id="readmore">Read more</p></a></p>
+                        <p><a href="/courses/{{$course->id}}" class="readmore">Read more</a></p>
 
-                       <button href="/bookings/create" class="btn btn-info">Book now</button>
-
-
+                        <a href="/bookings/create" class="btn btn-book">Book now</a>
                     </div>
                 </div>
             @endforeach
@@ -72,58 +67,43 @@
     </div>
 
     {{--Reviews start here--}}
-
-    {{--    <div class="row">--}}
-
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-md-12">
+            <h3>Trusted local Queenstown and Central Otago company</h3>
+            <hr>
+            <p>We are trusted by many companies in the Queenstown Lakes and Central Otago region,
+                including:</p>
 
-            <div class="section-heading">
-                <h4>
-                    We are trusted by many companies in the Queenstown Lakes and Central Otago region,
-                    including:
-                </h4>
-                <hr>
-            </div>
-            <div id="referencelogo">
+            <p class="referencelogo justify-content-center">
                 <img src="/images/index/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
                 <img src="/images/index/site-queenstown.jpg" alt="Site Trampaline Logo">
                 <img src="/images/index/mitre10.svg" alt="Mitre 10 Logo">
                 <img src="/images/index/rpslogo.jpg" alt="Remarkables Primary School Logo">
                 <img src="/images/index/neatmeatlogo.jpeg" alt="Neat Meat Queenstown Logo">
                 <img src="/images/index/bluekanu_logo.jpg" alt="Blue Kanu Queenstown Logo">
-            </div>
+            </p>
         </div>
     </div>
 
-
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-md-12">
-            <div class="section-heading">
-                <h4>
-                    What our learners like most about the courses:
-                </h4>
-                <hr>
-            </div>
+            <h3>Students enjoy our courses</h3>
+            <hr>
         </div>
+
         <div class="col-md-6 col-sm-12">
-            <div id="references">
-
-                    <p>CPR, burns, choking, heart attack. Enjoyed all the training.</p>
-                    <p class="referee">- Nathanial</p>
-
-                    <p>How interactive and easy going it was.</p>
-                    <p class="referee">- Karli</p>
-
-                    <p>The delivery and content was very relevant to me.</p>
-                    <p class="referee">- Amber</p>
-
-                    <p>Examples were fun.</p>
-                    <p class="referee">- Angela</p>
-
-                    <p>I enjoyed the course today. I learned a lot. Actually to do CPR.</p>
-                    <p class="referee">- Ervin</p>
-
+            <div class="references">
+                <p>CPR, burns, choking, heart attack. Enjoyed all the training. <span class="referee">-Nathanial</span>
+                </p>
+                <br>
+                <p>How interactive and easy going it was. <span class="referee">-Karli</span></p>
+                <br>
+                <p>The delivery and content was very relevant to me. <span class="referee">-Amber</span></p>
+                <br>
+                <p>Examples were fun. <span class="referee">-Angela</span></p>
+                <br>
+                <p>I enjoyed the course today. I learned a lot. Actually to do CPR. <span class="referee">-Ervin</span>
+                </p>
             </div>
         </div>
 
