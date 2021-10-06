@@ -42,12 +42,12 @@ Route::get('/', function () {
 Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
 Route::get('/', [HomeController::class, 'index']);
 
-
+Route::get('/courses', [HomeController::class, 'display']);
 
 Route::get('/aboutus', function () {return view('home.aboutus');});
 Route::get('/contactus', function () {return view('home.contactus');});
 Route::get('/terms', function () {return view('home.terms');});
-Route::get('/courses', function () {return view('home.show');});
+/*Route::get('/courses', function () {return view('home.show');});*/
 Route::get('/home/confirm', function () {return view('home.confirm');});
 
 /*

@@ -17,9 +17,11 @@ class HomeController extends Controller
         return view('home.index', ['courses' => $courses]);
     }
 
-    public function show()
+    public function display()
     {
+/*        */
         $courses = Course::all();
+/*        dd($courses);*/
         return view('home.show', ['courses' => $courses]);
     }
 }

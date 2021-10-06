@@ -202,7 +202,7 @@
                 <div class="row col-md-12">
                     <div class="copyright-text">
 
-                        <a href="/courses">Copyright &copy; 2021 Mobile Health | Design by: SIT-SS-DESIGN</a>
+                        <a href="{{ route('login') }}">Copyright &copy; 2021 Mobile Health | Design by: SIT-SS-DESIGN</a>
                     </div>
                 </div>
             </div>
