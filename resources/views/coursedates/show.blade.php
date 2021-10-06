@@ -14,7 +14,7 @@
                                 <div class="card-body" >
                                     @method('PUT')
                                     @csrf
-                                    <h4 class="card-title" style="text-align: left">First Aid Course</h4>
+                                    <h4 class="card-title" style="text-align: left">{{$coursedate->course->course_name}}</h4>
                                     <h6 class="card-title">Course Date: </h6>
                                     <p class="card-text">{{$coursedate->scheduled_date->format('d-m-Y')}}</p>
                                     <h6 class="card-title">Places available: </h6>
