@@ -56,7 +56,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/courses">Courses</a>
+                        <a class="nav-link" href="/facourses">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/bookings/create">Bookings</a>
@@ -85,7 +85,7 @@
     @auth
         <div class="container">
             <h1>Mobile Health Administration</h1>
-            <p>Your authorisation level is:&nbsp
+            {{--<p>Your authorisation level is:&nbsp
                 @can('isAdmin')
                     Admin access
                 @elsecan('isManager')
@@ -93,7 +93,7 @@
                 @else
                     User access
                 @endcan
-            </p>
+            </p>--}}
             <div style="float: right">
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -188,7 +188,7 @@
                     <h5>Site Map</h5>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/facourses">Courses</a></li>
                         <li><a href="/bookings/create">Book</a></li>
                         <li><a href="/aboutus">About Us</a></li>
                         <li><a href="/contactus">Contact Us</a></li>

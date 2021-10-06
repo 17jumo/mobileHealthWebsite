@@ -42,7 +42,7 @@ Route::get('/', function () {
 Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/courses', [HomeController::class, 'display']);
+Route::get('/facourses', [HomeController::class, 'display']);
 
 Route::get('/aboutus', function () {return view('home.aboutus');});
 Route::get('/contactus', function () {return view('home.contactus');});
