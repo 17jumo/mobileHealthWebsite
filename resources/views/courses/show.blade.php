@@ -6,12 +6,12 @@
         <div class="container">
             @endif
 
-            <div class="card card-body card-login w-75">
+            <div class="card card-body {{--card-login--}} w-75 card-show">
                 <div class="row no-gutters">
-                    <div class="col-md-2 text-center">
-                        <img src="/images/index/heart.png" class="card-img" alt="Course Icon">
+                    <div class="col-md-4 text-center">
+                        <img src="/images/index/heart.png" {{--class="card-show"--}} alt="Course Icon">
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">{{$courses->course_name}}</h5>
                             <h6 class="card-title">${{$courses->price}}</h6>

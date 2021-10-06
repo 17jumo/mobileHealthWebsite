@@ -233,6 +233,15 @@ a {
 /*    margin: auto;*/
 }
 
+.card-login {
+    margin: auto;
+}
+.card-show img {
+    height: 120px;
+    width: 120px;
+    /*    margin: auto;*/
+}
+
 .card-header {
     padding: 0;
 }

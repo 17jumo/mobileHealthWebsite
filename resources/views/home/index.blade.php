@@ -20,7 +20,7 @@
                 <strong>Providing First Aid courses now.</strong>
                 <br>Attend a course with us to get your First Aid qualifications.
             </p>
-            <div class="btn-book-primary">
+            <div class="btn btn-book-primary">
                 <a href="/bookings/create">Book your First Aid Course now!</a>
             </div>
         </div>
@@ -62,7 +62,8 @@
                         <p>{{$course->course_desc_short}}</p>
                         <p><a href="/courses/{{$course->id}}"><p id="readmore">Read more</p></a></p>
 
-                        <button href="/bookings/create" class="btn btn-info">Book now</button>
+                       <button href="/bookings/create" class="btn btn-info">Book now</button>
+
 
                     </div>
                 </div>
