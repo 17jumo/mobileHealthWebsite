@@ -56,16 +56,16 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/home/show">Courses</a>
+                        <a class="nav-link" href="/courses">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/bookings/create">Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/home/aboutus">About Us</a>
+                        <a class="nav-link" href="/aboutus">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/home/contactus">Contact Us</a>
+                        <a class="nav-link" href="/contactus">Contact Us</a>
                     </li>
                     <li>
                         <div class="btn btn-book-primary"><a href="/bookings/create">Book Now</a>
@@ -175,7 +175,7 @@
                         <li><a href="https://www.termsfeed.com/live/01b54658-9762-4347-8c16-3fd90e4ec5a3"
                                id="is_terms_agreed"
                                target="_blank">Privacy Policy</a></li>
-                        <li><a href="/home/terms" id="is_terms_agreed" target="_blank">Terms and Conditions</a></li>
+                        <li><a href="/terms" id="is_terms_agreed" target="_blank">Terms and Conditions</a></li>
                         <li>
                             <a href="https://engagesafety.co.nz/" target="_blank">
                                 <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
@@ -188,10 +188,10 @@
                     <h5>Site Map</h5>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/home/show">Courses</a></li>
+                        <li><a href="/courses">Courses</a></li>
                         <li><a href="/bookings/create">Book</a></li>
-                        <li><a href="/home/aboutus">About Us</a></li>
-                        <li><a href="/home/contactus">Contact Us</a></li>
+                        <li><a href="/aboutus">About Us</a></li>
+                        <li><a href="/contactus">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
