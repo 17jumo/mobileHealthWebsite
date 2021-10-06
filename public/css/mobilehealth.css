@@ -225,6 +225,7 @@ a {
 
 .card-login {
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 .card-login img {
@@ -233,9 +234,11 @@ a {
 /*    margin: auto;*/
 }
 
-.card-login {
+.card-show {
     margin: auto;
+    margin-bottom: 1rem;
 }
+
 .card-show img {
     height: 120px;
     width: 120px;
