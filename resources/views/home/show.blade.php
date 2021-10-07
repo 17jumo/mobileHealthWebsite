@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    {{--@if (Auth::check())
-    </div>
-    </div>
-    @endif--}}
-
     @if (Auth::check())
     @else
         <div class="container">
