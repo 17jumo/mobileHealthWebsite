@@ -105,31 +105,31 @@
                         <div class="col-md-6">
                             <label for="add_street">Street Address</label>
                             <input type="text" class="form-control @error('add_street') is-invalid @enderror"
-                                   name="add_street" id="add_street" value="{{$booking->add_street}}" required>
+                                   name="add_street" id="add_street" value="{{$booking->street}}" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="add_suburb">Suburb</label>
                             <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
-                                   name="add_suburb" id="add_suburb" value="{{$booking->add_suburb}}" required>
+                                   name="add_suburb" id="add_suburb" value="{{$booking->suburb}}" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="add_city">City</label>
                             <input type="text" class="form-control @error('add_city') is-invalid @enderror"
-                                   name="add_city" id="add_city" value="{{$booking->add_city}}" required>
+                                   name="add_city" id="add_city" value="{{$booking->city}}" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="add_postcode">Postcode</label>
                             <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
-                                   name="add_postcode" id="add_postcode" value="{{$booking->add_postcode}}" required>
+                                   name="add_postcode" id="add_postcode" value="{{$booking->postcode}}" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="add_country">Country</label>
                             <input type="text" class="form-control @error('add_country') is-invalid @enderror"
-                                   name="add_country" id="add_country" value="{{$booking->add_country}}" required>
+                                   name="add_country" id="add_country" value="{{$booking->country}}" required>
                         </div>
 
                         <div class="col-md-12">
@@ -137,7 +137,7 @@
                                    value="{{$booking->is_terms_agreed}}">
                             <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
                                 <a href="/home/terms" id="is_terms_agreed" target="_blank">
-                                    terms and conditions</a></label><br>
+                                    Terms and Conditions</a></label><br>
                         </div>
 
                         <div class="form-button mt-3">
