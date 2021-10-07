@@ -96,7 +96,7 @@
                     </table>
                 </div>
                 @auth
-                    <a class="btn btn-primary" href="/bookings/{{$booking->id}}/edit">Edit Booking</a>
+                    <a class="btn btn-primary" href="/bookings/{{$booking->id}}/edit">Edit</a>
                 @endauth
                 <a class="btn btn-warning mx-1" href="/bookings/">Cancel</a>
             </div>
