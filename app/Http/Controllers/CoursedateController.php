@@ -67,10 +67,10 @@ class CoursedateController extends Controller
      */
     public function show(Coursedate $coursedate)
     {
-/*        return view(' coursedates.show',['coursedate'=>$coursedate]);*/
+        return view(' coursedates.show',['coursedate'=>$coursedate]);
 
-        $coursedates = Coursedate::all();
-        return view('coursedates.show', ['coursedates' => $coursedates]);
+/*        $coursedates = Coursedate::all();
+        return view('coursedates.show', ['coursedates' => $coursedates]);*/
     }
 
     /**
