@@ -3,22 +3,23 @@
 
     <div class="container">
         <div class="card card-body card-login w-50 align-items-left">
-{{--            <img src="/images/MobileHealthTabLogo.png"
-                 alt="Mobile Health Logo">--}}
+            {{--            <img src="/images/MobileHealthTabLogo.png"
+                             alt="Mobile Health Logo">--}}
             <h4>Reset Password</h4>
+            <p>Please enter your email and we will send you a new password.</p>
+
+            <form class="contact__form" method="get" action="/resetpasswordmail">
+                @csrf
 
 
-                <form class="contact__form" method="get" action="/resetpasswordmail">
-                    @csrf
+                <input name="email" type="text" class="form-control" id="email"
+                       placeholder="Your email..." value="{{ @old('email') }}" required="">
 
-
-                    <input name="email" type="text" class="form-control" id="email"
-                           placeholder="Your email..." value="{{ @old('email') }}" required="">
-
-
-                    <button type="submit" id="form-submit" class="btn btn-secondary">Request New Password
+                <div class="form-button mt-3">
+                    <button type="submit" id="form-submit" class="btn btn-primary">Request New Password
                     </button>
-                </form>
+                </div>
+            </form>
 
             <!-- Validation Errors -->
             @if ($errors->any())
