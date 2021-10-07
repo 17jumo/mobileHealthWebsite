@@ -8,6 +8,8 @@ use App\Models\Booking;
 use Illuminate\Http\Request;
 use Stripe;
 use Session;
+use Illuminate\Support\Facades\Gate;
+
 class BookingController extends Controller
 {
     /**
