@@ -48,7 +48,7 @@
                         <a class="nav-link" href="/facourses">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bookings/create">Bookings</a>
+                        <a class="nav-link" href="/bookings/create">Book</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/aboutus">About Us</a>
