@@ -47,9 +47,13 @@
                                         <a class="btn btn-outline-success mx-1"
                                            href="/users/{{$user->id}}/edit">Edit</a>
                                         @can('isAdmin')
-                                            <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                                Delete
-                                            </button>
+                                            @if(Auth::user() == $user)
+                                            @else
+                                                <button type="submit" title="delete"
+                                                        class="btn btn-outline-secondary mx-1">
+                                                    Delete
+                                                </button>
+                                            @endif
                                         @endcan
                                     @endauth
                                 </form>
