@@ -133,11 +133,11 @@
                         </div>
 
                         <div class="col-md-12">
-                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="{{$booking->is_terms_agreed}}">
-                            <label for="is_terms_agreed">&nbspI have read and agree to the <a href="/home/terms"
-                                                                                              id="is_terms_agreed"
-                                                                                              target="_blank">terms and
-                                    conditions</a></label><br>
+                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed"
+                                   value="{{$booking->is_terms_agreed}}">
+                            <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
+                                <a href="/home/terms" id="is_terms_agreed" target="_blank">
+                                    terms and conditions</a></label><br>
                         </div>
 
                         <div class="form-button mt-3">

@@ -127,6 +127,10 @@ label {
     padding-bottom: 1rem;
 }
 
+.ptext {
+    font-size: 1rem;
+}
+
 /* BUTTON STYLE */
 .btn-book-primary a {
     background-color: #8BC53E;
@@ -161,47 +165,6 @@ label {
     color: #FFFFFF;
     opacity: 0.7;
 }
-
-/*.btn-info {
-    background-color: #8BC53E;
-    border-color: #8BC53E;
-    color: #FFFFFF;
-}
-
-.btn-info:hover {
-    background-color: #8BC53E;
-    border-color: #8BC53E;
-    color: #FFFFFF;
-    opacity: 0.7;
-}
-
-.btn-info:active {
-    background-color: #8BC53E;
-    border-color: #8BC53E;
-    color: #FFFFFF;
-    opacity: 0.7;
-}
-
-.btn-info.focus, .btn-info:focus {
-    box-shadow: 0 0 0 .2rem rgba(139,197,62,.5)
-}
-
-.btn-info.disabled, .btn-info:disabled {
-    color: #fff;
-    background-color: #8BC53E;
-    border-color: #8BC53E;
-}
-
-.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show > .btn-info.dropdown-toggle {
-    color: #fff;
-    background-color: #8BC53E;
-    border-color: #8BC53E;
-}
-
-.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show > .btn-info.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(139,197,62,.5)
-}*/
-
 
 .btn-book {
     background-color: #8BC53E;

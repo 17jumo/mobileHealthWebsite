@@ -155,7 +155,7 @@
 
                     <div class="col-md-12 mt-4 terms">
                         <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
-                        <label for="is_terms_agreed">&nbspI have read and agree to the
+                        <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
                             <a href="/terms" target="_blank"
                                value="{{ @old('is_terms_agreed') }}"><span class="is_terms_agreed">Terms and Conditions</span></a></label><br>
                     </div>

@@ -8,21 +8,10 @@
     {{--    Google fonts--}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {{--    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
-    {{--    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">--}}
-
-    {{--    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">--}}
-
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 
     {{--Browser Icon--}}
     <link rel="icon" href="/images/MobileHealthTabLogo.png" type="/image/MobileHealthTabLogo.png">
@@ -78,45 +67,37 @@
         </div>
     </nav>
 
-
 </header>
 
 <main>
     @auth
         <div class="container">
             <h1>Mobile Health Administration</h1>
-            {{--<p>Your authorisation level is:&nbsp
-                @can('isAdmin')
-                    Admin access
-                @elsecan('isManager')
-                    Manager access
-                @else
-                    User access
-                @endcan
-            </p>--}}
+
             <div style="float: right">
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
 
-                @else
-                    @can('isAdmin')
+                {{--@else--}}
+                    {{--@can('isAdmin')
                         @if (Route::has('register'))
                             <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
                         @endif
-                    @endcan
+                    @endcan--}}
                 @endif
                 <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>
-
-            <a class="btn btn-outline-primary mx-1" href="/courses">View Courses</a>
-            <a class="btn btn-outline-primary mx-1 " href="/coursedates">View Course Dates</a>
-            <a class="btn btn-outline-primary mx-1 " href="/bookings">View Bookings</a>
+            <div class="mt-2">
+            <a class="btn btn-outline-primary mx-1" href="/courses">Courses</a>
+            <a class="btn btn-outline-primary mx-1 " href="/coursedates">Course Dates</a>
+            <a class="btn btn-outline-primary mx-1 " href="/bookings">Bookings</a>
             @can('isAdmin')
-                <a class="btn btn-outline-primary mx-1 " href="/users">User Admin</a>
+                <a class="btn btn-outline-primary mx-1 " href="/users">Users</a>
             @endcan
+            </div>
 
 {{--            <ul class="nav nav-tabs">
                 <li class="active"><a href="#">Home</a></li>
@@ -173,9 +154,8 @@
                     <h5>Other</h5>
                     <ul>
                         <li><a href="https://www.termsfeed.com/live/01b54658-9762-4347-8c16-3fd90e4ec5a3"
-                               id="is_terms_agreed"
                                target="_blank">Privacy Policy</a></li>
-                        <li><a href="/terms" id="is_terms_agreed" target="_blank">Terms and Conditions</a></li>
+                        <li><a href="/terms" target="_blank">Terms and Conditions</a></li>
                         <li>
                             <a href="https://engagesafety.co.nz/" target="_blank">
                                 <img src="/images/EngageSafetyLogo.png" alt="Engage Safety Logo"
