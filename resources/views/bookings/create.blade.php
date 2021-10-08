@@ -44,7 +44,7 @@
                                 required>
                             @foreach ($coursedates as $coursedate)
                                 <option value="{{$coursedate->id}}">
-                                    {{$coursedate->scheduled_date->format('d-m-Y')}}</option>
+                                    {{$coursedate->scheduled_date->format('l d-M-Y')}}</option>
                             @endforeach
                         </select>
                     </div>
