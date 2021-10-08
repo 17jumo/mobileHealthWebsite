@@ -84,6 +84,7 @@ class BookingController extends Controller
             'country' => '',
 
             'is_terms_agreed' => 'required',
+            'isActive' => '',
         ]);
 
         $booking = new booking();
@@ -104,6 +105,7 @@ class BookingController extends Controller
         $booking->postcode = request('postcode');
         $booking->country = request('country');
         $booking->is_terms_agreed = request('is_terms_agreed');
+        $booking->isActive = ('1');
 
 
         $stripe = new \Stripe\StripeClient(
@@ -150,9 +152,6 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
-/*        if(! Gate::allows('admin')) {
-            abort(403);
-        }*/
         request()->validate([
             'course_id' => '',
             'coursedate_id' => '',
@@ -171,7 +170,7 @@ class BookingController extends Controller
             'postcode' => '',
             'country' => '',
 
-            'is_terms_agreed' => 'required',
+            'isActive' => 'required',
         ]);
 
         $booking->update($request->all());

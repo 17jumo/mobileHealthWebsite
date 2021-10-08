@@ -1,19 +1,19 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>View Bookings</h2>
-                    <hr>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <h2>View Bookings</h2>
+                <hr>
+            </div>
 
-                <p>
-                    <a class="btn btn-outline-primary mx-1 "
-                       href="/bookings/create">Create new booking</a>
-                </p>
+            <p>
+                <a class="btn btn-outline-primary mx-1 "
+                   href="/bookings/create">Create new booking</a>
+            </p>
 
-                <div class="table-responsive">
+            <div class="table-responsive">
                 <table class="table table-striped" id="book-table">
                     <thead>
                     <tr>
@@ -26,6 +26,7 @@
                         <th scope="col">Course Name</th>
                         <th scope="col">Course Date</th>
                         <th scope="col">Course Total</th>
+                        <th scope="col">Active Record</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -40,20 +41,24 @@
                             <td>{{$booking->company_name}}</td>
                             <td>{{$booking->coursedate->course->course_name}}</td>
                             <td>@php echo ($booking->coursedate->scheduled_date)->format('d-m-Y') @endphp</td>
-                            <td>${{$booking->course_total}} </td>
+                            <td>${{$booking->course_total}}</td>
+                            <td>@if($booking->isActive == 0)
+                                    Inactive
+                                @endif</td>
                             <td>
                                 <form action="/bookings/{{$booking->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     @auth
-                                        <a class="btn btn-outline-primary mx-1 " href="/bookings/{{$booking->id}}">Show</a>
+                                        <a class="btn btn-outline-primary mx-1 "
+                                           href="/bookings/{{$booking->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/bookings/{{$booking->id}}/edit">Edit</a>
-                                        @can('isAdmin')
+{{--                                        @can('isAdmin')
                                             <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                                Delete
+                                                Deactivate
                                             </button>
-                                        @endcan
+                                        @endcan--}}
                                     @endauth
                                 </form>
                             </td>
@@ -61,7 +66,6 @@
                     @endforeach
                     </tbody>
                 </table>
-                </div>
             </div>
         </div>
     </div>

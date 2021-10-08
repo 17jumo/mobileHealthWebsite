@@ -15,10 +15,33 @@
                     @csrf
 
                     <div class="row">
-
                         <h4>Course Details</h4>
-
                         <p>{{$booking->course_name}}</p>
+
+                        <div class="col-md-12">
+                            <label for="course_id">Course</label>
+                            <select id="course_id" name="course_id" class="form-control"
+                                    @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
+                                @foreach ($courses as $course)
+                                    <option
+                                        {{ $courses->id == $old_id ? 'selected' : '' }}  value="{{$courses->id}}">{{$courses->course_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="coursedate_id" class="form-control-label">Select course date*</label>
+                            <select name="coursedate_id" id="coursedate_id"
+                                    class="form-control @error('coursedate_id') is-invalid @enderror"
+                                    value="{{$course->scheduled_date}}"
+                                    required>
+                                @foreach ($coursedates as $coursedate)
+                                    <option value="{{$coursedate->id}}">
+                                        {{$coursedate->scheduled_date->format('l d-M-Y')}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        {{--
 
                         <div class="col-md-12">
                             <label for="course_name">Course</label>
@@ -38,13 +61,11 @@
                                 <option value="2022-02-17">Thursday 17 Feb 2022</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="course_total">Course Total</label>
-                            <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                                   name="course_total" id="course_total" value="{{$booking->course_total}}" required>
-                        </div>
+                    </div>--}}
+                    <div class="col-md-6">
+                        <label for="course_total">Course Total</label>
+                        <input type="number" class="form-control @error('course_total') is-invalid @enderror"
+                               name="course_total" id="course_total" value="{{$booking->course_total}}" required>
                     </div>
                     <h4>Attendee Details</h4>
 
@@ -103,41 +124,39 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_street">Street Address</label>
-                            <input type="text" class="form-control @error('add_street') is-invalid @enderror"
-                                   name="add_street" id="add_street" value="{{$booking->street}}" required>
+                            <label for="street">Street Address</label>
+                            <input type="text" class="form-control @error('street') is-invalid @enderror"
+                                   name="street" id="street" value="{{$booking->street}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_suburb">Suburb</label>
-                            <input type="text" class="form-control @error('add_suburb') is-invalid @enderror"
-                                   name="add_suburb" id="add_suburb" value="{{$booking->suburb}}" required>
+                            <label for="suburb">Suburb</label>
+                            <input type="text" class="form-control @error('suburb') is-invalid @enderror"
+                                   name="suburb" id="suburb" value="{{$booking->suburb}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_city">City</label>
-                            <input type="text" class="form-control @error('add_city') is-invalid @enderror"
-                                   name="add_city" id="add_city" value="{{$booking->city}}" required>
+                            <label for="city">City</label>
+                            <input type="text" class="form-control @error('city') is-invalid @enderror"
+                                   name="city" id="city" value="{{$booking->city}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_postcode">Postcode</label>
-                            <input type="text" class="form-control @error('add_postcode') is-invalid @enderror"
-                                   name="add_postcode" id="add_postcode" value="{{$booking->postcode}}" required>
+                            <label for="postcode">Postcode</label>
+                            <input type="text" class="form-control @error('postcode') is-invalid @enderror"
+                                   name="postcode" id="postcode" value="{{$booking->postcode}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="add_country">Country</label>
-                            <input type="text" class="form-control @error('add_country') is-invalid @enderror"
-                                   name="add_country" id="add_country" value="{{$booking->country}}" required>
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control @error('country') is-invalid @enderror"
+                                   name="country" id="country" value="{{$booking->country}}" required>
                         </div>
 
-                        <div class="col-md-12">
-                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed"
-                                   value="{{$booking->is_terms_agreed}}">
-                            <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
-                                <a href="/home/terms" id="is_terms_agreed" target="_blank">
-                                    Terms and Conditions</a></label><br>
+                        <div class="col-md-6">
+                            <label for="isActive">Active Record (0=No, 1=Yes)</label>
+                            <input type="text" class="form-control @error('isActive') is-invalid @enderror"
+                                   id="isActive" name="isActive" value="{{$booking->is_Active}}">
                         </div>
 
                         <div class="form-button mt-3">

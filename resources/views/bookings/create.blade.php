@@ -51,7 +51,7 @@
                     <div class="col-md-6">
                         @foreach ($courseprice as $courseprices)
                             <label for="course_total">Course Total (inc GST)</label>
-                            <input type="number" class="form-control" @error('course_total') is-invalid @enderror"
+                            <input type="number" class="form-control @error('course_total') is-invalid @enderror"
                             name="course_total" id="course_total" value="{{$courseprices->price}}" readonly>
                         @endforeach
                     </div>
