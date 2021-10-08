@@ -58,6 +58,12 @@
                             <input type="text" class="form-control @error('end_time') is-invalid @enderror"
                                    id="end_time" name="end_time" value="{{$courses->end_time}}">
                         </div>
+
+                        <div class="col-md-6">
+                            <label for="isActive">Active Record (0=No, 1=Yes)</label>
+                            <input type="text" class="form-control @error('isActive') is-invalid @enderror"
+                                   id="isActive" name="isActive" value="{{$courses->isActive}}">
+                        </div>
                     </div>
                     <div class="form-button mt-3">
                         @can('isAdmin')

@@ -27,8 +27,6 @@ class CourseController extends Controller
      */
     public function create()
     {
-/*        $courses = "xxx";
-        dd($courses);*/
         return view('courses.create');
     }
 
@@ -45,11 +43,11 @@ class CourseController extends Controller
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
             'price' => 'required',
-            'duration' => 'required',
+            'duration' => 'required|integer',
             'start_time' => 'required',
             'end_time' => 'required',
-/*            'image' => 'nullable|image|mimes:jpeg,jpg,png',
-            'image_path' => '',*/
+            /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            /*            'image_path' => '',*/
         ]);
 
 /*        $imageName = time() . '.' . $request->image->extension();
@@ -63,8 +61,9 @@ class CourseController extends Controller
         $course->start_time = request('start_time');
         $course->end_time = request('end_time');
         $course->price = request('price');
-/*        $course->image =  request('image');
-        $course->image_path =  "/images/index" . $imageName;*/
+        $course->isActive = true;
+        /*$course->image =  request('image');*/
+/*        $course->image_path =  "/images/index" . $imageName;*/
         $course->save();
 
         return redirect('courses');
@@ -108,22 +107,26 @@ class CourseController extends Controller
             'course_name' => 'required',
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
-            'duration' => 'required',
+            'duration' => 'required|integer',
             'start_time' => 'required',
             'end_time' => 'required',
             'price' => 'required',
-/*            'image' => 'nullable|image|mimes:jpeg,jpg,png',
-            'image_path' => '',*/
+            'isActive' => 'required',
+            /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+/*            'image_path' => '',*/
         ]);
 
-/*        if(isset($request->image)) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('images'), $imageName);
-            $course->image =  request('image');
-            $course->image_path =  "/images/course" . $imageName;
-        }*/
+        $course->course_name = request('course_name');
+        $course->course_desc_long = request('course_desc_long');
+        $course->course_desc_short = request('course_desc_short');
+        $course->duration =  request('duration');
+        $course->start_time =  request('start_time');
+        $course->end_time =  request('end_time');
+        $course->price =  request('price');
+        $course->isActive =  request('isActive');
+        $course->save();
 
-        $course->update($request->all());
+        /*$course->update($request->all());*/
         return redirect('courses');
     }
 

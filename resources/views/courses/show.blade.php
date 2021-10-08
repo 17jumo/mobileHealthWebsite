@@ -11,6 +11,9 @@
 
                     <div class="card w-100 mt-2 card-login">
                         <div class="card-body">
+                            @if($courses->isActive < 1)
+                                <div class="alert alert-danger" role="alert">Inactive Record</div>
+                            @endif
                             <img src="/images/index/heart.png" alt="Course Icon">
                             <h5 class="card-title">{{$courses->course_name}}</h5>
                             <br><br>

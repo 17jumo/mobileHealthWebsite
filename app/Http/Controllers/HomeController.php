@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Course;
 use App\Models\Coursedate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller

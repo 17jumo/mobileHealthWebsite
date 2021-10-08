@@ -21,6 +21,8 @@ class CreateCoursedatesTable extends Migration
             $table->integer	('max_attendee')->default(10);
             $table->string ('venue') ->default("18 Glenda Drive, Frankton, Queenstown");
 
+            $table->boolean('isActive')->default(true);
+
             $table->foreignID ('course_id')->contrained();
         });
     }

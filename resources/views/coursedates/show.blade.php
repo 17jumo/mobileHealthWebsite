@@ -6,6 +6,10 @@
                     <h2>Course dates</h2>
                     <hr>
 
+                @if($coursedate->isActive == 0)
+                    <div class="alert alert-danger" role="alert">Inactive Record</div>
+                @endif
+
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>

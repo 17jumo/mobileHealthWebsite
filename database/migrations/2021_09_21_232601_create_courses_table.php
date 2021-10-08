@@ -18,14 +18,15 @@ class CreateCoursesTable extends Migration
             $table->timestamps();
 
             $table->string('course_name');
-            $table->string('course_desc_short');
-            $table->string('course_desc_long');
+            $table->text('course_desc_short');
+            $table->text('course_desc_long');
             $table->float('price');
             $table->integer('duration');
             $table->time('start_time');
             $table->time('end_time');
-/*            $table->string('image');
-            $table->string('image_path');*/
+            /*$table->string('image');*/
+/*            $table->string('image_path');*/
+            $table->boolean('isActive')->default(true);
         });
     }
 

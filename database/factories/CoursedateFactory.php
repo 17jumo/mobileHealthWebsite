@@ -26,6 +26,7 @@ class CoursedateFactory extends Factory
             'scheduled_date' => $this->faker-> date($format = 'Y-m-d', $min = 'now', $max = '2022-1-1'),
             'max_attendee' => $this->faker-> numberBetween($min = 1, $max = 15),
             'venue' => "18 Glenda Drive, Frankton, Queenstown",
+            'isActive' => $this->faker->boolean,
 
             'created_at' => now(),
             'updated_at' => now(),

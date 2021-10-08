@@ -22,6 +22,7 @@
                         <th scope="col">Scheduled Date</th>
                         <th scope="col">Attendee Max</th>
                         <th scope="col">Venue</th>
+                        <th scope="col">Active Record</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -33,18 +34,10 @@
                             <td>{{$coursedate->scheduled_date->format('d-m-Y')}}</td>
                             <td>{{$coursedate->max_attendee}}</td>
                             <td>{{$coursedate->venue}}</td>
+                            <td>@if($coursedate->isActive == 0)
+                                    Inactive
+                                @endif</td>
                             <td>
-{{--                                <form action="/coursedates/{{$coursedate->id}}" method="POST">
-                                    @method('DELETE')
-                                    @csrf
-                                    @auth
-                                        <a class="btn btn-primary mx-1"
-                                           href="/coursedates/{{$coursedate->id}}">Show More</a>
-                                        <a class="btn btn-success mx-1" href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
-                                        <button type="submit" title="delete" class="btn btn-danger mx-1">Delete</button>
-                                    @endauth
-                                </form>--}}
-
                                 <form action="/coursedates/{{$coursedate->id}}" method="POST">
                                     @method('DELETE')
                                     @csrf
@@ -52,11 +45,11 @@
                                         <a class="btn btn-outline-primary mx-1 " href="/coursedates/{{$coursedate->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/coursedates/{{$coursedate->id}}/edit">Edit</a>
-                                        @can('isAdmin')
+{{--                                        @can('isAdmin')
                                             <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
                                                 Delete
                                             </button>
-                                        @endcan
+                                        @endcan--}}
                                     @endauth
                                 </form>
                             </td>

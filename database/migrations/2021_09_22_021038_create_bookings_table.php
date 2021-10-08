@@ -37,6 +37,8 @@ class CreateBookingsTable extends Migration
             $table->string ('country') ->nullable();
             $table->boolean('is_terms_agreed');
 
+            $table->boolean('isActive')->default(true);
+
             $table->timestamps();
         });
     }

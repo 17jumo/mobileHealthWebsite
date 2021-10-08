@@ -25,6 +25,7 @@
                         <th scope="col">Duration</th>
                         <th scope="col">Start Time</th>
                         <th scope="col">End Time</th>
+                        <th scope="col">Active Record</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -45,6 +46,9 @@
                             </td>
                             <td>{{ date('G:i', strtotime($course->start_time)) }}</td>
                             <td>{{ date('G:i', strtotime($course->end_time)) }}</td>
+                            <td>@if($course->isActive == 0)
+                                    Inactive
+                                @endif</td>
                             <td>
                                 <form action="/courses/{{$course->id}}" method="POST">
                                     @method('DELETE')
@@ -54,11 +58,11 @@
                                            href="/courses/{{$course->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/courses/{{$course->id}}/edit">Edit</a>
-                                        @can('isAdmin')
+{{--                                        @can('isAdmin')
                                             <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                                Delete
+                                                Deactivate
                                             </button>
-                                        @endcan
+                                        @endcan--}}
                                     @endauth
                                 </form>
                             </td>
@@ -69,5 +73,5 @@
             </div>
         </div>
     </div>
-    </div>
+
 @endsection

@@ -31,7 +31,9 @@ class CoursedateController extends Controller
      */
     public function create()
     {
-        return view('coursedates.create');
+        $coursedates = Coursedate::where("isActive","=",1)->get();
+        $courses = Course::where("isActive","=",1)->get();
+        return view('coursedates.create', ['courses' => $courses,'coursedates' => $coursedates]);
     }
 
     /**
@@ -53,6 +55,7 @@ class CoursedateController extends Controller
         $coursedate->max_attendee = request('max_attendee');
         $coursedate->venue = request('venue');
         $coursedate->course_id = request('course_id');
+        $coursedate->isActive = 1;
 
         $coursedate->save();
 
@@ -93,19 +96,19 @@ class CoursedateController extends Controller
      */
     public function update(Request $request, Coursedate $coursedate)
     {
-/*        if(! Gate::allows('admin')) {
-            abort(403);
-        }*/
         request()->validate([
             'scheduled_date' => 'required',
             'max_attendee' => '',
             'venue' => 'required',
+            'isActive' => 'required',
         ]);
 
         $coursedate->update($request->all());
 
         return redirect('coursedates');
     }
+
+
 
     /**
      * Remove the specified resource from storage.
