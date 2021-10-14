@@ -23,6 +23,7 @@ class BookingController extends Controller
         $bookings = Booking::all();
         $coursedates = Coursedate::all();
         $courses = Course::all();
+        // dd($bookings);
 
 
         return view('bookings.index', ['bookings' => $bookings, 'courses' => $courses,'coursedates' => $coursedates]);
@@ -40,7 +41,7 @@ class BookingController extends Controller
         $coursedates = Coursedate::where("course_id","=",1)->get();
         $courseprice = Course::select('price')->where("id","=",1)->get();
         $old_id = 1;
-        return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id ]);
+        return view('bookings.create', ['courses' => $courses, 'coursedates' => $coursedates, 'courseprice' => $courseprice, 'old_id' => $old_id,]);
     }
 
     /**
@@ -52,12 +53,11 @@ class BookingController extends Controller
     public function store(Request $request)
     {
        $courses = Course::all();
-       $coursedates = Coursedate::all();
        $courseprice = Course::select('price')->where("id","=",$request->course_id)->get();
+       $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
+       $old_id = $request->get('course_id');
         //IF CHECKING IF THEY ONLY CHANGE THE COURSE
         if ($request->first_name == null) {
-            $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
-            $old_id = $request->get('course_id');
             return view('bookings.create',
              ['courses' => $courses,
              'coursedates' => $coursedates,
@@ -69,7 +69,6 @@ class BookingController extends Controller
             'course_id' => 'required',
             'coursedate_id' => 'required',
             'course_total' => 'required',
-
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -82,16 +81,15 @@ class BookingController extends Controller
             'city' => '',
             'postcode' => '',
             'country' => '',
-
             'is_terms_agreed' => 'required',
             'isActive' => '',
         ]);
+        // dd($request);
 
         $booking = new booking();
         $booking->course_id = request('course_id');
         $booking->coursedate_id = request('coursedate_id');
         $booking->course_total = request('course_total');
-
         $booking->first_name = request('first_name');
         $booking->last_name = request('last_name');
         $booking->email = request('email');
@@ -109,16 +107,20 @@ class BookingController extends Controller
 
 
         $stripe = new \Stripe\StripeClient(
-      'sk_test_51JawcXEdQN6YZjuxiZyeug0fYd4GWKpmexqQ3Uw9BvL460IK5ktKUOtgpKeQF6elpZ1O1R998GAGjjH2djNep0cT00pG27q9iP'
-    );
+      'sk_test_51JawcXEdQN6YZjuxiZyeug0fYd4GWKpmexqQ3Uw9BvL460IK5ktKUOtgpKeQF6elpZ1O1R998GAGjjH2djNep0cT00pG27q9iP');
         $stripe->charges->create([
           'amount' => $request->input('course_total')*100,
           'currency' => 'nzd',
           'source' => 'tok_amex',
         ]);
+        
         $booking->save();
-        Session::flash('success', 'Booking Confirm! Thank-you');
-        return back();
+        Session::flash('success', 'Your booking is confirmed! Thank-you');
+        return view('bookings.create',
+         ['courses' => $courses,
+         'coursedates' => $coursedates,
+        'courseprice' => $courseprice,
+        'old_id' => $old_id ]);
     }
 
     /**
@@ -129,6 +131,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
+      
         return view('bookings.show', ['booking' => $booking]);
     }
 
@@ -140,7 +143,9 @@ class BookingController extends Controller
      */
     public function edit(Booking $booking)
     {
-        return view('bookings.edit', ['booking' => $booking]);
+      $course = Course::select('*')->where("id","=",$booking->course_id)->get();
+      $coursedates = Coursedate::select('*')->where("id","=",$booking->coursedate_id)->get();
+        return view('bookings.edit', ['booking' => $booking,'course'=>$course,'coursedates'=>$coursedates]);
     }
 
     /**
@@ -152,11 +157,8 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
+      // dd($request);
         request()->validate([
-            'course_id' => '',
-            'coursedate_id' => '',
-            'course_total' => '',
-
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -164,16 +166,29 @@ class BookingController extends Controller
             'gender' => 'required',
             'phone' => 'required',
             'company_name' => '',
-            'street' => '',
-            'suburb' => '',
-            'city' => '',
-            'postcode' => '',
-            'country' => '',
-
+            'street' => 'required',
+            'suburb' => 'required',
+            'city' => 'required',
+            'postcode' => 'required',
+            'country' => 'required',
             'isActive' => 'required',
         ]);
-
-        $booking->update($request->all());
+dd(validate);
+        $booking->first_name = request('first_name');
+        $booking->last_name = request('last_name');
+        $booking->email = request('email');
+        $booking->phone = request('phone');
+        $booking->dob = request('dob');
+        $booking->gender = request('gender');
+        $booking->company_name = request('company_name');
+        $booking->street = request('street');
+        $booking->suburb = request('suburb');
+        $booking->city = request('city');
+        $booking->postcode = request('postcode');
+        $booking->country = request('country');
+        $booking->isActive = ('1');
+        $booking->save();
+      
         return redirect('bookings');
     }
 

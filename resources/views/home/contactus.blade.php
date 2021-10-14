@@ -69,10 +69,8 @@
                     <textarea name="message" rows="4" class="form-control  mt-2" id="message"
                               placeholder="Your message..." value="{{ @old('message') }}" required=""></textarea>
 
-                    <button type="submit" id="form-submit" class="btn btn-secondary  mt-2">Send Message
+                    <button type="submit" id="form-submit" class="btn btn-primary  mt-2">Send Message
                     </button>
-                    {{--                    <div class="btn btn-secondary">--}}
-                    {{--                        <a href="/contactusmail">Send</a>--}}
                 </form>
             </div>
         </div>

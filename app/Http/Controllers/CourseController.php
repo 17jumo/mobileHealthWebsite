@@ -115,7 +115,7 @@ class CourseController extends Controller
             /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
 /*            'image_path' => '',*/
         ]);
-
+dd($request);
         $course->course_name = request('course_name');
         $course->course_desc_long = request('course_desc_long');
         $course->course_desc_short = request('course_desc_short');

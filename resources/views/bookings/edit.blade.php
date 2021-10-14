@@ -16,56 +16,34 @@
 
                     <div class="row">
                         <h4>Course Details</h4>
-                        <p>{{$booking->course_name}}</p>
 
                         <div class="col-md-12">
-                            <label for="course_id">Course</label>
-                            <select id="course_id" name="course_id" class="form-control"
-                                    @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
-                                @foreach ($courses as $course)
-                                    <option
-                                        {{ $courses->id == $old_id ? 'selected' : '' }}  value="{{$courses->id}}">{{$courses->course_name}}</option>
-                                @endforeach
-                            </select>
+                          <label for="course_id">Course Name </label>
+
+                          <select id="course_id" name="course_id" class="form-control
+                                  @error('course_id') is-invalid @enderror" >
+                              @foreach ($course as $courses)
+                                  <option
+                                      value="{{$courses->id}}">{{$courses->course_name}}</option>
+                              @endforeach
+                          </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="coursedate_id" class="form-control-label">Select course date*</label>
-                            <select name="coursedate_id" id="coursedate_id"
-                                    class="form-control @error('coursedate_id') is-invalid @enderror"
-                                    value="{{$course->scheduled_date}}"
-                                    required>
-                                @foreach ($coursedates as $coursedate)
-                                    <option value="{{$coursedate->id}}">
-                                        {{$coursedate->scheduled_date->format('l d-M-Y')}}</option>
-                                @endforeach
-                            </select>
+                          <label for="course_id">Course date</label>
+                          <select id="course_id" name="coursedate_id" class="form-control
+                                  @error('$coursedate->id') is-invalid @enderror" >
+                              @foreach ($coursedates as $coursedate)
+                                  <option
+                                      value="{{$coursedate->id}}">{{$coursedate->scheduled_date->format('l d-M-Y')}}</option>
+                              @endforeach
+                          </select>
                         </div>
-
-                        {{--
-
-                        <div class="col-md-12">
-                            <label for="course_name">Course</label>
-                            <select id="course_name" name="course_name" class="form-control"
-                                    @error('course_total') is-invalid @enderror required>
-                                <option value="FirstAid">First Aid Course</option>
-                                <option value="FirstAidRefresh">First Aid Refresher</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="course_date" class="form-control-label">Select course date*</label>
-                            <select name="course_date" id="course_date"
-                                    class="form-control @error('course_total') is-invalid @enderror"
-                                    required>
-                                <option value="2022-02-05">Thursday 05 Feb 2022</option>
-                                <option value="2022-02-17">Thursday 17 Feb 2022</option>
-                            </select>
-                        </div>
-                    </div>--}}
                     <div class="col-md-6">
+                        @foreach ($course as $courses)
                         <label for="course_total">Course Total</label>
                         <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                               name="course_total" id="course_total" value="{{$booking->course_total}}" required>
+                               name="course_total" id="course_total" value="{{$courses->price}}" readonly>
+                               @endforeach
                     </div>
                     <h4>Attendee Details</h4>
 
@@ -154,14 +132,14 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="isActive">Active Record (0=No, 1=Yes)</label>
-                            <input type="text" class="form-control @error('isActive') is-invalid @enderror"
-                                   id="isActive" name="isActive" value="{{$booking->is_Active}}">
+                            <label for="is_Active">Active Record (0=No, 1=Yes)</label>
+                            <input type="text" class="form-control @error('is_Active') is-invalid @enderror"
+                                   id="is_Active" name="is_Active" value="{{$booking->is_Active}}">
                         </div>
 
                         <div class="form-button mt-3">
                             <input class="btn btn-primary" type="submit" value="Save">
-                            <a class="btn btn-warning" href="/bookings/">Cancel</a>
+                            <a class="btn btn-warning" href="/bookings">Cancel</a>
                         </div>
                     </div>
                 </form>
@@ -171,5 +149,3 @@
 
 
 @endsection
-
-

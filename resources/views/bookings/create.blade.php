@@ -21,7 +21,7 @@
                 <p>Please complete the form below and make a payment to secure your place on a course.</p>
             </div>
 
-            <form method="POST" action="/bookings">
+            <form method="POST" action="/bookings" id="stripe">
                 @csrf
                 <div class="row">
                     <div class="col-md-12 mt-2">
@@ -49,11 +49,15 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        @foreach ($courseprice as $courseprices)
-                            <label for="course_total">Course Total (inc GST)</label>
-                            <input type="number" class="form-control @error('course_total') is-invalid @enderror"
-                            name="course_total" id="course_total" value="{{$courseprices->price}}" readonly>
-                        @endforeach
+                      <label for="course_id">Course Total</label>
+                      <select name="course_total" id="course_total"
+                              class="form-control @error('course_total') is-invalid @enderror"
+                              required>
+                          @foreach ($courseprice as $courseprices)
+                              <option value="{{$courseprices->price}}">
+                                  {{$courseprices->price}} NZD</option>
+                          @endforeach
+                      </select>
                     </div>
                 </div>
 
@@ -140,6 +144,7 @@
                                    required>
                             <label for="card-element">Card details</label>
                             <div class="form-control" id="card-element" name="card-element" required></div>
+                                <input name="pmethod" type="hidden" id="pmethod" value="" required/>
                         </div>
                         <div class="col-md-12 mt-4 terms">
                             <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>

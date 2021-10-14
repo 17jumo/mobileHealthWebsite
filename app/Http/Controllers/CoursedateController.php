@@ -84,7 +84,9 @@ class CoursedateController extends Controller
      */
     public function edit(Coursedate $coursedate)
     {
-        return view('coursedates.edit',['coursedate'=>$coursedate]);
+        $courses = Course::all();
+        $date=date("Y-m-d");
+        return view('coursedates.edit',['coursedate'=>$coursedate,'courses'=>$courses,'date'=>$date]);
     }
 
     /**
