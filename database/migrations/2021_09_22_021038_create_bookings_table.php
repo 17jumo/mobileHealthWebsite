@@ -18,11 +18,7 @@ class CreateBookingsTable extends Migration
 
             $table->foreignID ('course_id')->contrained();
             $table->foreignID ('coursedate_id')->contrained();
-
-/*            $table->string ('course_name');
-            $table->string ('course_date');*/
             $table->integer('course_total');
-
             $table->string	('first_name');
             $table->string ('last_name');
             $table->string ('phone');
@@ -36,7 +32,6 @@ class CreateBookingsTable extends Migration
             $table->string	('postcode') ->nullable();
             $table->string ('country') ->nullable();
             $table->boolean('is_terms_agreed');
-
             $table->boolean('isActive')->default(true);
 
             $table->timestamps();
