@@ -29,9 +29,7 @@ class CourseFactory extends Factory
             'duration' => $this->faker->numberBetween(1,3),
             'start_time' => $this->faker->time,
             'end_time' => $this->faker->time,
-
             /*'image' => '1.jpg',*/
-/*            'image_path' => '/images/index' . $this->faker->numberBetween(1, 4) . ".jpg",*/
             'isActive' => $this->faker->boolean,
 
             'created_at' => now(),
