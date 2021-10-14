@@ -158,22 +158,42 @@ class BookingController extends Controller
     public function update(Request $request, Booking $booking)
     {
       // dd($request);
+      //
+      // request()->validate([
+      //     'scheduled_date' => 'required',
+      //     'max_attendee' => '',
+      //     'venue' => 'required',
+      //     'isActive' => 'required',
+      // ]);
+      //
+      // $coursedate->update($request->all());
+      //
+      // return redirect('coursedates');
+      //
+      
+      
+      // dd($request);
         request()->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required',
-            'dob' => 'required',
-            'gender' => 'required',
-            'phone' => 'required',
-            'company_name' => '',
-            'street' => 'required',
-            'suburb' => 'required',
-            'city' => 'required',
-            'postcode' => 'required',
-            'country' => 'required',
-            'isActive' => 'required',
+          'course_id' => 'required',
+          'coursedate_id' => 'required',
+          'course_total' => 'required',
+          'first_name' => 'required',
+          'last_name' => 'required',
+          'email' => 'required',
+          'phone' => 'required',
+          'dob' => 'required',
+          'gender' => 'required',
+          'company_name' => '',
+          'street' => '',
+          'suburb' => '',
+          'city' => '',
+          'postcode' => '',
+          'country' => '',
+          'isActive' => '',
         ]);
-dd(validate);
+        $booking->course_id = request('course_id');
+        $booking->coursedate_id = request('coursedate_id');
+        $booking->course_total = request('course_total');
         $booking->first_name = request('first_name');
         $booking->last_name = request('last_name');
         $booking->email = request('email');
@@ -187,8 +207,7 @@ dd(validate);
         $booking->postcode = request('postcode');
         $booking->country = request('country');
         $booking->isActive = ('1');
-        $booking->save();
-      
+        $booking->update();
         return redirect('bookings');
     }
 
