@@ -33,6 +33,7 @@ class CoursedateController extends Controller
     {
         $coursedates = Coursedate::where("isActive","=",1)->get();
         $courses = Course::where("isActive","=",1)->get();
+
         return view('coursedates.create', ['courses' => $courses,'coursedates' => $coursedates]);
     }
 
@@ -71,9 +72,6 @@ class CoursedateController extends Controller
     public function show(Coursedate $coursedate)
     {
         return view(' coursedates.show',['coursedate'=>$coursedate]);
-
-/*        $coursedates = Coursedate::all();
-        return view('coursedates.show', ['coursedates' => $coursedates]);*/
     }
 
     /**
@@ -86,6 +84,7 @@ class CoursedateController extends Controller
     {
         $courses = Course::all();
         $date=date("Y-m-d");
+
         return view('coursedates.edit',['coursedate'=>$coursedate,'courses'=>$courses,'date'=>$date]);
     }
 

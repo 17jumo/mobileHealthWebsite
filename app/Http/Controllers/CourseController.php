@@ -16,7 +16,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::all();
-//        dd($courses);
+
         return view('courses.index',['courses'=>$courses]);
     }
 
@@ -47,11 +47,7 @@ class CourseController extends Controller
             'start_time' => 'required',
             'end_time' => 'required',
             /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
-            /*            'image_path' => '',*/
         ]);
-
-/*        $imageName = time() . '.' . $request->image->extension();
-        $request->image->move(public_path('images'), $imageName);*/
 
         $course = new course();
         $course->course_name = request('course_name');
@@ -63,7 +59,6 @@ class CourseController extends Controller
         $course->price = request('price');
         $course->isActive = true;
         /*$course->image =  request('image');*/
-/*        $course->image_path =  "/images/index" . $imageName;*/
         $course->save();
 
         return redirect('courses');
@@ -100,9 +95,6 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-/*        if(! Gate::allows('admin')) {
-            abort(403);
-        }*/
         request()->validate([
             'course_name' => 'required',
             'course_desc_long' => 'required',
@@ -113,9 +105,8 @@ class CourseController extends Controller
             'price' => 'required',
             'isActive' => 'required',
             /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
-/*            'image_path' => '',*/
         ]);
-dd($request);
+
         $course->course_name = request('course_name');
         $course->course_desc_long = request('course_desc_long');
         $course->course_desc_short = request('course_desc_short');
@@ -126,7 +117,6 @@ dd($request);
         $course->isActive =  request('isActive');
         $course->save();
 
-        /*$course->update($request->all());*/
         return redirect('courses');
     }
 
