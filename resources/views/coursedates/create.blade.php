@@ -18,7 +18,7 @@
                                 @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
                             @foreach ($courses as $course)
                                 <option
-                                    {{ $course->id /*== $old_id ? 'selected' : ''*/ }}  value="{{$course->id}}">{{$course->course_name}}</option>
+                                  value="{{$course->id}}">{{$course->course_name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -49,5 +49,3 @@
     </div>
 
 @endsection
-
-

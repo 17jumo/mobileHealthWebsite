@@ -21,14 +21,19 @@
 
                     <div class="col-md-6">
                         <label for="course_id">Course ID</label>
-                        <input type="text" class="form-control @error('course_id') is-invalid @enderror" id="course_id"
-                               name="course_id" value="{{$coursedate->course_id}}">
+                        <select id="course_id" name="course_id" class="form-control
+                                @error('course_id') is-invalid @enderror ">
+                            @foreach ($courses as $course)
+                                <option
+                                  value="{{$course->id}}">{{$course->course_name}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="col-md-6">
                         <label for="scheduled_date">Course Date</label>
                         <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
-                               id="scheduled_date" name="scheduled_date"
+                               id="scheduled_date" name="scheduled_date" min="{{$date}}"
                                value="{{$coursedate->scheduled_date}}">
                     </div>
 
