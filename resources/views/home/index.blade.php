@@ -41,7 +41,7 @@
 
         <div class="row justify-content-md-around">
             @foreach($courses as $course)
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
                     <div class="card card-body card-index">
                         <img src="/images/index/{{$course->image}}"
