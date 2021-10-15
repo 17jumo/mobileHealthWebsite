@@ -25,6 +25,7 @@
                         <th scope="col">Duration</th>
                         <th scope="col">Start Time</th>
                         <th scope="col">End Time</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Active Record</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -46,6 +47,7 @@
                             </td>
                             <td>{{ date('G:i', strtotime($course->start_time)) }}</td>
                             <td>{{ date('G:i', strtotime($course->end_time)) }}</td>
+                            <td>{{$course->image}}</td>
                             <td>@if($course->isActive == 0)
                                     Inactive
                                 @endif</td>
@@ -58,11 +60,6 @@
                                            href="/courses/{{$course->id}}">Show</a>
                                         <a class="btn btn-outline-success mx-1"
                                            href="/courses/{{$course->id}}/edit">Edit</a>
-{{--                                        @can('isAdmin')
-                                            <button type="submit" title="delete" class="btn btn-outline-secondary mx-1">
-                                                Deactivate
-                                            </button>
-                                        @endcan--}}
                                     @endauth
                                 </form>
                             </td>
