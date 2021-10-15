@@ -6,14 +6,16 @@
         <div class="container">
             @endif
 
+            {{--Cards start here--}}
+
             <div class="row">
                 <div class="col-md-12">
-                        <h1>First Aid Courses Available</h1>
-                        <hr>
+                    <h1>First Aid Courses Available</h1>
+                    <hr>
                     @foreach($courses as $course)
                         <div class="card w-100 mt-2 card-login">
                             <div class="card-body">
-                                <img src="/images/index/heart.png" alt="Course Icon">
+                                <img src="/images/index/{{$course->image}}" alt="Course Icon">
                                 <h5 class="card-title">{{$course->course_name}}</h5>
                                 <br><br>
                                 <h6 class="card-title">${{$course->price}} inc GST</h6>
@@ -33,16 +35,15 @@
                                 <p class="card-text text-muted">
                                     Ends at: &nbsp{{ date('G:i', strtotime($course->end_time)) }}</p>
 
-                                {{--                @if (Auth::check())
-                                                    <a class="btn btn-primary" href="/courses/{{$course->id}}/edit">Edit</a>
-                                                    <a class="btn btn-warning mx-1" href="/courses/">Cancel</a>
-                                                @else--}}
                                 <a class="btn btn-book" href="/bookings/create">Book now</a>
-                                {{--                @endif--}}
+
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
+        </div>
+
+        {{--Cards end here--}}
 
 @endsection

@@ -6,7 +6,7 @@
         <div class="container">
         @endif
 
-        <!-- Page Content Starts Here -->
+        <!-- About us starts Here -->
             <div class="row">
                 <div class="col-md-12">
                     <h1>About Debbie and the team at Mobile Health</h1>
@@ -18,10 +18,10 @@
                     </h5>
                     <p>We are <strong>locally owned and operated company</strong>.</p>
                     <p>Along with First Aid Courses, we offer a range of services including:
-                        <ul>
-                            <li>Health and Safety advice and consultation</li>
-                            <li>Health Monitoring</li>
-                        </ul>
+                    <ul>
+                        <li>Health and Safety advice and consultation</li>
+                        <li>Health Monitoring</li>
+                    </ul>
                     </p>
                 </div>
             </div>
@@ -246,7 +246,7 @@
             </div>
         </div>
 
-        <!-- Page Ends Here -->
+        <!-- About us ends Here -->
 
 @endsection
 

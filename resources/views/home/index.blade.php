@@ -6,7 +6,6 @@
 </div>
 @endif
 
-<!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="banner mt-2" alt="First Aid Course Image">
     <div class="container">
@@ -40,12 +39,12 @@
             <hr>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-md-around">
             @foreach($courses as $course)
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <div class="card card-body card-index">
-                        <img src="/images/index/heart.png"
+                        <img src="/images/index/{{$course->image}}"
                              alt="picture of course being held">
                         <h5>{{$course->course_name}}</h5>
                         <h6>Duration: {{$course->duration}}
@@ -74,7 +73,7 @@
             <p>We are trusted by many companies in the Queenstown Lakes and Central Otago region,
                 including:</p>
 
-            <p class="referencelogo justify-content-center">
+            <p class="referencelogo justify-content-md-around">
                 <img src="/images/index/skyline-queenstown-logo.png" alt="Skyline Queenstown Logo">
                 <img src="/images/index/site-queenstown.jpg" alt="Site Trampaline Logo">
                 <img src="/images/index/mitre10.svg" alt="Mitre 10 Logo">

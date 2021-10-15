@@ -7,12 +7,12 @@
     <div class="container">
     @endif
 
-    <!-- Page starts here -->
+    <!-- Contact details start here -->
 
         <div class="row">
             <div class="col-md-12">
-                    <h1>Contact Us</h1>
-                    <hr>
+                <h1>Contact Us</h1>
+                <hr>
                 <div class="contact-text">
                     <p>Please drop us a message using the contact form to request more information. <br>
                         Or if you wish to talk to someone please call us directly.</p>
@@ -75,6 +75,10 @@
             </div>
         </div>
 
+        <!-- Contact details ends here -->
+
+        <!-- Location starts here -->
+
         <div class="row">
             <div class="col-md-12">
                 <h2>Location</h2>
@@ -89,6 +93,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Location ends here -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>

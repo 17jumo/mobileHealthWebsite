@@ -24,7 +24,7 @@ class CreateCoursesTable extends Migration
             $table->integer('duration');
             $table->time('start_time');
             $table->time('end_time');
-            /*$table->string('image');*/
+            $table->string('image');
             $table->boolean('isActive')->default(true);
         });
     }
