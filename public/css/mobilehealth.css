@@ -37,7 +37,6 @@ h4 {
     font-size: 1.5rem;
 }
 
-
 hr {
     border-top: 1px solid rgba(0, 0, 0, .17);
 }
@@ -63,17 +62,9 @@ a {
     filter: grayscale(30%);
 }
 
-/*!* FORM STYLE *!
-.form-control {
-    margin: 0 0 1rem 0;
-}*/
-
 /* INDEX PAGE STYLE */
 
 .referee {
-    /*    font-family: 'MonteCarlo', cursive;*/
-    /*    font-size: 1.25rem;*/
-    /*padding-left: 2rem;*/
     font-style: italic;
     font-size: small;
     padding-bottom: 1rem;
@@ -85,9 +76,7 @@ a {
 
 .referencelogo {
     margin: auto;
-/*    display: flex;*/
     display: inline-block;
-/*    width: 80%;*/
 }
 
 .referencelogo img {
@@ -227,10 +216,6 @@ label {
     font-size: 1rem;
 }
 
-/*.card a {
-    font-size: 1rem;
-}*/
-
 .card-index {
     text-align: center;
 }
@@ -243,25 +228,11 @@ label {
 
 .card-login {
     margin: auto;
-    /*margin-bottom: 1rem;*/
-}
-
-/*.card-login img {
-    height: 60px;
-    width: 60px;
-    margin: auto;
-}*/
-
-.card-show {
-    /*margin: 2rem 0 1rem 0;*/
-/*    margin-top: 2rem;
-    margin-bottom: 1rem;*/
 }
 
 .card-show img {
     height: 10rem;
     width: 10rem;
-    /*    margin: auto;*/
 }
 
 .card-header {
@@ -288,21 +259,6 @@ div.card li {
     width: 18rem;
 }
 
-
-/*!* SECTION HEADINGS *!
-.section-heading {
-    margin-top: 2rem;
-    margin-bottom: 20px;
-}
-
-.section-heading dl dt {
-    font-weight: 400;
-}
-
-.section-heading dl dd {
-    font-size: smaller;
-}*/
-
 /* NOTIFICATION STYLES */
 #notification {
     background-color: #0c46ab;
@@ -317,7 +273,7 @@ div.card li {
     margin-bottom: 0;
 }
 
-/*Logo will expand on hoover*/
+/* LOGO EXPAND ON HOVER */
 #logoimage {
     transition: transform .3s;
 }
@@ -330,7 +286,6 @@ div.card li {
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
-
 }
 
 .navbar img {
@@ -342,7 +297,6 @@ div.card li {
     font-weight: 500;
     color: #212529;
     transition: all 0.5s;
-/*    text-transform: uppercase;*/
 }
 
 .navbar-toggler-icon {
@@ -366,7 +320,6 @@ div.card li {
 
 /* BANNER STYLE */
 .banner {
-    /*margin-top: 1rem;*/
     background-image: url(../images/banner-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -381,8 +334,7 @@ div.card li {
     padding: 20px 30px;
     max-width: 30rem;
     margin-bottom: 10px;
-    margin-left: 0%;
-    /*padding: 30px;*/
+    margin-left: 10%;
 }
 
 .banner .caption h4 {
@@ -393,12 +345,6 @@ div.card li {
     color: #1e1e1e;
 }
 
-/*
-.banner .caption {
-    width: 30px;
-    height: 5px;
-    background-color: #0c46ab;
-}*/
 .banner .caption p {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -407,10 +353,6 @@ div.card li {
 .banner {
     padding: 40px 0;
 }
-
-/*.banner .caption {
-
-}*/
 
 /* INDEX AND COURSE STYLES */
 .index-items, .course-items {
@@ -508,7 +450,6 @@ div.card li {
     flex-wrap: wrap;
 }
 
-
 /*SOCIAL ICONS*/
 .social-icons {
     margin-top: 5px;
@@ -552,35 +493,6 @@ div.card li {
     color: #212529;
     text-decoration: none;
 }
-
-/*
-!* Isotope Transitions
-------------------------------- *!
-.isotope,
-.isotope .item {
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-}
-
-.isotope {
-    -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
-    -o-transition-property: height, width;
-    transition-property: height, width;
-}
-
-.isotope .item {
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property:    -moz-transform, opacity;
-    -ms-transition-property:     -ms-transform, opacity;
-    -o-transition-property:         top, left, opacity;
-    transition-property:         transform, opacity;
-}
-
 
 /* RESPONSIVE MEDIA STYLE */
 @media (max-width: 991px) {
@@ -665,7 +577,6 @@ div.card li {
     }
 
 }
-
 
 .overlay {
     position: absolute;
