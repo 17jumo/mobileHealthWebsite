@@ -46,7 +46,7 @@ class CourseController extends Controller
             'duration' => 'required|integer',
             'start_time' => 'required',
             'end_time' => 'required',
-            /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'image' => '',
         ]);
 
         $course = new course();
@@ -58,7 +58,7 @@ class CourseController extends Controller
         $course->end_time = request('end_time');
         $course->price = request('price');
         $course->isActive = true;
-        /*$course->image =  request('image');*/
+        $course->image = request('image');
         $course->save();
 
         return redirect('courses');
@@ -104,7 +104,7 @@ class CourseController extends Controller
             'end_time' => 'required',
             'price' => 'required',
             'isActive' => 'required',
-            /*'image' => 'nullable|image|mimes:jpeg,jpg,png',*/
+            'image' => '',
         ]);
 
         $course->course_name = request('course_name');
@@ -115,6 +115,7 @@ class CourseController extends Controller
         $course->end_time =  request('end_time');
         $course->price =  request('price');
         $course->isActive =  request('isActive');
+        $course->image =  request('image');
         $course->save();
 
         return redirect('courses');
