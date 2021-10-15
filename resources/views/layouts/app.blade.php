@@ -26,7 +26,7 @@
 <body>
 <header>
 
-    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+    <nav class="navbar navbar-light navbar-expand-md bg-faded">
         <div class="container">
 
             <a class="navbar-brand d-flex w-25 me-auto nav-img" id="logoimage" href="/"><img
@@ -59,10 +59,8 @@
                     <li>
                         <a href="/bookings/create" class="btn btn-book">Book now</a>
                     </li>
-
                 </ul>
             </div>
-        </div>
         </div>
     </nav>
 
@@ -75,15 +73,11 @@
 
             <div style="float: right">
                 @if (Auth::check())
-                    <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">Logout</a>
+                    <a class="btn btn-outline-secondary mx-1"
+                       href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">Logout</a>
 
-                    {{--@else--}}
-                    {{--@can('isAdmin')
-                        @if (Route::has('register'))
-                            <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
-                        @endif
-                    @endcan--}}
                 @endif
                 <form id="logout-form" class="nav" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -164,8 +158,8 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Footer Ends Here -->
+
             <!-- Sub Footer Starts Here -->
             <div class="sub-footer">
                 <div class="row col-md-12">
@@ -193,10 +187,6 @@
 
 
 <!-- Additional Scripts -->
-{{--<script src="js/custom.js"></script>--}}
-{{--<script src="js/owl.js"></script>
-<script src="js/isotope.js"></script>--}}
-{{--<script src="js/flex-slider.js"></script>--}}
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
