@@ -33,7 +33,8 @@ class BookingController extends Controller
      */
     public function create(Request $request)
     {
-        $courses = Course::all();
+        /*$courses = Course::all();*/
+        $courses = Course::where("isActive","=",1)->get();
         $coursedates = Coursedate::where("course_id","=",1)->get();
         $courseprice = Course::select('price')->where("id","=",1)->get();
         $old_id = 1;
@@ -49,7 +50,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-       $courses = Course::all();
+       $courses = Course::where("isActive","=",1)->get();
        $courseprice = Course::select('price')->where("id","=",$request->course_id)->get();
        $coursedates = Coursedate::where("course_id", "=", $request->course_id)->get();
        $old_id = $request->get('course_id');
