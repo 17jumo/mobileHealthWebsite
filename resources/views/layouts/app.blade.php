@@ -57,8 +57,7 @@
                         <a class="nav-link" href="/contactus">Contact Us</a>
                     </li>
                     <li>
-                        <div class="btn btn-book-primary"><a href="/bookings/create">Book Now</a>
-                        </div>
+                        <a href="/bookings/create" class="btn btn-book">Book now</a>
                     </li>
 
                 </ul>
@@ -79,7 +78,7 @@
                     <a class="btn btn-outline-secondary mx-1" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Logout</a>
 
-                {{--@else--}}
+                    {{--@else--}}
                     {{--@can('isAdmin')
                         @if (Route::has('register'))
                             <a class="btn btn-outline-secondary mx-1" href="{{ route('login') }}">Login</a>
@@ -91,25 +90,15 @@
                 </form>
             </div>
             <div class="mt-2">
-            <a class="btn btn-outline-primary mx-1" href="/courses">Courses</a>
-            <a class="btn btn-outline-primary mx-1 " href="/coursedates">Course Dates</a>
-            <a class="btn btn-outline-primary mx-1 " href="/bookings">Bookings</a>
-            @can('isAdmin')
-                <a class="btn btn-outline-primary mx-1 " href="/users">Users</a>
-            @endcan
+                <a class="btn btn-outline-primary mx-1" href="/courses">Courses</a>
+                <a class="btn btn-outline-primary mx-1 " href="/coursedates">Course Dates</a>
+                <a class="btn btn-outline-primary mx-1 " href="/bookings">Bookings</a>
+                @can('isAdmin')
+                    <a class="btn btn-outline-primary mx-1 " href="/users">Users</a>
+                @endcan
             </div>
 
-{{--            <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="/courses">View Courses</a></li>
-                <li><a href="/coursedates">View Course Dates</a></li>
-                <li><a href="/bookings">View Bookings</a></li>
-                @can('isAdmin')
-                    <li><a href="/users">User Admin</a></li>
-                @endcan
-                <li><a href="{{ route('logout') }}">Logout</a></li>
-            </ul>--}}
-            @endauth
+    @endauth
 
             <div>
                 @yield('content')
@@ -182,7 +171,8 @@
                 <div class="row col-md-12">
                     <div class="copyright-text">
 
-                        <a href="{{ route('login') }}">Copyright &copy; 2021 Mobile Health | Design by: SIT-SS-DESIGN</a>
+                        <a href="{{ route('login') }}">Copyright &copy; 2021 Mobile Health | Design by:
+                            SIT-SS-DESIGN</a>
                     </div>
                 </div>
             </div>
@@ -193,9 +183,13 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
 <!-- Additional Scripts -->
@@ -205,32 +199,32 @@
 {{--<script src="js/flex-slider.js"></script>--}}
 <script src="https://js.stripe.com/v3/"></script>
 
-        <script>
-        const stripe = Stripe('{{ env("STRIPE_KEY") }}');
-        const elements = stripe.elements();
-        const cardElement = elements.create('card');
-        cardElement.mount('#card-element');
-        const cardHolderName = document.getElementById('card-holder-name');
-        const form = document.getElementById('stripe');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const { paymentMethod, error } = await stripe.createPaymentMethod(
-                'card', cardElement, {
-                    billing_details: { name: cardHolderName.value }
-                }
-            );
-            if (error) {
-                // Display "error.message" to the user...
-            } else {
-                console.log('Card verified successfully');
-                console.log(paymentMethod.id);
-                document.getElementById('pmethod').setAttribute('value', paymentMethod.id);
-                form.submit();
+<script>
+    const stripe = Stripe('{{ env("STRIPE_KEY") }}');
+    const elements = stripe.elements();
+    const cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+    const cardHolderName = document.getElementById('card-holder-name');
+    const form = document.getElementById('stripe');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const {paymentMethod, error} = await stripe.createPaymentMethod(
+            'card', cardElement, {
+                billing_details: {name: cardHolderName.value}
             }
-        });
+        );
+        if (error) {
+            // Display "error.message" to the user...
+        } else {
+            console.log('Card verified successfully');
+            console.log(paymentMethod.id);
+            document.getElementById('pmethod').setAttribute('value', paymentMethod.id);
+            form.submit();
+        }
+    });
 
 
-        </script>
+</script>
 
 </body>
 </html>
