@@ -10,7 +10,7 @@
 
             <p>
                 <a class="btn btn-outline-primary mx-1 "
-                   href="/courses/create">Create new courses</a>
+                   href="/courses/create">Create new course</a>
             </p>
 
             <div class="table-responsive">
