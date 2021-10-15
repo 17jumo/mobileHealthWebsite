@@ -27,7 +27,6 @@
                                 @endif</p>
                             <p class="card-text">
                                 Starts at: &nbsp{{ date('G:i', strtotime($courses->start_time)) }}
-                                &nbsp&nbsp&nbsp&nbsp
                             </p>
                             <p class="card-text">
                                 Ends at: &nbsp{{ date('G:i', strtotime($courses->end_time)) }}</p>
