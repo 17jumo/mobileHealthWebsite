@@ -36,27 +36,32 @@
                                id="price" name="price" value="{{ @old('price') }}" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="duration">Duration</label>
-                        <input type="text" class="form-control @error('duration') is-invalid @enderror"
+                        <label for="duration">Duration in days</label>
+                        <input type="number" class="form-control @error('duration') is-invalid @enderror"
                                id="duration" name="duration" value="{{ @old('duration') }}"required>
                     </div>
                     <div class="col-md-6">
-                        <label for="start_time">Start time</label>
+                        <label for="start_time">Start time (format as 9:00)</label>
                         <input type="text" class="form-control @error('start_time') is-invalid @enderror"
                                id="start_time" name="start_time" value="{{ @old('start_time') }}" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="end_time">End time</label>
+                        <label for="end_time">End time (format as 4:30)</label>
                         <input type="text" class="form-control @error('end_time') is-invalid @enderror"
                                id="end_time" name="end_time" value="{{ @old('end_time') }}" required>
                     </div>
+                    <div class="col-md-6">
+                        <label for="image">Image Filename/Extension (eg 2.png)</label>
+                        <input type="text" class="form-control @error('image') is-invalid @enderror"
+                               id="image" name="image" value="{{ @old('image') }}" required>
+                    </div>
 
-                    {{--                    <div class="custom-file field form-group col-md-6 ">
-                                            <label for="image">Image</label>
-                                            <div class="control">
-                                                <input type="file" name="image" class="custom-file-input form-control input @error('image') is-invalid @enderror" id="chooseFile" required>
-                                            </div>
-                                        </div>--}}
+{{--                    <div class="custom-file field form-group col-md-6 ">
+                         <label for="image">Image</label>
+                         <div class="control">
+                         <input type="file" name="image" class="custom-file-input form-control input @error('image') is-invalid @enderror" id="chooseFile">
+                         </div>
+                    </div>--}}
                 </div>
 
 
