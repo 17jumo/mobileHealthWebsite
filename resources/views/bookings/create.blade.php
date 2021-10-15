@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <link rel="stylesheet" href="css/global.css">
+    {{--<link rel="stylesheet" href="css/global.css">--}}
+
     @if (Session::has('success'))
         <div class="alert alert-success text-center">
             <p>{{ Session::get('success') }} </p><a href="#" class="close" data-dismiss="alert"
@@ -49,15 +50,16 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                      <label for="course_id">Course Total</label>
-                      <select name="course_total" id="course_total"
-                              class="form-control @error('course_total') is-invalid @enderror"
-                              required>
-                          @foreach ($courseprice as $courseprices)
-                              <option value="{{$courseprices->price}}">
-                                  {{$courseprices->price}} NZD</option>
-                          @endforeach
-                      </select>
+                        <label for="course_id">Course Total</label>
+                        <select name="course_total" id="course_total"
+                                class="form-control @error('course_total') is-invalid @enderror"
+                                required>
+                            @foreach ($courseprice as $courseprices)
+                                <option value="{{$courseprices->price}}">
+                                    {{$courseprices->price}} NZD
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
 
@@ -82,7 +84,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="phone">Mobile phone number*</label>
-                        <input class="form-control" type="text" name="phone" value="{{ @old('phone') }}">
+                        <input class="form-control" type="text" name="phone" value="{{ @old('phone') }}" required>
                     </div>
                     <div class="col-md-6">
                         <label for="dob" class="form-control-label">Date of birth*</label>
@@ -132,40 +134,42 @@
                         <input type="text" class="form-control @error('country') is-invalid @enderror"
                                name="country" id="country" value="{{ @old('country') }}" required>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 mt-2">
-                            <h4>Payment Details</h4>
-                        </div>
-                        <div class="col-md-12">
-                            <label for="card-holder-name">Name On Card</label>
-                            <input id="card-holder-name" type="text" class="form-control
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-2">
+                        <h4>Payment Details</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="card-holder-name">Name On Card</label>
+                        <input id="card-holder-name" type="text" class="form-control
                                @error('card-holder-name') is-invalid @enderror"
-                                   name="card-holder-name" id="card-holder-name" value="" placeholder="Cardholder name"
-                                   required>
-                            <label for="card-element">Card details</label>
-                            <div class="form-control" id="card-element" name="card-element" required></div>
-                                <input name="pmethod" type="hidden" id="pmethod" value="" required/>
-                        </div>
-                        <div class="col-md-12 mt-4 terms">
-                            <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
-                            <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
-                                <a href="/terms" target="_blank"
-                                   value="{{ @old('is_terms_agreed') }}"><span
-                                        class="is_terms_agreed">Terms and Conditions</span></a></label><br>
-                        </div>
-
-                        <div class="form-button mt-3">
-                            @if (Auth::check())
-                                <input class="btn btn-primary" type="submit" value="Submit Booking"/>
-                                <a class="btn btn-outline-dark" href="/bookings">Cancel</a>
-                            @else
-                                <input class="btn btn-book" type="submit" value="Submit Booking"/>
-                                <a class="btn btn-outline-dark" href="/">Cancel</a>
-                            @endif
-                        </div>
+                               name="card-holder-name" id="card-holder-name" value="" placeholder="Cardholder name"
+                               required>
+                        <label for="card-element">Card details</label>
+                        <div class="form-control" id="card-element" name="card-element" required></div>
+                        <input name="pmethod" type="hidden" id="pmethod" value="" required/>
+                    </div>
+                    <div class="col-md-12 mt-4 terms">
+                        <input type="checkbox" id="is_terms_agreed" name="is_terms_agreed" value="1" required>
+                        <label for="is_terms_agreed" class="ptext">&nbspI have read and agree to the
+                            <a href="/terms" target="_blank"
+                               value="{{ @old('is_terms_agreed') }}"><span
+                                    class="is_terms_agreed">Terms and Conditions</span></a></label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-2">
+                        @if (Auth::check())
+                            <input class="btn btn-primary" type="submit" value="Submit Booking"/>
+                            <a class="btn btn-outline-dark" href="/bookings">Cancel</a>
+                        @else
+                            <input class="btn btn-book" type="submit" value="Submit Booking"/>
+                            <a class="btn btn-outline-dark" href="/">Cancel</a>
+                        @endif
                     </div>
                 </div>
             </form>
         </div>
+
 
 @endsection
