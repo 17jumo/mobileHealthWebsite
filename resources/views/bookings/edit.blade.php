@@ -96,37 +96,37 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="company_name">Company Name *</label>
+                            <label for="company_name">Company Name</label>
                             <input type="text" class="form-control @error('company_name') is-invalid @enderror"
-                                   name="company_name" id="company_name" value="{{$booking->company_name}}" required>
+                                   name="company_name" id="company_name" value="{{$booking->company_name}}">
                         </div>
 
                         <div class="col-md-6">
-                            <label for="street">Street Address</label>
+                            <label for="street">Street Address*</label>
                             <input type="text" class="form-control @error('street') is-invalid @enderror"
                                    name="street" id="street" value="{{$booking->street}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="suburb">Suburb</label>
+                            <label for="suburb">Suburb*</label>
                             <input type="text" class="form-control @error('suburb') is-invalid @enderror"
                                    name="suburb" id="suburb" value="{{$booking->suburb}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="city">City</label>
+                            <label for="city">City*</label>
                             <input type="text" class="form-control @error('city') is-invalid @enderror"
                                    name="city" id="city" value="{{$booking->city}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="postcode">Postcode</label>
+                            <label for="postcode">Postcode*</label>
                             <input type="text" class="form-control @error('postcode') is-invalid @enderror"
                                    name="postcode" id="postcode" value="{{$booking->postcode}}" required>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="country">Country</label>
+                            <label for="country">Country*</label>
                             <input type="text" class="form-control @error('country') is-invalid @enderror"
                                    name="country" id="country" value="{{$booking->country}}" required>
                         </div>
