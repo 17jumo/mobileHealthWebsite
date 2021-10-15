@@ -230,6 +230,11 @@ label {
     margin: auto;
 }
 
+.card-body img {
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
 .card-show img {
     height: 10rem;
     width: 10rem;
