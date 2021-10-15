@@ -11,27 +11,25 @@
 
                     <div class="card w-100 mt-2 card-login">
                         <div class="card-body">
-                            @if($courses->isActive < 1)
+                            @if($courses->isActive == 0)
                                 <div class="alert alert-danger" role="alert">Inactive Record</div>
                             @endif
-                            <img src="/images/index/heart.png" alt="Course Icon">
+                            <img src="/images/index/{{$courses->image}}" alt="Course Icon">
                             <h5 class="card-title">{{$courses->course_name}}</h5>
-                            <br><br>
                             <h6 class="card-title">${{$courses->price}} inc GST</h6>
-                            <br><br>
                             <p class="card-text">{{$courses->course_desc_long}}</p>
                             <br><br>
-                            <p class="card-text text-muted">Duration: &nbsp{{$courses->duration}}
+                            <p class="card-text">Duration: &nbsp{{$courses->duration}}
                                 @if($courses->duration > 1)
                                     days
                                 @else
                                     day
                                 @endif</p>
-                            <p class="card-text text-muted">
+                            <p class="card-text">
                                 Starts at: &nbsp{{ date('G:i', strtotime($courses->start_time)) }}
                                 &nbsp&nbsp&nbsp&nbsp
                             </p>
-                            <p class="card-text text-muted">
+                            <p class="card-text">
                                 Ends at: &nbsp{{ date('G:i', strtotime($courses->end_time)) }}</p>
 
                             @if (Auth::check())
