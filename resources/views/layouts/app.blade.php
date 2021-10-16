@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet">
 
-    {{--Browser Icon--}}
+    {{--Browser Icon and Title--}}
     <link rel="icon" href="/images/MobileHealthTabLogo.png" type="/image/MobileHealthTabLogo.png">
-
     <title>Mobile Health</title>
+
+    <!-- CSS Files -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" href="/css/mobilehealth.css">
 
@@ -71,7 +71,7 @@
         <div class="container">
             <h1>Mobile Health Administration</h1>
 
-            <div style="float: right">
+            <div class="logout">
                 @if (Auth::check())
                     <a class="btn btn-outline-secondary mx-1"
                        href="{{ route('logout') }}"
@@ -83,6 +83,7 @@
                     @csrf
                 </form>
             </div>
+
             <div class="mt-2">
                 <a class="btn btn-outline-primary mx-1" href="/courses">Courses</a>
                 <a class="btn btn-outline-primary mx-1 " href="/coursedates">Course Dates</a>
