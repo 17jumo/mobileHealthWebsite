@@ -38,16 +38,20 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+
         request()->validate([
             'course_name' => 'required',
             'course_desc_long' => 'required',
             'course_desc_short' => 'required',
-            'price' => 'required',
+            'price' => 'required|min:0',
             'duration' => 'required|integer',
             'start_time' => 'required',
             'end_time' => 'required',
-            'image' => '',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:3000',
         ]);
+
+        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images/icons/'), $imageName);
 
         $course = new course();
         $course->course_name = request('course_name');
@@ -58,7 +62,8 @@ class CourseController extends Controller
         $course->end_time = request('end_time');
         $course->price = request('price');
         $course->isActive = true;
-        $course->image = request('image');
+        $course->image =  request('image');
+        $course->image_path =  "/images/icons/" . $imageName;
         $course->save();
 
         return redirect('courses');
@@ -104,8 +109,14 @@ class CourseController extends Controller
             'end_time' => 'required',
             'price' => 'required',
             'isActive' => 'required',
-            'image' => '',
         ]);
+
+        if(isset($request->image)) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images/icons/'), $imageName);
+            $course->image =  request('image');
+            $course->image_path =  "/images/icons/" . $imageName;
+        }
 
         $course->course_name = request('course_name');
         $course->course_desc_long = request('course_desc_long');
@@ -115,7 +126,6 @@ class CourseController extends Controller
         $course->end_time =  request('end_time');
         $course->price =  request('price');
         $course->isActive =  request('isActive');
-        $course->image =  request('image');
         $course->save();
 
         return redirect('courses');

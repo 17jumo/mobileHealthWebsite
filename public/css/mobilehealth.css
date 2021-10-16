@@ -318,6 +318,10 @@ div.card li {
     font-family: 'FontAwesome';
 }
 
+.logout {
+    float: right;
+}
+
 /* BANNER STYLE */
 .banner {
     background-image: url(../images/banner-bg.jpg);
