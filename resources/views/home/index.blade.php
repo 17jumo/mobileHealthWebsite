@@ -43,23 +43,27 @@
             @foreach($courses as $course)
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="card card-body card-index">
-                        <img src="/images/index/{{$course->image}}"
-                             alt="picture of course being held">
-                        <h5>{{$course->course_name}}</h5>
-                        <h6>Duration: {{$course->duration}}
-                            @if($course->duration > 1)
-                                days
-                            @else
-                                day
-                            @endif
-                        </h6>
-                        <h6>Cost: ${{$course->price}} inc GST</h6>
-                        <p>{{$course->course_desc_short}}</p>
-                        <p><a href="/courses/{{$course->id}}" class="readmore">Read more</a></p>
+                    @if($course->isActive == 1)
+                        <div class="card card-body card-index">
+                            <img src="/images/index/{{$course->image}}"
+                                 alt="Course icon">
+                            <h5>{{$course->course_name}}</h5>
+                            <h6>Duration: {{$course->duration}}
+                                @if($course->duration > 1)
+                                    days
+                                @else
+                                    day
+                                @endif
+                            </h6>
+                            <h6>${{$course->price}} inc GST</h6>
+                            <p>{{$course->course_desc_short}}</p>
+                            <p><a href="/courses/{{$course->id}}" class="readmore">Read more</a></p>
 
-                        <a href="/bookings/create" class="btn btn-book">Book now</a>
-                    </div>
+                            <a href="/bookings/create" class="btn btn-book">Book now</a>
+                        </div>
+{{--                    @else--}}
+
+                    @endif
                 </div>
             @endforeach
         </div>
