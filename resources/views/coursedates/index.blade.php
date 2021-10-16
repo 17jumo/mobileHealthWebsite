@@ -6,7 +6,7 @@
 
     <p>
         <a class="btn btn-outline-primary mx-1 "
-           href="/coursedates/create">Create new dates</a>
+           href="/coursedates/create">Create new date</a>
     </p>
 
     <div class="table-responsive">
