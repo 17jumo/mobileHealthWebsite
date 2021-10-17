@@ -13,4 +13,8 @@ class Booking extends Model
     public function coursedate() {
         return $this->belongsTo(Coursedate::class);
     }
+
+    protected $casts = [
+        'dob' => 'datetime'
+    ];
 }

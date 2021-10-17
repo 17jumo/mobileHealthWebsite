@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <th scope="col">Date of birth</th>
-                <td scope="row">{{$booking->dob}}</td>
+                <td scope="row">{{$booking->dob->format('d-m-Y')}}</td>
             </tr>
             <tr>
                 <th scope="col">Gender</th>
