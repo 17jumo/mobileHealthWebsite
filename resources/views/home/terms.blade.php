@@ -39,8 +39,7 @@
                 standards to be issued
             </li>
             <li>Smoking will be permitted outside in the destinated area only.</li>
-
-            <p>Please ask if further information is needed</p>
+            <li><em>Please ask if further information is needed</em></li>
         </ul>
 
         <h5>Payment</h5>
@@ -74,8 +73,11 @@
         </ul>
 
         <h5>Confidentiality and privacy</h5>
-        <p>Mobile Health adheres to, and abides by the Privacy Act 2020. Confidentiality,
-            privacy and respect are maintained at all times during courses.</p>
+        <ul>
+            <li>Mobile Health adheres to, and abides by the Privacy Act 2020. Confidentiality,
+                privacy and respect are maintained at all times during courses.
+            </li>
+        </ul>
 
         <h5>Health, safety and wellbeing</h5>
         <ul>
