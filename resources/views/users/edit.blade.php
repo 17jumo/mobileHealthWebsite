@@ -16,13 +16,13 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="name">Name</label>
+                <label for="name">Name*</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                        name="name" value="{{$users->name}}">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="email">Email</label>
+                <label for="email">Email*</label>
                 <input type="text" class="form-control @error('email') is-invalid @enderror"
                        id="email" name="email" value="{{$users->email}}">
             </div>
@@ -30,7 +30,7 @@
             @if(Auth::user() == $users)
             @else
                 <div class="form-group col-md-6">
-                    <label for="isAdmin">Administrator (0=No, 1=Yes)</label>
+                    <label for="isAdmin">Administrator* (0=No, 1=Yes)</label>
                     <input type="text" class="form-control @error('isAdmin') is-invalid @enderror"
                            id="isAdmin" name="isAdmin" value="{{$users->isAdmin}}">
                 </div>
