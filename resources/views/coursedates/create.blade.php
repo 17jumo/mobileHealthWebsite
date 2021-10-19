@@ -9,7 +9,7 @@
             @csrf
 
             <div class="form-group col-md-12">
-                <label for="course_id">Course</label>
+                <label for="course_id">Course*</label>
                 <select id="course_id" name="course_id" class="form-control"
                         @error('course_id') is-invalid @enderror required onchange="this.form.submit()">
                     @foreach ($courses as $course)
@@ -20,19 +20,19 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="scheduled_date">Scheduled Date</label>
+                <label for="scheduled_date">Scheduled Date*</label>
                 <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
                        id="scheduled_date" name="scheduled_date" value="{{ @old('scheduled_date') }}" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="max_attendee">Maximum Attendees</label>
+                <label for="max_attendee">Maximum Attendees*</label>
                 <input type="text" class="form-control @error('max_attendee') is-invalid @enderror"
                        id="max_attendee" name="max_attendee" value="{{ @old('max_attendee') }}" required>
             </div>
 
             <div class="form-group col-md-12">
-                <label for="venue">Venue</label>
+                <label for="venue">Venue*</label>
                 <input type="text" class="form-control @error('venue') is-invalid @enderror"
                        id="venue" name="venue" value="{{ @old('venue') }}" required>
             </div>

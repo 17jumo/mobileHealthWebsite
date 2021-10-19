@@ -27,26 +27,26 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="scheduled_date">Course Date</label>
+                <label for="scheduled_date">Course Date*</label>
                 <input type="date" class="form-control @error('scheduled_date') is-invalid @enderror"
                        id="scheduled_date" name="scheduled_date" min="{{$date}}"
                        value="{{$coursedate->scheduled_date}}">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="max_attendee">Attendee Maximum</label>
+                <label for="max_attendee">Attendee Maximum*</label>
                 <input type="number" class="form-control @error('max_attendee') is-invalid @enderror"
                        id="max_attendee" name="max_attendee" value="{{$coursedate->max_attendee}}">
             </div>
 
             <div class="form-group col-md-12">
-                <label for="venue">Venue</label>
+                <label for="venue">Venue*</label>
                 <input type="text" class="form-control @error('venue') is-invalid @enderror" id="venue"
                        name="venue" value="{{$coursedate->venue}}">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="isActive">Active Record (0=No, 1=Yes)</label>
+                <label for="isActive">Active Record* (0=No, 1=Yes)</label>
                 <input type="text" class="form-control @error('isActive') is-invalid @enderror"
                        id="isActive" name="isActive" value="{{$coursedate->isActive}}">
             </div>
