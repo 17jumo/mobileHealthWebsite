@@ -27,7 +27,7 @@
 </div>
 
 <div id="notification">
-    <p>We can run courses at your workplace to meet your needs. Please call us for more information.</p>
+    <p>We can run courses at your workplace to meet your needs. Please call us on 03 111 2222 for more information.</p>
 </div>
 <!-- Banner Ends Here -->
 
