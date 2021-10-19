@@ -119,31 +119,31 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="street">Street*</label>
+                <label for="street">Street</label>
                 <input type="text" class="form-control @error('street') is-invalid @enderror"
                        name="street" id="street" value="{{ @old('street') }}" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="suburb">Suburb*</label>
+                <label for="suburb">Suburb</label>
                 <input type="text" class="form-control @error('suburb') is-invalid @enderror"
                        name="suburb" id="suburb" value="{{ @old('suburb') }}" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="city">City*</label>
+                <label for="city">City</label>
                 <input type="text" class="form-control @error('city') is-invalid @enderror"
                        name="city" id="city" value="{{ @old('city') }}" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="postcode">Postcode*</label>
+                <label for="postcode">Postcode</label>
                 <input type="text" class="form-control @error('postcode') is-invalid @enderror"
                        name="postcode" id="postcode" value="{{ @old('postcode') }}" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="country">Country*</label>
+                <label for="country">Country</label>
                 <input type="text" class="form-control @error('country') is-invalid @enderror"
                        name="country" id="country" value="{{ @old('country') }}" required>
             </div>
