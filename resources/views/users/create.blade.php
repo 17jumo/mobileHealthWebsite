@@ -23,7 +23,7 @@
             <div class="form-group col-md-6">
                 <label for="password">Password*</label>
                 <input type="password" class="form-control @error('password') is-invalid @enderror"
-                       id="password" name="password" value="">
+                       id="password" name="password" minlength="8" value="">
             </div>
 
             <div class="form-group col-md-6">
