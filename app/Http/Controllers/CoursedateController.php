@@ -48,7 +48,7 @@ class CoursedateController extends Controller
         request()->validate([
             'scheduled_date' => 'required',
             'max_attendee' => '',
-            'venue' => 'required',
+            'venue' => 'required | max:255',
         ]);
 
         $coursedate = new coursedate();
@@ -100,7 +100,7 @@ class CoursedateController extends Controller
         request()->validate([
             'scheduled_date' => 'required',
             'max_attendee' => '',
-            'venue' => 'required',
+            'venue' => 'required | max:255',
             'isActive' => 'required',
         ]);
 

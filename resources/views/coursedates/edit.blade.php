@@ -34,7 +34,7 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="max_attendee">Attendee Maximum*</label>
+                <label for="max_attendee">Attendee Maximum</label>
                 <input type="number" class="form-control @error('max_attendee') is-invalid @enderror"
                        id="max_attendee" name="max_attendee" value="{{$coursedate->max_attendee}}">
             </div>

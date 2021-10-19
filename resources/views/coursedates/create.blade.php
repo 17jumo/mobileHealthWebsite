@@ -26,7 +26,7 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="max_attendee">Maximum Attendees*</label>
+                <label for="max_attendee">Maximum Attendees</label>
                 <input type="text" class="form-control @error('max_attendee') is-invalid @enderror"
                        id="max_attendee" name="max_attendee" value="{{ @old('max_attendee') }}" required>
             </div>
