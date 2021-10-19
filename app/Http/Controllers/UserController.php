@@ -34,7 +34,7 @@ class UserController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'email' => 'required',
+            'email' => 'required | email | unique:users',
             'password' => 'required',
             'isAdmin' => 'required',
         ]);
@@ -82,7 +82,7 @@ class UserController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'email' => 'required',
+            'email' => 'required | email | unique:users',
             'isAdmin' => 'required',
         ]);
 
