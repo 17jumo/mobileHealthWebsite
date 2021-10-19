@@ -52,16 +52,16 @@
             <form class="contact__form" method="get" action="/contactusmail">
 
                 <input name="name" type="text" class="form-control mt-2" id="name"
-                       placeholder="Your name..." value="{{ @old('name') }}" required="">
+                       placeholder="Your name*..." value="{{ @old('name') }}" required="">
 
                 <input name="email" type="text" class="form-control  mt-2" id="email"
-                       placeholder="Your email..." value="{{ @old('email') }}" required="">
+                       placeholder="Your email*..." value="{{ @old('email') }}" required="">
 
                 <input name="subject" type="text" class="form-control  mt-2" id="subject"
-                       placeholder="Subject..." value="{{ @old('subject') }}" required="">
+                       placeholder="Subject*..." value="{{ @old('subject') }}" required="">
 
                 <textarea name="message" rows="4" class="form-control  mt-2" id="message"
-                          placeholder="Your message..." value="{{ @old('message') }}" required=""></textarea>
+                          placeholder="Your message*..." value="{{ @old('message') }}" required=""></textarea>
 
                 <button type="submit" id="form-submit" class="btn btn-primary  mt-2">Send Message
                 </button>
